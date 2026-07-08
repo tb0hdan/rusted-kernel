@@ -519,12 +519,17 @@ def render(data: dict) -> str:
     files_line = line_chart(versions, "files", "files", "#5aa9e6")
     comment_line = line_chart(versions, "comment", "comment lines", RUST_HI)
 
-    return f"""<meta charset="utf-8">
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rusted Kernel — Rust in the Linux Kernel</title>
 <meta name="description" content="A version-by-version analysis of Rust adoption in the Linux kernel, from {e(first['version'])} to {e(last['version'])}: files, size, purpose and SLOC.">
 <link rel="icon" href="{FAVICON}">
 <style>{CSS}</style>
+</head>
+<body>
 
 <header class="hero"><div class="wrap">
   <p class="eyebrow">rusted-kernel.com<span class="cursor"></span></p>
@@ -609,6 +614,9 @@ def render(data: dict) -> str:
      machine-readable results live in <code>data/kernels.json</code>.</p>
   <p style="margin-top:14px">Generated {gen} · <a href="{SITE_URL}">{SITE}</a></p>
 </div></footer>
+
+</body>
+</html>
 """
 
 
