@@ -37,6 +37,36 @@ FAINT = "#6b7280"
 RUST = "#e4552e"       # primary accent (Rust orange)
 RUST_HI = "#f7a072"    # lighter accent
 
+# --- branding / outbound links --------------------------------------------
+SITE = "rusted-kernel.com"
+SITE_URL = "https://rusted-kernel.com"
+REPO_URL = "https://github.com/tb0hdan/rusted-kernel"
+DP_URL = "https://domainsproject.org"
+DP_NAME = "DomainsProject.org"
+
+GH_ICON = (
+    '<svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 '
+    '3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49'
+    '-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63'
+    '-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64'
+    '-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82'
+    '.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 '
+    '1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 '
+    '1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58'
+    '-8-8-8z"></path></svg>'
+)
+
+
+def wordmark_svg(x: float, y: float, anchor: str = "start", size: float = 13.0) -> str:
+    """A `~/rusted-kernel.com` terminal-prompt wordmark as SVG <text>."""
+    return (
+        f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" class="wm" '
+        f'style="font-size:{size}px">'
+        f'<tspan fill="{RUST}">~/</tspan>'
+        f'<tspan fill="{INK}">rusted-kernel</tspan>'
+        f'<tspan fill="{FAINT}">.com</tspan></text>'
+    )
+
 # Categorical palette for stacked chart / legend. "Kernel crate" gets the
 # hero Rust orange; the rest are muted-but-distinct hues that read on black.
 CAT_ORDER = [
@@ -82,10 +112,15 @@ def e(s: str) -> str:
 
 
 # --- SVG chart builders ----------------------------------------------------
-def stacked_bars(versions: list[dict]) -> str:
-    """Stacked bar chart: Rust SLOC by category, one bar per version."""
-    W, H = 960, 440
-    ml, mr, mt, mb = 64, 20, 24, 56
+def stacked_bars(versions: list[dict], title: str, source: str, note: str) -> str:
+    """Stacked bar chart: Rust SLOC by category, one bar per version.
+
+    Self-branding: carries a title + source caption at the top and a
+    ``~/rusted-kernel.com`` wordmark + methodology note at the bottom, so the
+    chart reads as a standalone artefact when shared.
+    """
+    W, H = 960, 500
+    ml, mr, mt, mb = 64, 22, 66, 96
     plot_w = W - ml - mr
     plot_h = H - mt - mb
     n = len(versions)
@@ -119,6 +154,10 @@ def stacked_bars(versions: list[dict]) -> str:
     parts = [f'<svg viewBox="0 0 {W} {H}" role="img" '
              f'aria-label="Stacked bar chart of Rust source lines by category across kernel versions" '
              f'preserveAspectRatio="xMidYMid meet" class="chart">']
+
+    # top branding: title + source caption
+    parts.append(f'<text x="{ml-46}" y="26" class="ctitle">{e(title)}</text>')
+    parts.append(f'<text x="{ml-46}" y="46" class="csrc">{e(source)}</text>')
 
     # y gridlines + labels
     ticks = 4
@@ -154,7 +193,12 @@ def stacked_bars(versions: list[dict]) -> str:
         parts.append(f'<text x="{cx:.1f}" y="{H-mb+22:.1f}" text-anchor="middle" '
                      f'class="axis strong">{e(v["series"])}</text>')
 
-    parts.append(f'<text x="{ml-46}" y="{mt-8}" class="axis">SLOC</text>')
+    # bottom branding band: divider + wordmark + methodology note
+    parts.append(f'<line x1="{ml-46}" y1="{H-42}" x2="{W-mr}" y2="{H-42}" '
+                 f'stroke="{BORDER}" stroke-width="1"/>')
+    parts.append(wordmark_svg(ml - 46, H - 16, "start", 15))
+    parts.append(f'<text x="{W-mr}" y="{H-17:.0f}" text-anchor="end" '
+                 f'class="cnote">{e(note)}</text>')
     parts.append('</svg>')
     return "".join(parts)
 
@@ -184,6 +228,8 @@ def line_chart(versions: list[dict], key: str, label: str, color: str) -> str:
     parts = [f'<svg viewBox="0 0 {W} {H}" role="img" '
              f'aria-label="{e(label)} across kernel versions" '
              f'preserveAspectRatio="xMidYMid meet" class="chart">']
+    # subtle brand mark, top-right corner
+    parts.append(wordmark_svg(W - mr, 12, "end", 10.5))
     ticks = 3
     for t in range(ticks + 1):
         val = ymax_r * t / ticks
@@ -278,13 +324,22 @@ h2::before{content:"// ";color:__RUST__}
 .chart .axis.small{font-size:10px}
 .chart .axis.strong{fill:__MUTE__;font-size:12px}
 .chart .bartot{fill:__MUTE__;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10.5px}
+.chart text{font-family:ui-monospace,Menlo,Consolas,monospace}
+.chart .ctitle{fill:__INK__;font-size:14px;font-weight:700;letter-spacing:.16em}
+.chart .csrc{fill:__FAINT__;font-size:11.5px;letter-spacing:.02em}
+.chart .csrc .src-accent{fill:__RUST__}
+.chart .cnote{fill:__FAINT__;font-size:10.5px}
+.chart .wm{font-weight:700}
 .smallcharts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.smallcharts .chart{min-width:0}
 .smallcharts .chartwrap .cap{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;
   letter-spacing:.1em;text-transform:uppercase;color:__FAINT__;margin:2px 4px 8px}
 @media(max-width:720px){.smallcharts{grid-template-columns:1fr}}
 
-.legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin:18px 2px 0}
-.legend .item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:__MUTE__}
+.legend{display:flex;flex-wrap:wrap;gap:8px 10px;margin:16px 2px 0}
+.legend .item{display:flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;
+  font-size:11.5px;color:__MUTE__;background:__PANEL2__;border:1px solid __BORDER__;
+  border-radius:20px;padding:4px 11px 4px 9px}
 .dot{display:inline-block;width:11px;height:11px;border-radius:3px;flex:none}
 
 table{width:100%;border-collapse:collapse;font-size:13.5px}
@@ -323,6 +378,27 @@ footer code{background:__PANEL2__;border:1px solid __BORDER__;border-radius:5px;
 footer p{max-width:80ch}
 .tag{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;
   color:__RUST__;border:1px solid __BORDER__;border-radius:20px;padding:2px 10px;margin-right:6px}
+
+.topnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.topnav a{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;
+  font-size:12.5px;color:__MUTE__;border:1px solid __BORDER__;border-radius:8px;padding:7px 13px;
+  background:__PANEL__}
+.topnav a:hover{color:__INK__;border-color:__RUST__;text-decoration:none}
+.topnav a .gh{width:15px;height:15px;flex:none;fill:currentColor}
+.topnav a .arr{color:__RUST__}
+
+.brandfoot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0 26px;margin-bottom:18px;border-bottom:1px solid __BORDER__}
+.brandfoot .mark{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:19px;font-weight:700;color:__INK__}
+.brandfoot .mark .p{color:__RUST__}
+.brandfoot .mark .tld{color:__FAINT__}
+.brandfoot .flinks{display:flex;flex-wrap:wrap;gap:8px}
+.brandfoot .flinks a{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;
+  font-size:12px;color:__MUTE__;border:1px solid __BORDER__;border-radius:8px;padding:7px 12px;background:__PANEL__}
+.brandfoot .flinks a:hover{color:__INK__;border-color:__RUST__;text-decoration:none}
+.brandfoot .flinks a .gh{width:14px;height:14px;flex:none;fill:currentColor}
+.dp-link{color:__RUST_HI__ !important}
+.dp-link b{color:__INK__}
 """
 
 CSS = (CSS.replace("__BG__", BG).replace("__PANEL2__", PANEL2).replace("__PANEL__", PANEL)
@@ -438,13 +514,18 @@ def render(data: dict) -> str:
         f'{e(r["category"])}</div><p class="p">{e(r["purpose"])}</p></div>'
         for r in data.get("category_reference", []) if r["category"] in present_cats)
 
-    stacked = stacked_bars(versions)
-    files_line = line_chart(versions, "files", "files", "#5aa9e6")
-    comment_line = line_chart(versions, "comment", "comment lines", RUST_HI)
-
     gen = e(data.get("generated_utc", ""))
     cloc_v = e(data.get("cloc_version", ""))
     src = e(data.get("source", ""))
+
+    stacked = stacked_bars(
+        versions,
+        title="RUST SLOC BY PURPOSE",
+        source=f"source: kernel.org  ·  latest patch of each series  ·  "
+               f"{first['series']} → {last['series']}",
+        note=f"SLOC = code lines, excl. comments & blanks  ·  cloc {cloc_v}")
+    files_line = line_chart(versions, "files", "files", "#5aa9e6")
+    comment_line = line_chart(versions, "comment", "comment lines", RUST_HI)
 
     return f"""<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -468,6 +549,10 @@ def render(data: dict) -> str:
   <p class="meta"><b>Range</b> {e(first['version'])} … {e(last['version'])} &nbsp;·&nbsp;
      <b>Series</b> {len(versions)} &nbsp;·&nbsp; <b>Generated</b> {gen} &nbsp;·&nbsp;
      <b>Tool</b> {cloc_v} &nbsp;·&nbsp; <b>Source</b> kernel.org</p>
+  <nav class="topnav">
+    <a href="{REPO_URL}">{GH_ICON}Source on GitHub <span class="arr">↗</span></a>
+    <a href="{DP_URL}">Part of {DP_NAME} <span class="arr">↗</span></a>
+  </nav>
 </div></header>
 
 <section><div class="wrap">
@@ -519,6 +604,13 @@ def render(data: dict) -> str:
 </div></section>
 
 <footer><div class="wrap">
+  <div class="brandfoot">
+    <span class="mark"><span class="p">~/</span>rusted-kernel<span class="tld">.com</span></span>
+    <div class="flinks">
+      <a href="{REPO_URL}">{GH_ICON}tb0hdan/rusted-kernel <span class="arr" style="color:{RUST}">↗</span></a>
+      <a class="dp-link" href="{DP_URL}">Part of <b>{DP_NAME}</b> ↗</a>
+    </div>
+  </div>
   <p><span class="tag">methodology</span></p>
   <p>For each kernel series ≥ {e(data.get('floor',''))} the latest patch release is
      resolved from <a href="{src}">{src}</a>, the source tarball downloaded and only
@@ -527,7 +619,8 @@ def render(data: dict) -> str:
      are produced only at build time are <em>not</em> shipped in the tarball and therefore
      not counted. Data regenerated with <code>scripts/build.sh</code>;
      machine-readable results live in <code>data/kernels.json</code>.</p>
-  <p style="margin-top:14px">Generated {gen} · rusted-kernel.com</p>
+  <p style="margin-top:14px">Generated {gen} · <a href="{SITE_URL}">{SITE}</a> ·
+     data from <a href="{src}">{src}</a></p>
 </div></footer>
 """
 
