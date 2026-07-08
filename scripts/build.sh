@@ -24,4 +24,7 @@ python3 scripts/analyze.py "$@"
 echo "==> rendering site"
 python3 scripts/render.py
 
-echo "==> done: index.html"
+echo "==> generating Open Graph image"
+python3 scripts/ogimage.py   # skips with a warning if rsvg-convert is absent
+
+echo "==> done: index.html, sitemap.xml, robots.txt, og.png"

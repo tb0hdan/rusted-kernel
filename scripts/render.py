@@ -398,6 +398,101 @@ CSS = (CSS.replace("__BG__", BG).replace("__PANEL2__", PANEL2).replace("__PANEL_
        .replace("__FAINT__", FAINT).replace("__RUST_HI__", RUST_HI).replace("__RUST__", RUST))
 
 
+def build_seo(data: dict, first: dict, last: dict) -> tuple[str, str, str, str]:
+    """Return (title, description, <head> meta block, JSON-LD <script>)."""
+    gen = data.get("generated_utc", "")
+    canonical = SITE_URL + "/"
+    og_image = SITE_URL + "/og.png"
+
+    def growth(k):
+        a, b = first[k], last[k]
+        return (b / a) if a else 0
+
+    title = "Rust in the Linux Kernel — a version-by-version analysis"
+    desc = (f"How Rust is growing in the mainline Linux kernel, measured release "
+            f"by release from {first['version']} to {last['version']}: files, size, "
+            f"purpose and SLOC via cloc. {last['files']:,} Rust files and "
+            f"{last['code']:,} SLOC in {last['series']} — {growth('code'):.1f}× the "
+            f"SLOC of {first['series']}.")
+    keywords = ("Rust in the Linux kernel, Rust for Linux, Linux kernel Rust, "
+                "rust/kernel, kernel drivers in Rust, Rust abstractions, cloc, SLOC, "
+                "kernel source analysis, Rust procedural macros, Linux "
+                f"{first['series']}, Linux {last['series']}")
+    img_alt = (f"Rust in the Linux kernel: {last['files']:,} files and "
+               f"{last['code']:,} SLOC in {last['series']}")
+
+    meta = "\n".join([
+        f'<link rel="canonical" href="{canonical}">',
+        '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">',
+        f'<meta name="author" content="{DP_NAME}">',
+        f'<meta name="theme-color" content="{BG}">',
+        f'<meta name="keywords" content="{e(keywords)}">',
+        '<meta property="og:type" content="website">',
+        '<meta property="og:site_name" content="Rusted Kernel">',
+        f'<meta property="og:title" content="{e(title)}">',
+        f'<meta property="og:description" content="{e(desc)}">',
+        f'<meta property="og:url" content="{canonical}">',
+        f'<meta property="og:image" content="{og_image}">',
+        '<meta property="og:image:type" content="image/png">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        f'<meta property="og:image:alt" content="{e(img_alt)}">',
+        '<meta property="og:locale" content="en_US">',
+        '<meta name="twitter:card" content="summary_large_image">',
+        f'<meta name="twitter:title" content="{e(title)}">',
+        f'<meta name="twitter:description" content="{e(desc)}">',
+        f'<meta name="twitter:image" content="{og_image}">',
+        f'<meta name="twitter:image:alt" content="{e(img_alt)}">',
+    ])
+
+    org = {"@type": "Organization", "@id": f"{DP_URL}/#org",
+           "name": "DomainsProject", "url": DP_URL}
+    website = {"@type": "WebSite", "@id": f"{SITE_URL}/#website", "url": canonical,
+               "name": "Rusted Kernel", "description": desc, "inLanguage": "en-US",
+               "publisher": {"@id": org["@id"]}}
+    dataset = {
+        "@type": "Dataset", "@id": f"{SITE_URL}/#dataset",
+        "name": "Rust usage in the Linux kernel by release",
+        "description": (f"Per-release counts of Rust source files, on-disk size, "
+                        f"purpose category and cloc line counts across Linux kernel "
+                        f"series {first['series']}–{last['series']} (latest patch of each)."),
+        "url": canonical, "inLanguage": "en-US",
+        "creator": {"@id": org["@id"]}, "publisher": {"@id": org["@id"]},
+        "isBasedOn": data.get("source", ""),
+        "measurementTechnique": "Line counting with cloc; file classification by kernel-tree path",
+        "variableMeasured": ["Rust source file count", "Source lines of code (SLOC)",
+                             "Comment lines", "Blank lines", "On-disk size (bytes)"],
+        "keywords": ["Rust", "Linux kernel", "SLOC", "cloc", "kernel drivers"],
+        "license": f"{REPO_URL}/blob/master/LICENSE",
+        "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json",
+                          "contentUrl": f"{SITE_URL}/data/kernels.json"}],
+    }
+    article = {
+        "@type": "TechArticle", "@id": f"{SITE_URL}/#article",
+        "headline": title, "description": desc, "url": canonical,
+        "inLanguage": "en-US", "image": og_image,
+        "isPartOf": {"@id": website["@id"]}, "mainEntityOfPage": canonical,
+        "author": {"@id": org["@id"]}, "publisher": {"@id": org["@id"]},
+        "about": [
+            {"@type": "Thing", "name": "Rust (programming language)",
+             "sameAs": "https://en.wikipedia.org/wiki/Rust_(programming_language)"},
+            {"@type": "Thing", "name": "Linux kernel",
+             "sameAs": "https://en.wikipedia.org/wiki/Linux_kernel"},
+        ],
+        "mentions": {"@id": dataset["@id"]},
+    }
+    if gen:
+        for node in (dataset, article):
+            node["datePublished"] = gen
+            node["dateModified"] = gen
+
+    ld = {"@context": "https://schema.org", "@graph": [website, org, dataset, article]}
+    # Escape "<" so a string value can never terminate the <script> element.
+    ld_json = json.dumps(ld, ensure_ascii=False).replace("<", "\\u003c")
+    jsonld = f'<script type="application/ld+json">{ld_json}</script>'
+    return title, desc, meta, jsonld
+
+
 def render(data: dict) -> str:
     versions = data["versions"]
     if not versions:
@@ -519,14 +614,18 @@ def render(data: dict) -> str:
     files_line = line_chart(versions, "files", "files", "#5aa9e6")
     comment_line = line_chart(versions, "comment", "comment lines", RUST_HI)
 
+    seo_title, seo_desc, seo_meta, seo_jsonld = build_seo(data, first, last)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rusted Kernel — Rust in the Linux Kernel</title>
-<meta name="description" content="A version-by-version analysis of Rust adoption in the Linux kernel, from {e(first['version'])} to {e(last['version'])}: files, size, purpose and SLOC.">
+<title>{e(seo_title)}</title>
+<meta name="description" content="{e(seo_desc)}">
+{seo_meta}
 <link rel="icon" href="{FAVICON}">
+{seo_jsonld}
 <style>{CSS}</style>
 </head>
 <body>
@@ -620,12 +719,34 @@ def render(data: dict) -> str:
 """
 
 
+def write_seo_files(repo_root: Path, data: dict) -> None:
+    """Emit robots.txt and sitemap.xml (lastmod tracks the data build date)."""
+    lastmod = data.get("generated_utc", "")
+    lastmod_el = f"\n    <lastmod>{e(lastmod)}</lastmod>" if lastmod else ""
+    (repo_root / "robots.txt").write_text(
+        "User-agent: *\n"
+        "Allow: /\n\n"
+        f"Sitemap: {SITE_URL}/sitemap.xml\n"
+    )
+    (repo_root / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        '  <url>\n'
+        f'    <loc>{SITE_URL}/</loc>{lastmod_el}\n'
+        '    <changefreq>monthly</changefreq>\n'
+        '    <priority>1.0</priority>\n'
+        '  </url>\n'
+        '</urlset>\n'
+    )
+
+
 def main() -> int:
     repo_root = Path(__file__).resolve().parent.parent
     data = json.loads((repo_root / "data" / "kernels.json").read_text())
     out = repo_root / "index.html"
     out.write_text(render(data))
-    print(f"[*] wrote {out} ({len(data['versions'])} versions)")
+    write_seo_files(repo_root, data)
+    print(f"[*] wrote {out} + robots.txt + sitemap.xml ({len(data['versions'])} versions)")
     return 0
 
 
