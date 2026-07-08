@@ -1,0 +1,2331 @@
+{
+  "generated_utc": "2026-07-08",
+  "cloc_version": "1.98",
+  "floor": "6.12",
+  "source": "https://cdn.kernel.org/pub/linux/kernel",
+  "category_reference": [
+    {
+      "category": "Kernel crate",
+      "purpose": "Safe Rust abstractions layered over the C kernel APIs"
+    },
+    {
+      "category": "Procedural macros",
+      "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc."
+    },
+    {
+      "category": "pin-init crate",
+      "purpose": "Safe in-place (pinned) initialisation primitives"
+    },
+    {
+      "category": "Generated bindings",
+      "purpose": "Auto-generated raw FFI bindings to C kernel symbols"
+    },
+    {
+      "category": "UAPI bindings",
+      "purpose": "Raw bindings to the kernel's userspace API headers"
+    },
+    {
+      "category": "Samples & examples",
+      "purpose": "Reference modules demonstrating the Rust API"
+    },
+    {
+      "category": "Drivers",
+      "purpose": "Production device drivers written in Rust"
+    },
+    {
+      "category": "Kernel build tooling",
+      "purpose": "Codegen and helpers used during the kernel build"
+    },
+    {
+      "category": "Tooling & tests",
+      "purpose": "Out-of-tree tooling and test harnesses"
+    },
+    {
+      "category": "io_uring",
+      "purpose": "io_uring subsystem Rust code"
+    },
+    {
+      "category": "Library code",
+      "purpose": "Shared library-style Rust code"
+    },
+    {
+      "category": "Core kernel",
+      "purpose": "Core kernel subsystem Rust code"
+    },
+    {
+      "category": "Vendored crates",
+      "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros"
+    },
+    {
+      "category": "Core runtime & shims",
+      "purpose": "compiler_builtins, ffi and other crate-root shims"
+    },
+    {
+      "category": "Other subsystems",
+      "purpose": "Rust code elsewhere in the tree"
+    }
+  ],
+  "versions": [
+    {
+      "version": "6.12.95",
+      "series": "6.12",
+      "tarball": "linux-6.12.95.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.95.tar.xz",
+      "files": 79,
+      "bytes": 734230,
+      "code": 9651,
+      "comment": 9123,
+      "blank": 1775,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 51,
+          "bytes": 597699,
+          "code": 7023,
+          "comment": 8158,
+          "blank": 1383
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 4,
+          "bytes": 43907,
+          "code": 998,
+          "comment": 177,
+          "blank": 138
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 58704,
+          "code": 990,
+          "comment": 552,
+          "blank": 106
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 22256,
+          "code": 398,
+          "comment": 136,
+          "blank": 77
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3677,
+          "code": 93,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 4673,
+          "code": 80,
+          "comment": 54,
+          "blank": 22
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1741,
+          "code": 36,
+          "comment": 16,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 981,
+          "code": 21,
+          "comment": 9,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 34214,
+          "code": 793,
+          "comment": 121,
+          "blank": 89
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7829,
+          "code": 157,
+          "comment": 43,
+          "blank": 37
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 1864,
+          "code": 48,
+          "comment": 13,
+          "blank": 12
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "drivers/gpu/drm/drm_panic_qr.rs",
+          "bytes": 34214,
+          "code": 793
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 63384,
+          "code": 759
+        },
+        {
+          "path": "rust/kernel/rbtree.rs",
+          "bytes": 49127,
+          "code": 496
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 29851,
+          "code": 483
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 31826,
+          "code": 469
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 49263,
+          "code": 408
+        },
+        {
+          "path": "rust/kernel/alloc/kvec.rs",
+          "bytes": 28075,
+          "code": 401
+        },
+        {
+          "path": "rust/kernel/list.rs",
+          "bytes": 27268,
+          "code": 327
+        },
+        {
+          "path": "rust/kernel/list/arc.rs",
+          "bytes": 20022,
+          "code": 270
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 13712,
+          "code": 268
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 27193,
+          "code": 262
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 25279,
+          "code": 238
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 9235,
+          "code": 215
+        },
+        {
+          "path": "rust/kernel/alloc/kbox.rs",
+          "bytes": 14295,
+          "code": 212
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 12841,
+          "code": 191
+        }
+      ]
+    },
+    {
+      "version": "6.13.12",
+      "series": "6.13",
+      "tarball": "linux-6.13.12.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.13.12.tar.xz",
+      "files": 91,
+      "bytes": 813431,
+      "code": 10538,
+      "comment": 10243,
+      "blank": 1993,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 63,
+          "bytes": 673281,
+          "code": 7899,
+          "comment": 9213,
+          "blank": 1596
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 62488,
+          "code": 1004,
+          "comment": 613,
+          "blank": 107
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 4,
+          "bytes": 43974,
+          "code": 999,
+          "comment": 177,
+          "blank": 138
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 21792,
+          "code": 386,
+          "comment": 136,
+          "blank": 77
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 4078,
+          "code": 103,
+          "comment": 18,
+          "blank": 40
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 4673,
+          "code": 80,
+          "comment": 54,
+          "blank": 22
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1657,
+          "code": 35,
+          "comment": 16,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 896,
+          "code": 20,
+          "comment": 9,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 34214,
+          "code": 793,
+          "comment": 121,
+          "blank": 89
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7829,
+          "code": 157,
+          "comment": 43,
+          "blank": 37
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 1931,
+          "code": 49,
+          "comment": 13,
+          "blank": 12
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "drivers/gpu/drm/drm_panic_qr.rs",
+          "bytes": 34214,
+          "code": 793
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 57669,
+          "code": 707
+        },
+        {
+          "path": "rust/kernel/rbtree.rs",
+          "bytes": 49131,
+          "code": 496
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 29880,
+          "code": 483
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 32062,
+          "code": 471
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 49263,
+          "code": 408
+        },
+        {
+          "path": "rust/kernel/alloc/kvec.rs",
+          "bytes": 27839,
+          "code": 400
+        },
+        {
+          "path": "rust/kernel/list.rs",
+          "bytes": 27180,
+          "code": 326
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 13734,
+          "code": 273
+        },
+        {
+          "path": "rust/kernel/list/arc.rs",
+          "bytes": 20022,
+          "code": 270
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 27193,
+          "code": 262
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 26615,
+          "code": 238
+        },
+        {
+          "path": "rust/kernel/alloc/kbox.rs",
+          "bytes": 14295,
+          "code": 212
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 8771,
+          "code": 203
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 12841,
+          "code": 191
+        }
+      ]
+    },
+    {
+      "version": "6.14.11",
+      "series": "6.14",
+      "tarball": "linux-6.14.11.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.14.11.tar.xz",
+      "files": 105,
+      "bytes": 902356,
+      "code": 11769,
+      "comment": 11310,
+      "blank": 2321,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 73,
+          "bytes": 750540,
+          "code": 8874,
+          "comment": 10169,
+          "blank": 1845
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 4,
+          "bytes": 44112,
+          "code": 1004,
+          "comment": 178,
+          "blank": 138
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 62390,
+          "code": 997,
+          "comment": 613,
+          "blank": 108
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 21792,
+          "code": 386,
+          "comment": 136,
+          "blank": 77
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 9,
+          "bytes": 15535,
+          "code": 359,
+          "comment": 128,
+          "blank": 118
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 4673,
+          "code": 80,
+          "comment": 54,
+          "blank": 22
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1741,
+          "code": 36,
+          "comment": 16,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 981,
+          "code": 21,
+          "comment": 9,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 34214,
+          "code": 793,
+          "comment": 121,
+          "blank": 89
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7829,
+          "code": 157,
+          "comment": 43,
+          "blank": 37
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 2069,
+          "code": 54,
+          "comment": 14,
+          "blank": 12
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "drivers/gpu/drm/drm_panic_qr.rs",
+          "bytes": 34214,
+          "code": 793
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 57669,
+          "code": 707
+        },
+        {
+          "path": "rust/kernel/rbtree.rs",
+          "bytes": 49056,
+          "code": 496
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 30134,
+          "code": 484
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 32017,
+          "code": 471
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 49453,
+          "code": 408
+        },
+        {
+          "path": "rust/kernel/alloc/kvec.rs",
+          "bytes": 27927,
+          "code": 401
+        },
+        {
+          "path": "rust/kernel/list.rs",
+          "bytes": 27268,
+          "code": 327
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 28899,
+          "code": 276
+        },
+        {
+          "path": "rust/kernel/list/arc.rs",
+          "bytes": 20212,
+          "code": 273
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 13684,
+          "code": 267
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 26774,
+          "code": 238
+        },
+        {
+          "path": "rust/kernel/alloc/kbox.rs",
+          "bytes": 15464,
+          "code": 232
+        },
+        {
+          "path": "rust/kernel/pci.rs",
+          "bytes": 14534,
+          "code": 225
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 8771,
+          "code": 203
+        }
+      ]
+    },
+    {
+      "version": "6.15.11",
+      "series": "6.15",
+      "tarball": "linux-6.15.11.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.15.11.tar.xz",
+      "files": 131,
+      "bytes": 1059705,
+      "code": 14195,
+      "comment": 13151,
+      "blank": 2792,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 78,
+          "bytes": 745317,
+          "code": 8803,
+          "comment": 10017,
+          "blank": 1988
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 158796,
+          "code": 2275,
+          "comment": 2038,
+          "blank": 228
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 10,
+          "bytes": 53505,
+          "code": 1270,
+          "comment": 225,
+          "blank": 204
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 9,
+          "bytes": 53523,
+          "code": 853,
+          "comment": 514,
+          "blank": 122
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 10,
+          "bytes": 18149,
+          "code": 436,
+          "comment": 135,
+          "blank": 135
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 21902,
+          "code": 388,
+          "comment": 136,
+          "blank": 77
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5199,
+          "code": 101,
+          "comment": 54,
+          "blank": 25
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1741,
+          "code": 36,
+          "comment": 16,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 981,
+          "code": 21,
+          "comment": 9,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 7,
+          "bytes": 43598,
+          "code": 1059,
+          "comment": 168,
+          "blank": 155
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7835,
+          "code": 157,
+          "comment": 43,
+          "blank": 37
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 2072,
+          "code": 54,
+          "comment": 14,
+          "blank": 12
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "drivers/gpu/drm/drm_panic_qr.rs",
+          "bytes": 33632,
+          "code": 773
+        },
+        {
+          "path": "rust/pin-init/src/macros.rs",
+          "bytes": 57575,
+          "code": 711
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 31319,
+          "code": 513
+        },
+        {
+          "path": "rust/kernel/rbtree.rs",
+          "bytes": 49065,
+          "code": 496
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 32023,
+          "code": 471
+        },
+        {
+          "path": "rust/kernel/alloc/kvec.rs",
+          "bytes": 28075,
+          "code": 401
+        },
+        {
+          "path": "rust/kernel/list.rs",
+          "bytes": 37249,
+          "code": 392
+        },
+        {
+          "path": "rust/pin-init/src/lib.rs",
+          "bytes": 49591,
+          "code": 329
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 31215,
+          "code": 327
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 14286,
+          "code": 277
+        },
+        {
+          "path": "rust/kernel/list/arc.rs",
+          "bytes": 20216,
+          "code": 273
+        },
+        {
+          "path": "rust/kernel/pci.rs",
+          "bytes": 15747,
+          "code": 253
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 27522,
+          "code": 244
+        },
+        {
+          "path": "rust/kernel/alloc/kbox.rs",
+          "bytes": 15943,
+          "code": 237
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 8855,
+          "code": 205
+        }
+      ]
+    },
+    {
+      "version": "6.16.12",
+      "series": "6.16",
+      "tarball": "linux-6.16.12.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.16.12.tar.xz",
+      "files": 158,
+      "bytes": 1382442,
+      "code": 19071,
+      "comment": 16730,
+      "blank": 3843,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 96,
+          "bytes": 1019049,
+          "code": 12582,
+          "comment": 13329,
+          "blank": 2845
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 167562,
+          "code": 2422,
+          "comment": 2140,
+          "blank": 240
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 17,
+          "bytes": 83081,
+          "code": 1924,
+          "comment": 364,
+          "blank": 331
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 9,
+          "bytes": 55339,
+          "code": 894,
+          "comment": 521,
+          "blank": 126
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 12,
+          "bytes": 26626,
+          "code": 677,
+          "comment": 154,
+          "blank": 186
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 22266,
+          "code": 402,
+          "comment": 136,
+          "blank": 77
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5205,
+          "code": 101,
+          "comment": 54,
+          "blank": 25
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1741,
+          "code": 36,
+          "comment": 16,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 981,
+          "code": 21,
+          "comment": 9,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 13,
+          "bytes": 66185,
+          "code": 1555,
+          "comment": 278,
+          "blank": 243
+        },
+        {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 6989,
+          "code": 158,
+          "comment": 29,
+          "blank": 39
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7835,
+          "code": 157,
+          "comment": 43,
+          "blank": 37
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 2072,
+          "code": 54,
+          "comment": 14,
+          "blank": 12
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/pin-init/src/macros.rs",
+          "bytes": 60575,
+          "code": 792
+        },
+        {
+          "path": "drivers/gpu/drm/drm_panic_qr.rs",
+          "bytes": 34290,
+          "code": 787
+        },
+        {
+          "path": "rust/kernel/cpufreq.rs",
+          "bytes": 46276,
+          "code": 694
+        },
+        {
+          "path": "rust/kernel/opp.rs",
+          "bytes": 38153,
+          "code": 580
+        },
+        {
+          "path": "rust/kernel/alloc/kvec.rs",
+          "bytes": 40816,
+          "code": 552
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 31071,
+          "code": 507
+        },
+        {
+          "path": "rust/kernel/configfs.rs",
+          "bytes": 37244,
+          "code": 505
+        },
+        {
+          "path": "rust/kernel/rbtree.rs",
+          "bytes": 48915,
+          "code": 493
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 32069,
+          "code": 472
+        },
+        {
+          "path": "rust/kernel/list.rs",
+          "bytes": 40279,
+          "code": 391
+        },
+        {
+          "path": "rust/pin-init/src/lib.rs",
+          "bytes": 54150,
+          "code": 363
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 31294,
+          "code": 329
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 14492,
+          "code": 280
+        },
+        {
+          "path": "rust/kernel/list/arc.rs",
+          "bytes": 20217,
+          "code": 273
+        },
+        {
+          "path": "drivers/gpu/nova-core/regs/macros.rs",
+          "bytes": 13502,
+          "code": 261
+        }
+      ]
+    },
+    {
+      "version": "6.17.13",
+      "series": "6.17",
+      "tarball": "linux-6.17.13.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.17.13.tar.xz",
+      "files": 182,
+      "bytes": 1645767,
+      "code": 23186,
+      "comment": 19474,
+      "blank": 4752,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 106,
+          "bytes": 1158180,
+          "code": 14195,
+          "comment": 15306,
+          "blank": 3228
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 31,
+          "bytes": 195607,
+          "code": 4243,
+          "comment": 1002,
+          "blank": 833
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 172761,
+          "code": 2500,
+          "comment": 2201,
+          "blank": 246
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 9,
+          "bytes": 56324,
+          "code": 907,
+          "comment": 525,
+          "blank": 127
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 12,
+          "bytes": 31792,
+          "code": 761,
+          "comment": 218,
+          "blank": 204
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 22419,
+          "code": 404,
+          "comment": 136,
+          "blank": 76
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5205,
+          "code": 101,
+          "comment": 54,
+          "blank": 25
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1831,
+          "code": 39,
+          "comment": 16,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 1056,
+          "code": 24,
+          "comment": 9,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 27,
+          "bytes": 178689,
+          "code": 3874,
+          "comment": 916,
+          "blank": 745
+        },
+        {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 7011,
+          "code": 158,
+          "comment": 29,
+          "blank": 39
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7835,
+          "code": 157,
+          "comment": 43,
+          "blank": 37
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 2072,
+          "code": 54,
+          "comment": 14,
+          "blank": 12
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "drivers/gpu/nova-core/vbios.rs",
+          "bytes": 39336,
+          "code": 800
+        },
+        {
+          "path": "rust/pin-init/src/macros.rs",
+          "bytes": 60615,
+          "code": 792
+        },
+        {
+          "path": "drivers/gpu/drm/drm_panic_qr.rs",
+          "bytes": 34298,
+          "code": 787
+        },
+        {
+          "path": "rust/kernel/cpufreq.rs",
+          "bytes": 46121,
+          "code": 689
+        },
+        {
+          "path": "rust/kernel/opp.rs",
+          "bytes": 38089,
+          "code": 580
+        },
+        {
+          "path": "rust/kernel/alloc/kvec.rs",
+          "bytes": 41918,
+          "code": 569
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 32202,
+          "code": 515
+        },
+        {
+          "path": "rust/kernel/configfs.rs",
+          "bytes": 36911,
+          "code": 497
+        },
+        {
+          "path": "rust/kernel/rbtree.rs",
+          "bytes": 48838,
+          "code": 488
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 32105,
+          "code": 458
+        },
+        {
+          "path": "rust/pin-init/src/lib.rs",
+          "bytes": 58254,
+          "code": 407
+        },
+        {
+          "path": "drivers/gpu/nova-core/falcon.rs",
+          "bytes": 18186,
+          "code": 400
+        },
+        {
+          "path": "rust/kernel/list.rs",
+          "bytes": 40428,
+          "code": 393
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 39504,
+          "code": 384
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 32957,
+          "code": 345
+        }
+      ]
+    },
+    {
+      "version": "6.18.38",
+      "series": "6.18",
+      "tarball": "linux-6.18.38.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.38.tar.xz",
+      "files": 243,
+      "bytes": 2399227,
+      "code": 36225,
+      "comment": 25249,
+      "blank": 6989,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 130,
+          "bytes": 1478367,
+          "code": 18388,
+          "comment": 18955,
+          "blank": 4027
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 64,
+          "bytes": 605358,
+          "code": 12596,
+          "comment": 3005,
+          "blank": 2182
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 182249,
+          "code": 2635,
+          "comment": 2268,
+          "blank": 262
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 15,
+          "bytes": 42824,
+          "code": 1039,
+          "comment": 262,
+          "blank": 257
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 9,
+          "bytes": 55890,
+          "code": 901,
+          "comment": 525,
+          "blank": 127
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 22617,
+          "code": 408,
+          "comment": 136,
+          "blank": 76
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5205,
+          "code": 101,
+          "comment": 54,
+          "blank": 25
+        },
+        {
+          "category": "Library code",
+          "purpose": "Shared library-style Rust code",
+          "files": 1,
+          "bytes": 2864,
+          "code": 79,
+          "comment": 8,
+          "blank": 17
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 2175,
+          "code": 41,
+          "comment": 20,
+          "blank": 8
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 1086,
+          "code": 25,
+          "comment": 9,
+          "blank": 5
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/android (Android (binder))",
+          "purpose": "",
+          "files": 18,
+          "bytes": 327823,
+          "code": 6840,
+          "comment": 1403,
+          "blank": 1062
+        },
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 41,
+          "bytes": 252864,
+          "code": 5148,
+          "comment": 1519,
+          "blank": 986
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 9904,
+          "code": 295,
+          "comment": 11,
+          "blank": 60
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7835,
+          "code": 157,
+          "comment": 43,
+          "blank": 37
+        },
+        {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 6932,
+          "code": 156,
+          "comment": 29,
+          "blank": 37
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "drivers/android/binder/process.rs",
+          "bytes": 59666,
+          "code": 1316
+        },
+        {
+          "path": "drivers/android/binder/thread.rs",
+          "bytes": 61947,
+          "code": 1246
+        },
+        {
+          "path": "rust/pin-init/src/macros.rs",
+          "bytes": 69693,
+          "code": 921
+        },
+        {
+          "path": "drivers/android/binder/node.rs",
+          "bytes": 39480,
+          "code": 844
+        },
+        {
+          "path": "drivers/gpu/nova-core/vbios.rs",
+          "bytes": 39021,
+          "code": 792
+        },
+        {
+          "path": "drivers/gpu/drm/drm_panic_qr.rs",
+          "bytes": 34298,
+          "code": 787
+        },
+        {
+          "path": "rust/kernel/cpufreq.rs",
+          "bytes": 46123,
+          "code": 687
+        },
+        {
+          "path": "rust/kernel/alloc/kvec.rs",
+          "bytes": 43495,
+          "code": 590
+        },
+        {
+          "path": "rust/kernel/opp.rs",
+          "bytes": 37983,
+          "code": 573
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 37206,
+          "code": 559
+        },
+        {
+          "path": "rust/kernel/configfs.rs",
+          "bytes": 36971,
+          "code": 498
+        },
+        {
+          "path": "rust/kernel/pci/id.rs",
+          "bytes": 39464,
+          "code": 497
+        },
+        {
+          "path": "rust/kernel/rbtree.rs",
+          "bytes": 48834,
+          "code": 488
+        },
+        {
+          "path": "drivers/android/binder/rust_binder_main.rs",
+          "bytes": 19162,
+          "code": 457
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 32063,
+          "code": 454
+        }
+      ]
+    },
+    {
+      "version": "6.19.14",
+      "series": "6.19",
+      "tarball": "linux-6.19.14.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.19.14.tar.xz",
+      "files": 338,
+      "bytes": 4648824,
+      "code": 89336,
+      "comment": 35461,
+      "blank": 11140,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 75,
+          "bytes": 1915516,
+          "code": 46958,
+          "comment": 7616,
+          "blank": 3135
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 140,
+          "bytes": 1621238,
+          "code": 20680,
+          "comment": 20546,
+          "blank": 4525
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 71,
+          "bytes": 775461,
+          "code": 16030,
+          "comment": 3833,
+          "blank": 2648
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 184246,
+          "code": 2651,
+          "comment": 2317,
+          "blank": 259
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 17,
+          "bytes": 49602,
+          "code": 1200,
+          "comment": 329,
+          "blank": 282
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 68341,
+          "code": 1153,
+          "comment": 586,
+          "blank": 156
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 22472,
+          "code": 405,
+          "comment": 136,
+          "blank": 76
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5231,
+          "code": 102,
+          "comment": 54,
+          "blank": 26
+        },
+        {
+          "category": "Library code",
+          "purpose": "Shared library-style Rust code",
+          "files": 1,
+          "bytes": 2864,
+          "code": 79,
+          "comment": 8,
+          "blank": 17
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 2175,
+          "code": 41,
+          "comment": 20,
+          "blank": 8
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 1086,
+          "code": 25,
+          "comment": 9,
+          "blank": 5
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 47,
+          "bytes": 410884,
+          "code": 8302,
+          "comment": 2311,
+          "blank": 1387
+        },
+        {
+          "category": "drivers/android (Android (binder))",
+          "purpose": "",
+          "files": 18,
+          "bytes": 327565,
+          "code": 6833,
+          "comment": 1396,
+          "blank": 1062
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 9894,
+          "code": 295,
+          "comment": 11,
+          "blank": 60
+        },
+        {
+          "category": "drivers/pwm (pwm)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 12160,
+          "code": 279,
+          "comment": 44,
+          "blank": 64
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 8055,
+          "code": 165,
+          "comment": 42,
+          "blank": 38
+        },
+        {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 6903,
+          "code": 156,
+          "comment": 29,
+          "blank": 37
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/syn/gen/visit.rs",
+          "bytes": 125443,
+          "code": 3933
+        },
+        {
+          "path": "rust/syn/gen/fold.rs",
+          "bytes": 137051,
+          "code": 3894
+        },
+        {
+          "path": "rust/syn/gen/visit_mut.rs",
+          "bytes": 127630,
+          "code": 3750
+        },
+        {
+          "path": "rust/syn/expr.rs",
+          "bytes": 141825,
+          "code": 3377
+        },
+        {
+          "path": "rust/syn/gen/debug.rs",
+          "bytes": 127428,
+          "code": 3235
+        },
+        {
+          "path": "rust/syn/item.rs",
+          "bytes": 121565,
+          "code": 3001
+        },
+        {
+          "path": "rust/syn/gen/hash.rs",
+          "bytes": 76985,
+          "code": 2873
+        },
+        {
+          "path": "rust/syn/gen/eq.rs",
+          "bytes": 93199,
+          "code": 2303
+        },
+        {
+          "path": "rust/syn/gen/clone.rs",
+          "bytes": 76399,
+          "code": 2264
+        },
+        {
+          "path": "rust/syn/lit.rs",
+          "bytes": 55843,
+          "code": 1523
+        },
+        {
+          "path": "drivers/android/binder/process.rs",
+          "bytes": 60683,
+          "code": 1330
+        },
+        {
+          "path": "drivers/android/binder/thread.rs",
+          "bytes": 61950,
+          "code": 1246
+        },
+        {
+          "path": "rust/syn/generics.rs",
+          "bytes": 51724,
+          "code": 1224
+        },
+        {
+          "path": "rust/syn/ty.rs",
+          "bytes": 44783,
+          "code": 1086
+        },
+        {
+          "path": "rust/proc-macro2/fallback.rs",
+          "bytes": 34318,
+          "code": 1054
+        }
+      ]
+    },
+    {
+      "version": "7.0.14",
+      "series": "7.0",
+      "tarball": "linux-7.0.14.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.0.14.tar.xz",
+      "files": 345,
+      "bytes": 4680320,
+      "code": 90607,
+      "comment": 35502,
+      "blank": 11446,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 75,
+          "bytes": 1915516,
+          "code": 46958,
+          "comment": 7616,
+          "blank": 3135
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 146,
+          "bytes": 1689373,
+          "code": 21824,
+          "comment": 21320,
+          "blank": 4740
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 71,
+          "bytes": 790351,
+          "code": 16404,
+          "comment": 3862,
+          "blank": 2693
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 138232,
+          "code": 2388,
+          "comment": 1542,
+          "blank": 288
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 18,
+          "bytes": 52111,
+          "code": 1325,
+          "comment": 333,
+          "blank": 297
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 9,
+          "bytes": 59342,
+          "code": 1007,
+          "comment": 593,
+          "blank": 153
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 22680,
+          "code": 409,
+          "comment": 136,
+          "blank": 76
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5231,
+          "code": 102,
+          "comment": 54,
+          "blank": 26
+        },
+        {
+          "category": "Library code",
+          "purpose": "Shared library-style Rust code",
+          "files": 1,
+          "bytes": 2864,
+          "code": 79,
+          "comment": 8,
+          "blank": 17
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 2439,
+          "code": 53,
+          "comment": 20,
+          "blank": 9
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 1086,
+          "code": 25,
+          "comment": 9,
+          "blank": 5
+        },
+        {
+          "category": "Tooling & tests",
+          "purpose": "Out-of-tree tooling and test harnesses",
+          "files": 1,
+          "bytes": 503,
+          "code": 21,
+          "comment": 2,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 47,
+          "bytes": 423386,
+          "code": 8637,
+          "comment": 2335,
+          "blank": 1427
+        },
+        {
+          "category": "drivers/android (Android (binder))",
+          "purpose": "",
+          "files": 18,
+          "bytes": 330221,
+          "code": 6881,
+          "comment": 1401,
+          "blank": 1067
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 9798,
+          "code": 290,
+          "comment": 11,
+          "blank": 60
+        },
+        {
+          "category": "drivers/pwm (pwm)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 12078,
+          "code": 278,
+          "comment": 44,
+          "blank": 64
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7990,
+          "code": 163,
+          "comment": 42,
+          "blank": 38
+        },
+        {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 6878,
+          "code": 155,
+          "comment": 29,
+          "blank": 37
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/syn/gen/visit.rs",
+          "bytes": 125443,
+          "code": 3933
+        },
+        {
+          "path": "rust/syn/gen/fold.rs",
+          "bytes": 137051,
+          "code": 3894
+        },
+        {
+          "path": "rust/syn/gen/visit_mut.rs",
+          "bytes": 127630,
+          "code": 3750
+        },
+        {
+          "path": "rust/syn/expr.rs",
+          "bytes": 141825,
+          "code": 3377
+        },
+        {
+          "path": "rust/syn/gen/debug.rs",
+          "bytes": 127428,
+          "code": 3235
+        },
+        {
+          "path": "rust/syn/item.rs",
+          "bytes": 121565,
+          "code": 3001
+        },
+        {
+          "path": "rust/syn/gen/hash.rs",
+          "bytes": 76985,
+          "code": 2873
+        },
+        {
+          "path": "rust/syn/gen/eq.rs",
+          "bytes": 93199,
+          "code": 2303
+        },
+        {
+          "path": "rust/syn/gen/clone.rs",
+          "bytes": 76399,
+          "code": 2264
+        },
+        {
+          "path": "rust/syn/lit.rs",
+          "bytes": 55843,
+          "code": 1523
+        },
+        {
+          "path": "drivers/android/binder/process.rs",
+          "bytes": 61082,
+          "code": 1338
+        },
+        {
+          "path": "drivers/android/binder/thread.rs",
+          "bytes": 61962,
+          "code": 1244
+        },
+        {
+          "path": "rust/syn/generics.rs",
+          "bytes": 51724,
+          "code": 1224
+        },
+        {
+          "path": "rust/syn/ty.rs",
+          "bytes": 44783,
+          "code": 1086
+        },
+        {
+          "path": "rust/proc-macro2/fallback.rs",
+          "bytes": 34318,
+          "code": 1054
+        }
+      ]
+    },
+    {
+      "version": "7.1.3",
+      "series": "7.1",
+      "tarball": "linux-7.1.3.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.1.3.tar.xz",
+      "files": 349,
+      "bytes": 4841751,
+      "code": 93245,
+      "comment": 37782,
+      "blank": 11974,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 75,
+          "bytes": 1915516,
+          "code": 46958,
+          "comment": 7616,
+          "blank": 3135
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 150,
+          "bytes": 1834316,
+          "code": 23811,
+          "comment": 23674,
+          "blank": 5138
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 71,
+          "bytes": 804758,
+          "code": 16988,
+          "comment": 3783,
+          "blank": 2812
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 140035,
+          "code": 2419,
+          "comment": 1549,
+          "blank": 290
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 18,
+          "bytes": 52965,
+          "code": 1368,
+          "comment": 332,
+          "blank": 306
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 9,
+          "bytes": 59120,
+          "code": 1004,
+          "comment": 594,
+          "blank": 153
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 22680,
+          "code": 409,
+          "comment": 136,
+          "blank": 76
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5231,
+          "code": 102,
+          "comment": 54,
+          "blank": 26
+        },
+        {
+          "category": "Library code",
+          "purpose": "Shared library-style Rust code",
+          "files": 1,
+          "bytes": 2864,
+          "code": 79,
+          "comment": 8,
+          "blank": 17
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 2262,
+          "code": 51,
+          "comment": 19,
+          "blank": 9
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 909,
+          "code": 23,
+          "comment": 8,
+          "blank": 5
+        },
+        {
+          "category": "Tooling & tests",
+          "purpose": "Out-of-tree tooling and test harnesses",
+          "files": 1,
+          "bytes": 503,
+          "code": 21,
+          "comment": 2,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 47,
+          "bytes": 433733,
+          "code": 9120,
+          "comment": 2246,
+          "blank": 1530
+        },
+        {
+          "category": "drivers/android (Android (binder))",
+          "purpose": "",
+          "files": 18,
+          "bytes": 335159,
+          "code": 6984,
+          "comment": 1421,
+          "blank": 1086
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 9798,
+          "code": 290,
+          "comment": 11,
+          "blank": 60
+        },
+        {
+          "category": "drivers/pwm (pwm)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 11200,
+          "code": 276,
+          "comment": 34,
+          "blank": 61
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7990,
+          "code": 163,
+          "comment": 42,
+          "blank": 38
+        },
+        {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 6878,
+          "code": 155,
+          "comment": 29,
+          "blank": 37
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/syn/gen/visit.rs",
+          "bytes": 125443,
+          "code": 3933
+        },
+        {
+          "path": "rust/syn/gen/fold.rs",
+          "bytes": 137051,
+          "code": 3894
+        },
+        {
+          "path": "rust/syn/gen/visit_mut.rs",
+          "bytes": 127630,
+          "code": 3750
+        },
+        {
+          "path": "rust/syn/expr.rs",
+          "bytes": 141825,
+          "code": 3377
+        },
+        {
+          "path": "rust/syn/gen/debug.rs",
+          "bytes": 127428,
+          "code": 3235
+        },
+        {
+          "path": "rust/syn/item.rs",
+          "bytes": 121565,
+          "code": 3001
+        },
+        {
+          "path": "rust/syn/gen/hash.rs",
+          "bytes": 76985,
+          "code": 2873
+        },
+        {
+          "path": "rust/syn/gen/eq.rs",
+          "bytes": 93199,
+          "code": 2303
+        },
+        {
+          "path": "rust/syn/gen/clone.rs",
+          "bytes": 76399,
+          "code": 2264
+        },
+        {
+          "path": "rust/syn/lit.rs",
+          "bytes": 55843,
+          "code": 1523
+        },
+        {
+          "path": "drivers/android/binder/process.rs",
+          "bytes": 61318,
+          "code": 1340
+        },
+        {
+          "path": "drivers/android/binder/thread.rs",
+          "bytes": 63246,
+          "code": 1272
+        },
+        {
+          "path": "rust/syn/generics.rs",
+          "bytes": 51724,
+          "code": 1224
+        },
+        {
+          "path": "rust/syn/ty.rs",
+          "bytes": 44783,
+          "code": 1086
+        },
+        {
+          "path": "rust/proc-macro2/fallback.rs",
+          "bytes": 34318,
+          "code": 1054
+        }
+      ]
+    }
+  ]
+}

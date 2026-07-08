@@ -1,0 +1,12 @@
+# Kernel source tarball download cache (large; regenerated on demand)
+data/tarballs/
+
+# Per-file measurement cache (derived; regenerated from tarballs)
+data/.cache/
+
+# Scratch extraction dirs
+/tmp-rk-*/
+
+# Python
+__pycache__/
+*.pyc
