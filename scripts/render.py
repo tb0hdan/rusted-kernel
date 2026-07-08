@@ -379,14 +379,6 @@ footer p{max-width:80ch}
 .tag{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;
   color:__RUST__;border:1px solid __BORDER__;border-radius:20px;padding:2px 10px;margin-right:6px}
 
-.topnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.topnav a{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;
-  font-size:12.5px;color:__MUTE__;border:1px solid __BORDER__;border-radius:8px;padding:7px 13px;
-  background:__PANEL__}
-.topnav a:hover{color:__INK__;border-color:__RUST__;text-decoration:none}
-.topnav a .gh{width:15px;height:15px;flex:none;fill:currentColor}
-.topnav a .arr{color:__RUST__}
-
 .brandfoot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;
   padding:20px 0 26px;margin-bottom:18px;border-bottom:1px solid __BORDER__}
 .brandfoot .mark{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:19px;font-weight:700;color:__INK__}
@@ -549,10 +541,6 @@ def render(data: dict) -> str:
   <p class="meta"><b>Range</b> {e(first['version'])} … {e(last['version'])} &nbsp;·&nbsp;
      <b>Series</b> {len(versions)} &nbsp;·&nbsp; <b>Generated</b> {gen} &nbsp;·&nbsp;
      <b>Tool</b> {cloc_v} &nbsp;·&nbsp; <b>Source</b> kernel.org</p>
-  <nav class="topnav">
-    <a href="{REPO_URL}">{GH_ICON}Source on GitHub <span class="arr">↗</span></a>
-    <a href="{DP_URL}">Part of {DP_NAME} <span class="arr">↗</span></a>
-  </nav>
 </div></header>
 
 <section><div class="wrap">
@@ -619,8 +607,7 @@ def render(data: dict) -> str:
      are produced only at build time are <em>not</em> shipped in the tarball and therefore
      not counted. Data regenerated with <code>scripts/build.sh</code>;
      machine-readable results live in <code>data/kernels.json</code>.</p>
-  <p style="margin-top:14px">Generated {gen} · <a href="{SITE_URL}">{SITE}</a> ·
-     data from <a href="{src}">{src}</a></p>
+  <p style="margin-top:14px">Generated {gen} · <a href="{SITE_URL}">{SITE}</a></p>
 </div></footer>
 """
 
