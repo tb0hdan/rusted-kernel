@@ -134,6 +134,10 @@ class VersionReport:
     series: str
     tarball: str
     url: str
+    # Publication date of this exact tarball (the latest patch of the series),
+    # ISO ``YYYY-MM-DD``, taken from the kernel.org directory listing. Empty if
+    # the listing did not carry a parseable date.
+    released: str = ""
     files: int = 0
     bytes: int = 0
     code: int = 0
@@ -166,11 +170,38 @@ def http_get(url: str) -> str:
     return out.stdout
 
 
+_MONTHS = {m: i for i, m in enumerate(
+    ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), 1)}
+
+
+def _parse_listing_date(raw: str) -> str:
+    """Convert a kernel.org autoindex date (``12-Jan-2023``) to ISO
+    ``2023-01-12``. Returns ``""`` if the token is missing or unparseable so a
+    format change degrades gracefully rather than breaking discovery. Parsed
+    locale-independently — the autoindex always uses English month names.
+    """
+    m = re.fullmatch(r"(\d{2})-([A-Za-z]{3})-(\d{4})", raw)
+    if not m:
+        return ""
+    mon = _MONTHS.get(m.group(2).title())
+    if not mon:
+        return ""
+    return f"{m.group(3)}-{mon:02d}-{int(m.group(1)):02d}"
+
+
 def discover_versions(floor: tuple[int, int]) -> list[dict]:
     """Return latest patch release per series >= floor, as list of dicts:
-    {version, series, tarball, url} sorted ascending by version.
+    {version, series, tarball, url, released} sorted ascending by version.
     """
     pat = re.compile(r"linux-(\d+)\.(\d+)(?:\.(\d+))?\.tar\.xz")
+    # Publication date next to each tarball in the autoindex, e.g.
+    #   <a href="linux-6.0.19.tar.xz">linux-6.0.19.tar.xz</a>  12-Jan-2023 11:11  128M
+    # Kept separate from ``pat`` (and optional) so a listing without dates still
+    # yields versions — the date is enrichment, discovery must not depend on it.
+    date_pat = re.compile(
+        r'href="(linux-[\d.]+\.tar\.xz)">[^<]*</a>\s+(\d{2}-[A-Za-z]{3}-\d{4})')
+    dates: dict[str, str] = {}
     latest: dict[tuple[int, int], tuple[int, str, str]] = {}
     # Probe v6.x, v7.x, v8.x ... until a directory 404s.
     major = floor[0]
@@ -194,6 +225,8 @@ def discover_versions(floor: tuple[int, int]) -> list[dict]:
             cur = latest.get(key)
             if cur is None or patch > cur[0]:
                 latest[key] = (patch, m.group(0), base + m.group(0))
+        for dm in date_pat.finditer(html):
+            dates[dm.group(1)] = _parse_listing_date(dm.group(2))
         # Stop once we reach a major with no tarballs at all (future-proof).
         if not found_any and major > floor[0]:
             break
@@ -209,6 +242,7 @@ def discover_versions(floor: tuple[int, int]) -> list[dict]:
             "series": f"{maj}.{minr}",
             "tarball": tarball,
             "url": url,
+            "released": dates.get(tarball, ""),
         })
     return result
 
@@ -462,7 +496,8 @@ def measure_kernel_totals(info: dict, cache_dir: Path, work_dir: Path,
 
 def build_report(info: dict, records: list[dict]) -> VersionReport:
     rep = VersionReport(version=info["version"], series=info["series"],
-                        tarball=info["tarball"], url=info["url"])
+                        tarball=info["tarball"], url=info["url"],
+                        released=info.get("released", ""))
     cats: dict[str, CategoryStat] = {}
     drivers: dict[str, CategoryStat] = {}
 

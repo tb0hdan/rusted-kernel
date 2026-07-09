@@ -141,6 +141,8 @@ summary::-webkit-details-marker{display:none}
 summary::before{content:"▸";color:#e4552e;margin-right:2px}
 details[open] summary::before{content:"▾"}
 summary .ver{font-size:16px;font-weight:700;color:#e7e9ec}
+summary .vdate{font-size:12.5px;color:#9aa0aa}
+summary .vdate::before{content:"· ";color:#9aa0aa}
 summary .sstat{font-size:12.5px;color:#9aa0aa}
 summary .sstat b{color:#f7a072}
 details .body{padding:4px 16px 16px}
@@ -274,10 +276,10 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
      change in SLOC versus the previous series. <b>Kernel SLOC</b> is the whole tree
      (all languages) and <b>Rust %</b> is Rust's share of it.</p>
   <div class="scroll"><table>
-    <thead><tr><th>Version</th><th class="num">Files</th><th class="num">Size</th>
+    <thead><tr><th>Version</th><th>Released</th><th class="num">Files</th><th class="num">Size</th>
       <th class="num">SLOC</th><th class="num">Comments</th><th class="num">Blank</th>
       <th class="num">Δ SLOC</th><th class="num">Kernel SLOC</th><th class="num">Rust %</th></tr></thead>
-    <tbody><tr><td class="mono">6.0.19</td><td class="num">0</td><td class="num">0 B</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td class="num">25,029,959</td><td class="num">0.000%</td></tr><tr><td class="mono">6.1.177</td><td class="num">29</td><td class="num">345.2 KiB</td><td class="num">4,877</td><td class="num">4,750</td><td class="num">826</td><td class="num"><span class="delta-pos">+4,877</span></td><td class="num">25,411,667</td><td class="num">0.019%</td></tr><tr><td class="mono">6.2.16</td><td class="num">37</td><td class="num">388.4 KiB</td><td class="num">5,543</td><td class="num">5,454</td><td class="num">948</td><td class="num"><span class="delta-pos">+666</span></td><td class="num">25,552,823</td><td class="num">0.022%</td></tr><tr><td class="mono">6.3.13</td><td class="num">38</td><td class="num">400.3 KiB</td><td class="num">5,538</td><td class="num">5,696</td><td class="num">980</td><td class="num">-5</td><td class="num">25,619,851</td><td class="num">0.022%</td></tr><tr><td class="mono">6.4.16</td><td class="num">55</td><td class="num">570.7 KiB</td><td class="num">7,696</td><td class="num">8,126</td><td class="num">1,280</td><td class="num"><span class="delta-pos">+2,158</span></td><td class="num">25,929,516</td><td class="num">0.030%</td></tr><tr><td class="mono">6.5.13</td><td class="num">55</td><td class="num">601.4 KiB</td><td class="num">8,086</td><td class="num">8,524</td><td class="num">1,333</td><td class="num"><span class="delta-pos">+390</span></td><td class="num">26,179,852</td><td class="num">0.031%</td></tr><tr><td class="mono">6.6.144</td><td class="num">61</td><td class="num">647.9 KiB</td><td class="num">8,704</td><td class="num">9,020</td><td class="num">1,429</td><td class="num"><span class="delta-pos">+618</span></td><td class="num">26,422,294</td><td class="num">0.033%</td></tr><tr><td class="mono">6.7.12</td><td class="num">61</td><td class="num">665.7 KiB</td><td class="num">8,838</td><td class="num">9,387</td><td class="num">1,456</td><td class="num"><span class="delta-pos">+134</span></td><td class="num">26,791,593</td><td class="num">0.033%</td></tr><tr><td class="mono">6.8.12</td><td class="num">64</td><td class="num">710.6 KiB</td><td class="num">9,444</td><td class="num">9,922</td><td class="num">1,565</td><td class="num"><span class="delta-pos">+606</span></td><td class="num">26,991,688</td><td class="num">0.035%</td></tr><tr><td class="mono">6.9.12</td><td class="num">65</td><td class="num">727.5 KiB</td><td class="num">9,717</td><td class="num">10,061</td><td class="num">1,598</td><td class="num"><span class="delta-pos">+273</span></td><td class="num">27,325,387</td><td class="num">0.036%</td></tr><tr><td class="mono">6.10.14</td><td class="num">54</td><td class="num">421.2 KiB</td><td class="num">5,642</td><td class="num">5,625</td><td class="num">980</td><td class="num">-4,075</td><td class="num">27,476,112</td><td class="num">0.021%</td></tr><tr><td class="mono">6.11.11</td><td class="num">66</td><td class="num">495.0 KiB</td><td class="num">6,513</td><td class="num">6,589</td><td class="num">1,169</td><td class="num"><span class="delta-pos">+871</span></td><td class="num">28,015,512</td><td class="num">0.023%</td></tr><tr><td class="mono">6.12.95</td><td class="num">79</td><td class="num">717.0 KiB</td><td class="num">9,651</td><td class="num">9,123</td><td class="num">1,775</td><td class="num"><span class="delta-pos">+3,138</span></td><td class="num">28,232,844</td><td class="num">0.034%</td></tr><tr><td class="mono">6.13.12</td><td class="num">91</td><td class="num">794.4 KiB</td><td class="num">10,538</td><td class="num">10,243</td><td class="num">1,993</td><td class="num"><span class="delta-pos">+887</span></td><td class="num">28,305,706</td><td class="num">0.037%</td></tr><tr><td class="mono">6.14.11</td><td class="num">105</td><td class="num">881.2 KiB</td><td class="num">11,769</td><td class="num">11,310</td><td class="num">2,321</td><td class="num"><span class="delta-pos">+1,231</span></td><td class="num">28,480,734</td><td class="num">0.041%</td></tr><tr><td class="mono">6.15.11</td><td class="num">131</td><td class="num">1.0 MiB</td><td class="num">14,195</td><td class="num">13,151</td><td class="num">2,792</td><td class="num"><span class="delta-pos">+2,426</span></td><td class="num">28,796,193</td><td class="num">0.049%</td></tr><tr><td class="mono">6.16.12</td><td class="num">158</td><td class="num">1.3 MiB</td><td class="num">19,071</td><td class="num">16,730</td><td class="num">3,843</td><td class="num"><span class="delta-pos">+4,876</span></td><td class="num">28,997,206</td><td class="num">0.066%</td></tr><tr><td class="mono">6.17.13</td><td class="num">182</td><td class="num">1.6 MiB</td><td class="num">23,186</td><td class="num">19,474</td><td class="num">4,752</td><td class="num"><span class="delta-pos">+4,115</span></td><td class="num">29,153,996</td><td class="num">0.080%</td></tr><tr><td class="mono">6.18.38</td><td class="num">243</td><td class="num">2.3 MiB</td><td class="num">36,225</td><td class="num">25,249</td><td class="num">6,989</td><td class="num"><span class="delta-pos">+13,039</span></td><td class="num">29,317,955</td><td class="num">0.124%</td></tr><tr><td class="mono">6.19.14</td><td class="num">338</td><td class="num">4.4 MiB</td><td class="num">89,336</td><td class="num">35,461</td><td class="num">11,140</td><td class="num"><span class="delta-pos">+53,111</span></td><td class="num">29,607,055</td><td class="num">0.302%</td></tr><tr><td class="mono">7.0.14</td><td class="num">345</td><td class="num">4.5 MiB</td><td class="num">90,607</td><td class="num">35,502</td><td class="num">11,446</td><td class="num"><span class="delta-pos">+1,271</span></td><td class="num">29,902,966</td><td class="num">0.303%</td></tr><tr><td class="mono">7.1.3</td><td class="num">349</td><td class="num">4.6 MiB</td><td class="num">93,245</td><td class="num">37,782</td><td class="num">11,974</td><td class="num"><span class="delta-pos">+2,638</span></td><td class="num">30,101,072</td><td class="num">0.310%</td></tr></tbody>
+    <tbody><tr><td class="mono">6.0.19</td><td class="mono">2023-01-12</td><td class="num">0</td><td class="num">0 B</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td class="num">25,029,959</td><td class="num">0.000%</td></tr><tr><td class="mono">6.1.177</td><td class="mono">2026-07-04</td><td class="num">29</td><td class="num">345.2 KiB</td><td class="num">4,877</td><td class="num">4,750</td><td class="num">826</td><td class="num"><span class="delta-pos">+4,877</span></td><td class="num">25,411,667</td><td class="num">0.019%</td></tr><tr><td class="mono">6.2.16</td><td class="mono">2023-05-17</td><td class="num">37</td><td class="num">388.4 KiB</td><td class="num">5,543</td><td class="num">5,454</td><td class="num">948</td><td class="num"><span class="delta-pos">+666</span></td><td class="num">25,552,823</td><td class="num">0.022%</td></tr><tr><td class="mono">6.3.13</td><td class="mono">2023-07-11</td><td class="num">38</td><td class="num">400.3 KiB</td><td class="num">5,538</td><td class="num">5,696</td><td class="num">980</td><td class="num">-5</td><td class="num">25,619,851</td><td class="num">0.022%</td></tr><tr><td class="mono">6.4.16</td><td class="mono">2023-09-13</td><td class="num">55</td><td class="num">570.7 KiB</td><td class="num">7,696</td><td class="num">8,126</td><td class="num">1,280</td><td class="num"><span class="delta-pos">+2,158</span></td><td class="num">25,929,516</td><td class="num">0.030%</td></tr><tr><td class="mono">6.5.13</td><td class="mono">2023-11-28</td><td class="num">55</td><td class="num">601.4 KiB</td><td class="num">8,086</td><td class="num">8,524</td><td class="num">1,333</td><td class="num"><span class="delta-pos">+390</span></td><td class="num">26,179,852</td><td class="num">0.031%</td></tr><tr><td class="mono">6.6.144</td><td class="mono">2026-07-04</td><td class="num">61</td><td class="num">647.9 KiB</td><td class="num">8,704</td><td class="num">9,020</td><td class="num">1,429</td><td class="num"><span class="delta-pos">+618</span></td><td class="num">26,422,294</td><td class="num">0.033%</td></tr><tr><td class="mono">6.7.12</td><td class="mono">2024-04-03</td><td class="num">61</td><td class="num">665.7 KiB</td><td class="num">8,838</td><td class="num">9,387</td><td class="num">1,456</td><td class="num"><span class="delta-pos">+134</span></td><td class="num">26,791,593</td><td class="num">0.033%</td></tr><tr><td class="mono">6.8.12</td><td class="mono">2024-05-30</td><td class="num">64</td><td class="num">710.6 KiB</td><td class="num">9,444</td><td class="num">9,922</td><td class="num">1,565</td><td class="num"><span class="delta-pos">+606</span></td><td class="num">26,991,688</td><td class="num">0.035%</td></tr><tr><td class="mono">6.9.12</td><td class="mono">2024-07-27</td><td class="num">65</td><td class="num">727.5 KiB</td><td class="num">9,717</td><td class="num">10,061</td><td class="num">1,598</td><td class="num"><span class="delta-pos">+273</span></td><td class="num">27,325,387</td><td class="num">0.036%</td></tr><tr><td class="mono">6.10.14</td><td class="mono">2024-10-10</td><td class="num">54</td><td class="num">421.2 KiB</td><td class="num">5,642</td><td class="num">5,625</td><td class="num">980</td><td class="num">-4,075</td><td class="num">27,476,112</td><td class="num">0.021%</td></tr><tr><td class="mono">6.11.11</td><td class="mono">2024-12-05</td><td class="num">66</td><td class="num">495.0 KiB</td><td class="num">6,513</td><td class="num">6,589</td><td class="num">1,169</td><td class="num"><span class="delta-pos">+871</span></td><td class="num">28,015,512</td><td class="num">0.023%</td></tr><tr><td class="mono">6.12.95</td><td class="mono">2026-07-04</td><td class="num">79</td><td class="num">717.0 KiB</td><td class="num">9,651</td><td class="num">9,123</td><td class="num">1,775</td><td class="num"><span class="delta-pos">+3,138</span></td><td class="num">28,232,844</td><td class="num">0.034%</td></tr><tr><td class="mono">6.13.12</td><td class="mono">2025-04-20</td><td class="num">91</td><td class="num">794.4 KiB</td><td class="num">10,538</td><td class="num">10,243</td><td class="num">1,993</td><td class="num"><span class="delta-pos">+887</span></td><td class="num">28,305,706</td><td class="num">0.037%</td></tr><tr><td class="mono">6.14.11</td><td class="mono">2025-06-10</td><td class="num">105</td><td class="num">881.2 KiB</td><td class="num">11,769</td><td class="num">11,310</td><td class="num">2,321</td><td class="num"><span class="delta-pos">+1,231</span></td><td class="num">28,480,734</td><td class="num">0.041%</td></tr><tr><td class="mono">6.15.11</td><td class="mono">2025-08-20</td><td class="num">131</td><td class="num">1.0 MiB</td><td class="num">14,195</td><td class="num">13,151</td><td class="num">2,792</td><td class="num"><span class="delta-pos">+2,426</span></td><td class="num">28,796,193</td><td class="num">0.049%</td></tr><tr><td class="mono">6.16.12</td><td class="mono">2025-10-12</td><td class="num">158</td><td class="num">1.3 MiB</td><td class="num">19,071</td><td class="num">16,730</td><td class="num">3,843</td><td class="num"><span class="delta-pos">+4,876</span></td><td class="num">28,997,206</td><td class="num">0.066%</td></tr><tr><td class="mono">6.17.13</td><td class="mono">2025-12-18</td><td class="num">182</td><td class="num">1.6 MiB</td><td class="num">23,186</td><td class="num">19,474</td><td class="num">4,752</td><td class="num"><span class="delta-pos">+4,115</span></td><td class="num">29,153,996</td><td class="num">0.080%</td></tr><tr><td class="mono">6.18.38</td><td class="mono">2026-07-04</td><td class="num">243</td><td class="num">2.3 MiB</td><td class="num">36,225</td><td class="num">25,249</td><td class="num">6,989</td><td class="num"><span class="delta-pos">+13,039</span></td><td class="num">29,317,955</td><td class="num">0.124%</td></tr><tr><td class="mono">6.19.14</td><td class="mono">2026-04-22</td><td class="num">338</td><td class="num">4.4 MiB</td><td class="num">89,336</td><td class="num">35,461</td><td class="num">11,140</td><td class="num"><span class="delta-pos">+53,111</span></td><td class="num">29,607,055</td><td class="num">0.302%</td></tr><tr><td class="mono">7.0.14</td><td class="mono">2026-06-27</td><td class="num">345</td><td class="num">4.5 MiB</td><td class="num">90,607</td><td class="num">35,502</td><td class="num">11,446</td><td class="num"><span class="delta-pos">+1,271</span></td><td class="num">29,902,966</td><td class="num">0.303%</td></tr><tr><td class="mono">7.1.3</td><td class="mono">2026-07-04</td><td class="num">349</td><td class="num">4.6 MiB</td><td class="num">93,245</td><td class="num">37,782</td><td class="num">11,974</td><td class="num"><span class="delta-pos">+2,638</span></td><td class="num">30,101,072</td><td class="num">0.310%</td></tr></tbody>
   </table></div>
 </div></section>
 
@@ -288,6 +290,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
   
         <details>
           <summary><span class="ver">6.0.19</span>
+            <span class="vdate">2023-01-12</span>
             <span class="sstat"><b>0</b> files ·
             <b>0</b> SLOC · 0 B</span></summary>
           <div class="body">
@@ -306,6 +309,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.1.177</span>
+            <span class="vdate">2026-07-04</span>
             <span class="sstat"><b>29</b> files ·
             <b>4,877</b> SLOC · 345.2 KiB</span></summary>
           <div class="body">
@@ -324,6 +328,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.2.16</span>
+            <span class="vdate">2023-05-17</span>
             <span class="sstat"><b>37</b> files ·
             <b>5,543</b> SLOC · 388.4 KiB</span></summary>
           <div class="body">
@@ -342,6 +347,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.3.13</span>
+            <span class="vdate">2023-07-11</span>
             <span class="sstat"><b>38</b> files ·
             <b>5,538</b> SLOC · 400.3 KiB</span></summary>
           <div class="body">
@@ -360,6 +366,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.4.16</span>
+            <span class="vdate">2023-09-13</span>
             <span class="sstat"><b>55</b> files ·
             <b>7,696</b> SLOC · 570.7 KiB</span></summary>
           <div class="body">
@@ -378,6 +385,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.5.13</span>
+            <span class="vdate">2023-11-28</span>
             <span class="sstat"><b>55</b> files ·
             <b>8,086</b> SLOC · 601.4 KiB</span></summary>
           <div class="body">
@@ -396,6 +404,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.6.144</span>
+            <span class="vdate">2026-07-04</span>
             <span class="sstat"><b>61</b> files ·
             <b>8,704</b> SLOC · 647.9 KiB</span></summary>
           <div class="body">
@@ -419,6 +428,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.7.12</span>
+            <span class="vdate">2024-04-03</span>
             <span class="sstat"><b>61</b> files ·
             <b>8,838</b> SLOC · 665.7 KiB</span></summary>
           <div class="body">
@@ -437,6 +447,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.8.12</span>
+            <span class="vdate">2024-05-30</span>
             <span class="sstat"><b>64</b> files ·
             <b>9,444</b> SLOC · 710.6 KiB</span></summary>
           <div class="body">
@@ -460,6 +471,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.9.12</span>
+            <span class="vdate">2024-07-27</span>
             <span class="sstat"><b>65</b> files ·
             <b>9,717</b> SLOC · 727.5 KiB</span></summary>
           <div class="body">
@@ -483,6 +495,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.10.14</span>
+            <span class="vdate">2024-10-10</span>
             <span class="sstat"><b>54</b> files ·
             <b>5,642</b> SLOC · 421.2 KiB</span></summary>
           <div class="body">
@@ -506,6 +519,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.11.11</span>
+            <span class="vdate">2024-12-05</span>
             <span class="sstat"><b>66</b> files ·
             <b>6,513</b> SLOC · 495.0 KiB</span></summary>
           <div class="body">
@@ -529,6 +543,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.12.95</span>
+            <span class="vdate">2026-07-04</span>
             <span class="sstat"><b>79</b> files ·
             <b>9,651</b> SLOC · 717.0 KiB</span></summary>
           <div class="body">
@@ -552,6 +567,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.13.12</span>
+            <span class="vdate">2025-04-20</span>
             <span class="sstat"><b>91</b> files ·
             <b>10,538</b> SLOC · 794.4 KiB</span></summary>
           <div class="body">
@@ -575,6 +591,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.14.11</span>
+            <span class="vdate">2025-06-10</span>
             <span class="sstat"><b>105</b> files ·
             <b>11,769</b> SLOC · 881.2 KiB</span></summary>
           <div class="body">
@@ -598,6 +615,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.15.11</span>
+            <span class="vdate">2025-08-20</span>
             <span class="sstat"><b>131</b> files ·
             <b>14,195</b> SLOC · 1.0 MiB</span></summary>
           <div class="body">
@@ -621,6 +639,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.16.12</span>
+            <span class="vdate">2025-10-12</span>
             <span class="sstat"><b>158</b> files ·
             <b>19,071</b> SLOC · 1.3 MiB</span></summary>
           <div class="body">
@@ -644,6 +663,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.17.13</span>
+            <span class="vdate">2025-12-18</span>
             <span class="sstat"><b>182</b> files ·
             <b>23,186</b> SLOC · 1.6 MiB</span></summary>
           <div class="body">
@@ -667,6 +687,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.18.38</span>
+            <span class="vdate">2026-07-04</span>
             <span class="sstat"><b>243</b> files ·
             <b>36,225</b> SLOC · 2.3 MiB</span></summary>
           <div class="body">
@@ -690,6 +711,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">6.19.14</span>
+            <span class="vdate">2026-04-22</span>
             <span class="sstat"><b>338</b> files ·
             <b>89,336</b> SLOC · 4.4 MiB</span></summary>
           <div class="body">
@@ -713,6 +735,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">7.0.14</span>
+            <span class="vdate">2026-06-27</span>
             <span class="sstat"><b>345</b> files ·
             <b>90,607</b> SLOC · 4.5 MiB</span></summary>
           <div class="body">
@@ -736,6 +759,7 @@ footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
         </details>
         <details>
           <summary><span class="ver">7.1.3</span>
+            <span class="vdate">2026-07-04</span>
             <span class="sstat"><b>349</b> files ·
             <b>93,245</b> SLOC · 4.6 MiB</span></summary>
           <div class="body">

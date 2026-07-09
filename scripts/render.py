@@ -568,6 +568,8 @@ summary::-webkit-details-marker{display:none}
 summary::before{content:"▸";color:__RUST__;margin-right:2px}
 details[open] summary::before{content:"▾"}
 summary .ver{font-size:16px;font-weight:700;color:__INK__}
+summary .vdate{font-size:12.5px;color:__MUTE__}
+summary .vdate::before{content:"· ";color:__MUTE__}
 summary .sstat{font-size:12.5px;color:__MUTE__}
 summary .sstat b{color:__RUST_HI__}
 details .body{padding:4px 16px 16px}
@@ -773,6 +775,7 @@ def render(data: dict) -> str:
         kcode = v.get("kernel_code", 0)
         rows.append(
             f'<tr><td class="mono">{e(v["version"])}</td>'
+            f'<td class="mono">{e(v.get("released") or "—")}</td>'
             f'<td class="num">{fi(v["files"])}</td>'
             f'<td class="num">{human_bytes(v["bytes"])}</td>'
             f'<td class="num">{fi(v["code"])}</td>'
@@ -813,6 +816,7 @@ def render(data: dict) -> str:
         detail_blocks.append(f"""
         <details>
           <summary><span class="ver">{e(v['version'])}</span>
+            <span class="vdate">{e(v.get('released') or '—')}</span>
             <span class="sstat"><b>{fi(v['files'])}</b> files ·
             <b>{fi(v['code'])}</b> SLOC · {human_bytes(v['bytes'])}</span></summary>
           <div class="body">
@@ -989,7 +993,7 @@ def render(data: dict) -> str:
      change in SLOC versus the previous series. <b>Kernel SLOC</b> is the whole tree
      (all languages) and <b>Rust %</b> is Rust's share of it.</p>
   <div class="scroll"><table>
-    <thead><tr><th>Version</th><th class="num">Files</th><th class="num">Size</th>
+    <thead><tr><th>Version</th><th>Released</th><th class="num">Files</th><th class="num">Size</th>
       <th class="num">SLOC</th><th class="num">Comments</th><th class="num">Blank</th>
       <th class="num">Δ SLOC</th><th class="num">Kernel SLOC</th><th class="num">Rust %</th></tr></thead>
     <tbody>{summary_rows}</tbody>
