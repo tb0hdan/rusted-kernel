@@ -41,6 +41,7 @@ RUST_HI = "#f7a072"    # lighter accent
 SITE = "rusted-kernel.com"
 SITE_URL = "https://rusted-kernel.com"
 REPO_URL = "https://github.com/tb0hdan/rusted-kernel"
+KERNEL_RUST_DOCS = "https://docs.kernel.org/rust/index.html"
 DP_URL = "https://domainsproject.org"
 DP_NAME = "DomainsProject.org"
 
@@ -75,7 +76,7 @@ CAT_ORDER = [
     ("Vendored crates", "#c9a227"),
     ("Procedural macros", "#c792ea"),
     ("Generated bindings", "#5aa9e6"),
-    ("UAPI bindings", "#66d1c4"),
+    ("UAPI bindings", "#3fc8e6"),
     ("pin-init crate", "#f2c14e"),
     ("Core runtime & shims", "#e08ba8"),
     ("Samples & examples", "#9aa0a6"),
@@ -91,6 +92,44 @@ CAT_COLOR = dict(CAT_ORDER)
 
 def color_for(cat: str) -> str:
     return CAT_COLOR.get(cat, "#5b667a")
+
+
+# Editorial annotations surfaced inside a version's folded detail block, keyed by
+# series. For anomalies the raw numbers alone would misrepresent. Trusted static
+# HTML (rendered verbatim); keep identifiers in <span class="mono">…</span>.
+VERSION_NOTES: dict[str, str] = {
+    "6.10": (
+        '<b>Why totals fall here — a one-time cleanup, not a retreat from Rust.</b> '
+        '6.10 removed the in-tree <span class="mono">rust/alloc</span> fork: the '
+        "kernel's private copy of Rust's standard <span class=\"mono\">alloc</span> "
+        'library (<span class="mono">Vec</span>, <span class="mono">Box</span>, '
+        '<span class="mono">slice</span>, <span class="mono">raw_vec</span>, …) — '
+        '~4,360 SLOC across 14 files, counted here under <b>Vendored crates</b> — '
+        'and replaced it with thin allocator abstractions in '
+        '<span class="mono">rust/kernel/alloc/</span> '
+        '(<span class="mono">box_ext</span>, <span class="mono">vec_ext</span>). '
+        'First-party kernel Rust kept growing straight through the drop: the '
+        'Kernel crate went 3,812 → 4,057 → 4,845 SLOC across 6.9 → 6.10 → 6.11. '
+        'Only the vendored standard-library copy went away, so the total fell even '
+        "as the kernel's own Rust expanded."
+    ),
+    "6.19": (
+        'Total Rust '
+        'leaps from 36,225 SLOC (6.18) to 89,336 — but almost all of that is '
+        '<b>vendored crates</b>: third-party libraries from the Rust ecosystem '
+        '(crates.io) copied verbatim into <span class="mono">rust/</span>, because '
+        "the kernel build is self-contained and can't fetch dependencies over the "
+        'network. In 6.19 the standard procedural-macro toolchain was vendored in '
+        'one go — <span class="mono">syn</span> (41,716 SLOC, a full Rust-source '
+        'parser), <span class="mono">proc-macro2</span> (3,782) and '
+        '<span class="mono">quote</span> (1,460): 46,958 SLOC across 75 files — so '
+        "the kernel's own macros (<span class=\"mono\">rust/macros/</span>) can lean "
+        'on them instead of hand-rolled parsing. This is external tooling, not '
+        'kernel logic: set it aside and first-party kernel Rust grew steadily, '
+        '36,225 → 42,378 SLOC (6.18 → 6.19). The hero chart breaks it out as its own '
+        '"Vendored crates" band for exactly this reason.'
+    ),
+}
 
 
 # --- formatting ------------------------------------------------------------
@@ -250,7 +289,12 @@ def line_chart(versions: list[dict], key: str, label: str, color: str) -> str:
     for i, (x, y) in enumerate(pts):
         parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{color}">'
                      f'<title>{e(versions[i]["version"])}: {fi(vals[i])} {e(label)}</title></circle>')
-        parts.append(f'<text x="{x:.1f}" y="{H-mb+20:.1f}" text-anchor="middle" '
+        # 22 series labels are too dense to sit horizontally, so render them
+        # vertically (rotated 90deg, reading bottom-to-top) in the bottom margin.
+        ly = H - mb / 2
+        parts.append(f'<text x="{x:.1f}" y="{ly:.1f}" text-anchor="middle" '
+                     f'dominant-baseline="central" '
+                     f'transform="rotate(-90 {x:.1f} {ly:.1f})" '
                      f'class="axis small">{e(versions[i]["series"])}</text>')
     parts.append('</svg>')
     return "".join(parts)
@@ -295,6 +339,8 @@ header.hero{padding:64px 0 40px;border-bottom:1px solid __BORDER__}
 h1{font-family:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
   font-size:clamp(30px,6vw,58px);line-height:1.02;margin:0 0 18px;font-weight:700;letter-spacing:-.01em}
 h1 .accent{color:__RUST__}
+h1 .h1link,h1 .h1link:hover{color:inherit;text-decoration:none}
+h1 .h1link:hover .accent{color:__RUST_HI__}
 .lede{font-size:clamp(16px,2.2vw,20px);color:__MUTE__;max-width:70ch;margin:0 0 8px}
 .meta{margin-top:22px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:__FAINT__}
 .meta b{color:__MUTE__;font-weight:600}
@@ -351,6 +397,7 @@ td.num,th.num{text-align:right;font-family:ui-monospace,Menlo,Consolas,monospace
 tbody tr:hover{background:__PANEL2__}
 .delta-pos{color:__RUST_HI__}
 .catname{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px}
+.catname .dot{margin-right:9px;vertical-align:baseline}
 .purpose{color:__MUTE__;white-space:normal;font-size:12.5px}
 .barcell{width:180px}
 .bar{display:block;height:9px;border-radius:5px;min-width:2px}
@@ -365,6 +412,10 @@ summary .ver{font-size:16px;font-weight:700;color:__INK__}
 summary .sstat{font-size:12.5px;color:__MUTE__}
 summary .sstat b{color:__RUST_HI__}
 details .body{padding:4px 16px 16px}
+.vnote{background:__PANEL2__;border:1px solid __BORDER__;border-left:3px solid __RUST__;
+  border-radius:8px;padding:11px 14px;margin:2px 0 16px;color:__MUTE__;font-size:13px;line-height:1.62}
+.vnote b{color:__INK__}
+.vnote .mono{color:__RUST_HI__}
 
 .glossary{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
 .gitem{background:__PANEL__;border:1px solid __BORDER__;border-radius:10px;padding:14px 15px}
@@ -399,14 +450,14 @@ CSS = (CSS.replace("__BG__", BG).replace("__PANEL2__", PANEL2).replace("__PANEL_
        .replace("__FAINT__", FAINT).replace("__RUST_HI__", RUST_HI).replace("__RUST__", RUST))
 
 
-def build_seo(data: dict, first: dict, last: dict) -> tuple[str, str, str, str]:
+def build_seo(data: dict, first: dict, last: dict, baseline: dict) -> tuple[str, str, str, str]:
     """Return (title, description, <head> meta block, JSON-LD <script>)."""
     gen = data.get("generated_utc", "")
     canonical = SITE_URL + "/"
     og_image = SITE_URL + "/og.png"
 
     def growth(k):
-        a, b = first[k], last[k]
+        a, b = baseline[k], last[k]
         return (b / a) if a else 0
 
     title = "Rust in the Linux Kernel — a version-by-version analysis"
@@ -414,7 +465,7 @@ def build_seo(data: dict, first: dict, last: dict) -> tuple[str, str, str, str]:
             f"by release from {first['version']} to {last['version']}: files, size, "
             f"purpose and SLOC via cloc. {last['files']:,} Rust files and "
             f"{last['code']:,} SLOC in {last['series']} — {growth('code'):.1f}× the "
-            f"SLOC of {first['series']}.")
+            f"SLOC of {baseline['series']}.")
     keywords = ("Rust in the Linux kernel, Rust for Linux, Linux kernel Rust, "
                 "rust/kernel, kernel drivers in Rust, Rust abstractions, cloc, SLOC, "
                 "kernel source analysis, Rust procedural macros, Linux "
@@ -500,9 +551,14 @@ def render(data: dict) -> str:
         raise SystemExit("render: data/kernels.json has no versions to render")
     versions = sorted(versions, key=lambda v: [int(x) for x in v["series"].split(".")])
     first, last = versions[0], versions[-1]
+    # Growth multipliers are measured from the first release that actually ships
+    # Rust: when the window starts before Rust landed (a zero-Rust baseline like
+    # 6.0), dividing by it is undefined, so anchor to the first non-zero release.
+    baseline = next((v for v in versions if v["code"]), first)
+    since = "" if baseline is first else f" since {e(baseline['series'])}"
 
     def growth(key):
-        a, b = first[key], last[key]
+        a, b = baseline[key], last[key]
         return (b / a) if a else 0
 
     # legend (only categories present)
@@ -554,7 +610,7 @@ def render(data: dict) -> str:
 
     # per-version detail (details/summary)
     detail_blocks = []
-    for v in reversed(versions):  # newest first
+    for v in versions:  # ascending, to match the per-version totals table
         maxcode = max((c["code"] for c in v["categories"]), default=1)
         catrows = "".join(cat_bar_row(c, maxcode) for c in v["categories"])
         drv = ""
@@ -576,12 +632,15 @@ def render(data: dict) -> str:
             f'<td class="num">{human_bytes(f["bytes"])}</td>'
             f'<td class="num">{fi(f["code"])}</td></tr>'
             for f in v["largest_files"][:8])
+        note = VERSION_NOTES.get(v["series"], "")
+        note_html = f'<p class="vnote">{note}</p>' if note else ""
         detail_blocks.append(f"""
         <details>
           <summary><span class="ver">{e(v['version'])}</span>
             <span class="sstat"><b>{fi(v['files'])}</b> files ·
             <b>{fi(v['code'])}</b> SLOC · {human_bytes(v['bytes'])}</span></summary>
           <div class="body">
+            {note_html}
             <div class="scroll"><table>
               <thead><tr><th>Category</th><th>Purpose</th><th class="num">Files</th>
                 <th class="num">Size</th><th class="num">SLOC</th><th>Share</th></tr></thead>
@@ -615,7 +674,7 @@ def render(data: dict) -> str:
     files_line = line_chart(versions, "files", "files", "#5aa9e6")
     comment_line = line_chart(versions, "comment", "comment lines", RUST_HI)
 
-    seo_title, seo_desc, seo_meta, seo_jsonld = build_seo(data, first, last)
+    seo_title, seo_desc, seo_meta, seo_jsonld = build_seo(data, first, last, baseline)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -633,7 +692,7 @@ def render(data: dict) -> str:
 
 <header class="hero"><div class="wrap">
   <p class="eyebrow">rusted-kernel.com<span class="cursor"></span></p>
-  <h1>Rust in the <span class="accent">Linux&nbsp;Kernel</span></h1>
+  <h1><a class="h1link" href="{KERNEL_RUST_DOCS}">Rust in the <span class="accent">Linux&nbsp;Kernel</span></a></h1>
   <p class="lede">A version-by-version measurement of how Rust is growing inside the
      mainline kernel tree — every <span class="mono">.rs</span> file counted, sized,
      categorised by purpose and measured with <span class="mono">cloc</span>.</p>
@@ -641,7 +700,7 @@ def render(data: dict) -> str:
     <span class="big">{e(first['series'])}</span>
     <span class="arrow">→</span>
     <span class="big">{e(last['series'])}</span>
-    <span class="mult">&nbsp;·&nbsp;{growth('code'):.1f}× SLOC · {growth('files'):.1f}× files</span>
+    <span class="mult">&nbsp;·&nbsp;{growth('code'):.1f}× SLOC · {growth('files'):.1f}× files{since}</span>
   </div>
   <p class="meta"><b>Range</b> {e(first['version'])} … {e(last['version'])} &nbsp;·&nbsp;
      <b>Series</b> {len(versions)} &nbsp;·&nbsp; <b>Generated</b> {gen} &nbsp;·&nbsp;

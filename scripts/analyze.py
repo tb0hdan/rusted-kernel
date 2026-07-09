@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Analyze Rust usage across Linux kernel releases.
 
-For every stable kernel series >= a configurable floor (default 6.12), this
+For every stable kernel series >= a configurable floor (default 6.0), this
 script resolves the latest patch release from kernel.org, downloads the source
 tarball (cached), extracts only the Rust (``*.rs``) sources, and produces a
 detailed breakdown of:
@@ -32,7 +32,7 @@ from dataclasses import dataclass, field, asdict
 from pathlib import Path
 
 CDN = "https://cdn.kernel.org/pub/linux/kernel"
-DEFAULT_FLOOR = (6, 12)
+DEFAULT_FLOOR = (6, 0)
 
 # ---------------------------------------------------------------------------
 # Categorisation: map a kernel-relative path to a (category, purpose) pair.
@@ -391,8 +391,8 @@ def build_report(info: dict, records: list[dict]) -> VersionReport:
 # ---------------------------------------------------------------------------
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--floor", default="6.12",
-                    help="lowest kernel series to include (default 6.12)")
+    ap.add_argument("--floor", default="6.0",
+                    help="lowest kernel series to include (default 6.0)")
     ap.add_argument("--only", default="",
                     help="comma-separated list of exact versions to analyze "
                          "(for quick validation), e.g. 6.12.95")

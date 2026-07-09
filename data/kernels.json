@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-08",
+  "generated_utc": "2026-07-09",
   "cloc_version": "1.98",
-  "floor": "6.12",
+  "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
   "category_reference": [
     {
@@ -66,6 +66,1872 @@
     }
   ],
   "versions": [
+    {
+      "version": "6.0.19",
+      "series": "6.0",
+      "tarball": "linux-6.0.19.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.0.19.tar.xz",
+      "files": 0,
+      "bytes": 0,
+      "code": 0,
+      "comment": 0,
+      "blank": 0,
+      "categories": [],
+      "drivers": [],
+      "largest_files": []
+    },
+    {
+      "version": "6.1.177",
+      "series": "6.1",
+      "tarball": "linux-6.1.177.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.177.tar.xz",
+      "files": 29,
+      "bytes": 353491,
+      "code": 4877,
+      "comment": 4750,
+      "blank": 826,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 13,
+          "bytes": 309872,
+          "code": 4115,
+          "comment": 4338,
+          "blank": 650
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 3,
+          "bytes": 15659,
+          "code": 284,
+          "comment": 105,
+          "blank": 54
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 6,
+          "bytes": 17958,
+          "code": 238,
+          "comment": 243,
+          "blank": 65
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 1,
+          "bytes": 5373,
+          "code": 132,
+          "comment": 22,
+          "blank": 28
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 4,
+          "bytes": 1291,
+          "code": 38,
+          "comment": 8,
+          "blank": 16
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 1,
+          "bytes": 1746,
+          "code": 37,
+          "comment": 19,
+          "blank": 7
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1592,
+          "code": 33,
+          "comment": 15,
+          "blank": 6
+        }
+      ],
+      "drivers": [],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 107394,
+          "code": 1060
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 65716,
+          "code": 829
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 43592,
+          "code": 597
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 20922,
+          "code": 273
+        },
+        {
+          "path": "rust/alloc/borrow.rs",
+          "bytes": 13911,
+          "code": 260
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 15982,
+          "code": 245
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 12347,
+          "code": 239
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 12352,
+          "code": 235
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 7976,
+          "code": 154
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 5373,
+          "code": 132
+        },
+        {
+          "path": "rust/alloc/collections/mod.rs",
+          "bytes": 4428,
+          "code": 122
+        },
+        {
+          "path": "rust/alloc/vec/drain.rs",
+          "bytes": 6367,
+          "code": 121
+        },
+        {
+          "path": "rust/alloc/vec/drain_filter.rs",
+          "bytes": 5202,
+          "code": 98
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 6713,
+          "code": 97
+        },
+        {
+          "path": "rust/alloc/vec/is_zero.rs",
+          "bytes": 3350,
+          "code": 83
+        }
+      ]
+    },
+    {
+      "version": "6.2.16",
+      "series": "6.2",
+      "tarball": "linux-6.2.16.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.2.16.tar.xz",
+      "files": 37,
+      "bytes": 397729,
+      "code": 5543,
+      "comment": 5454,
+      "blank": 948,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 13,
+          "bytes": 314419,
+          "code": 4146,
+          "comment": 4421,
+          "blank": 656
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 10,
+          "bytes": 50539,
+          "code": 720,
+          "comment": 773,
+          "blank": 153
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 5,
+          "bytes": 19753,
+          "code": 389,
+          "comment": 174,
+          "blank": 68
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 1,
+          "bytes": 5373,
+          "code": 132,
+          "comment": 22,
+          "blank": 28
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3037,
+          "code": 79,
+          "comment": 10,
+          "blank": 27
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3076,
+          "code": 45,
+          "comment": 39,
+          "blank": 10
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1532,
+          "code": 32,
+          "comment": 15,
+          "blank": 6
+        }
+      ],
+      "drivers": [],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 110608,
+          "code": 1070
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 65716,
+          "code": 829
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 43592,
+          "code": 597
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 18479,
+          "code": 305
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 22255,
+          "code": 294
+        },
+        {
+          "path": "rust/alloc/borrow.rs",
+          "bytes": 13911,
+          "code": 260
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 15982,
+          "code": 245
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 12347,
+          "code": 239
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 8740,
+          "code": 225
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 13064,
+          "code": 165
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 7976,
+          "code": 154
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 5373,
+          "code": 132
+        },
+        {
+          "path": "rust/alloc/collections/mod.rs",
+          "bytes": 4428,
+          "code": 122
+        },
+        {
+          "path": "rust/alloc/vec/drain.rs",
+          "bytes": 6367,
+          "code": 121
+        },
+        {
+          "path": "rust/alloc/vec/drain_filter.rs",
+          "bytes": 5202,
+          "code": 98
+        }
+      ]
+    },
+    {
+      "version": "6.3.13",
+      "series": "6.3",
+      "tarball": "linux-6.3.13.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.3.13.tar.xz",
+      "files": 38,
+      "bytes": 409925,
+      "code": 5538,
+      "comment": 5696,
+      "blank": 980,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 12,
+          "bytes": 300626,
+          "code": 3890,
+          "comment": 4220,
+          "blank": 619
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 12,
+          "bytes": 76333,
+          "code": 970,
+          "comment": 1214,
+          "blank": 221
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 5,
+          "bytes": 19753,
+          "code": 389,
+          "comment": 174,
+          "blank": 68
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 1,
+          "bytes": 5373,
+          "code": 132,
+          "comment": 22,
+          "blank": 28
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3037,
+          "code": 79,
+          "comment": 10,
+          "blank": 27
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3239,
+          "code": 45,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1564,
+          "code": 33,
+          "comment": 15,
+          "blank": 6
+        }
+      ],
+      "drivers": [],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 110677,
+          "code": 1073
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 65716,
+          "code": 829
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 43592,
+          "code": 597
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 18479,
+          "code": 305
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 22255,
+          "code": 294
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 15982,
+          "code": 245
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 12347,
+          "code": 239
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 8740,
+          "code": 225
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 17846,
+          "code": 169
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 13064,
+          "code": 165
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 8025,
+          "code": 155
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 5373,
+          "code": 132
+        },
+        {
+          "path": "rust/alloc/collections/mod.rs",
+          "bytes": 4428,
+          "code": 122
+        },
+        {
+          "path": "rust/alloc/vec/drain.rs",
+          "bytes": 6367,
+          "code": 121
+        },
+        {
+          "path": "rust/alloc/vec/drain_filter.rs",
+          "bytes": 5202,
+          "code": 98
+        }
+      ]
+    },
+    {
+      "version": "6.4.16",
+      "series": "6.4",
+      "tarball": "linux-6.4.16.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.4.16.tar.xz",
+      "files": 55,
+      "bytes": 584440,
+      "code": 7696,
+      "comment": 8126,
+      "blank": 1280,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 14,
+          "bytes": 312123,
+          "code": 4106,
+          "comment": 4309,
+          "blank": 649
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 23,
+          "bytes": 224675,
+          "code": 2620,
+          "comment": 3444,
+          "blank": 461
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 8,
+          "bytes": 33141,
+          "code": 652,
+          "comment": 273,
+          "blank": 86
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 1,
+          "bytes": 5373,
+          "code": 132,
+          "comment": 22,
+          "blank": 28
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3598,
+          "code": 92,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3239,
+          "code": 45,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1564,
+          "code": 33,
+          "comment": 15,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 727,
+          "code": 16,
+          "comment": 8,
+          "blank": 3
+        }
+      ],
+      "drivers": [],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 115596,
+          "code": 1125
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 65716,
+          "code": 829
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 43592,
+          "code": 597
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 49307,
+          "code": 546
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 39913,
+          "code": 408
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 18479,
+          "code": 305
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 22255,
+          "code": 294
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 15982,
+          "code": 245
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 9388,
+          "code": 243
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 12347,
+          "code": 239
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 21231,
+          "code": 232
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 13064,
+          "code": 165
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 8025,
+          "code": 155
+        },
+        {
+          "path": "rust/alloc/vec/spec_extend.rs",
+          "bytes": 5759,
+          "code": 144
+        },
+        {
+          "path": "rust/kernel/types.rs",
+          "bytes": 13474,
+          "code": 139
+        }
+      ]
+    },
+    {
+      "version": "6.5.13",
+      "series": "6.5",
+      "tarball": "linux-6.5.13.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.5.13.tar.xz",
+      "files": 55,
+      "bytes": 615878,
+      "code": 8086,
+      "comment": 8524,
+      "blank": 1333,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 14,
+          "bytes": 333434,
+          "code": 4323,
+          "comment": 4646,
+          "blank": 685
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 23,
+          "bytes": 229536,
+          "code": 2689,
+          "comment": 3481,
+          "blank": 474
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 8,
+          "bytes": 38455,
+          "code": 758,
+          "comment": 297,
+          "blank": 90
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 1,
+          "bytes": 5373,
+          "code": 132,
+          "comment": 22,
+          "blank": 28
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3598,
+          "code": 92,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3239,
+          "code": 45,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1540,
+          "code": 32,
+          "comment": 15,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 703,
+          "code": 15,
+          "comment": 8,
+          "blank": 3
+        }
+      ],
+      "drivers": [],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 126533,
+          "code": 1181
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 79553,
+          "code": 986
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 49443,
+          "code": 546
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 30736,
+          "code": 452
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 40309,
+          "code": 408
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 19179,
+          "code": 318
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 22202,
+          "code": 294
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 15230,
+          "code": 279
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 16217,
+          "code": 248
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 9388,
+          "code": 243
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 21565,
+          "code": 240
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 9510,
+          "code": 191
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 11881,
+          "code": 184
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 13064,
+          "code": 165
+        },
+        {
+          "path": "rust/alloc/vec/drain.rs",
+          "bytes": 9020,
+          "code": 147
+        }
+      ]
+    },
+    {
+      "version": "6.6.144",
+      "series": "6.6",
+      "tarball": "linux-6.6.144.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.144.tar.xz",
+      "files": 61,
+      "bytes": 663419,
+      "code": 8704,
+      "comment": 9020,
+      "blank": 1429,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 14,
+          "bytes": 329576,
+          "code": 4271,
+          "comment": 4623,
+          "blank": 679
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 24,
+          "bytes": 250351,
+          "code": 2894,
+          "comment": 3737,
+          "blank": 493
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 51813,
+          "code": 936,
+          "comment": 441,
+          "blank": 103
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 18403,
+          "code": 315,
+          "comment": 125,
+          "blank": 74
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3598,
+          "code": 92,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3363,
+          "code": 53,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1600,
+          "code": 33,
+          "comment": 15,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 703,
+          "code": 15,
+          "comment": 8,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 125034,
+          "code": 1137
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 78949,
+          "code": 999
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 56430,
+          "code": 691
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 31480,
+          "code": 469
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 46663,
+          "code": 389
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 19240,
+          "code": 318
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 23285,
+          "code": 304
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 15667,
+          "code": 283
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 12999,
+          "code": 253
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 21703,
+          "code": 240
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 15479,
+          "code": 234
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 9663,
+          "code": 190
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 11885,
+          "code": 184
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 13098,
+          "code": 165
+        },
+        {
+          "path": "scripts/rustdoc_test_gen.rs",
+          "bytes": 9704,
+          "code": 152
+        }
+      ]
+    },
+    {
+      "version": "6.7.12",
+      "series": "6.7",
+      "tarball": "linux-6.7.12.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.7.12.tar.xz",
+      "files": 61,
+      "bytes": 681724,
+      "code": 8838,
+      "comment": 9387,
+      "blank": 1456,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 14,
+          "bytes": 329576,
+          "code": 4271,
+          "comment": 4623,
+          "blank": 679
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 25,
+          "bytes": 276046,
+          "code": 3134,
+          "comment": 4146,
+          "blank": 546
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 48495,
+          "code": 926,
+          "comment": 415,
+          "blank": 101
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 18403,
+          "code": 315,
+          "comment": 125,
+          "blank": 74
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3598,
+          "code": 92,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3363,
+          "code": 53,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1540,
+          "code": 32,
+          "comment": 15,
+          "blank": 6
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 703,
+          "code": 15,
+          "comment": 8,
+          "blank": 3
+        }
+      ],
+      "drivers": [],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 125034,
+          "code": 1137
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 78949,
+          "code": 999
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 56424,
+          "code": 691
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 31480,
+          "code": 469
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 46002,
+          "code": 389
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 19240,
+          "code": 318
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 23285,
+          "code": 304
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 15667,
+          "code": 283
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 23935,
+          "code": 256
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 9355,
+          "code": 243
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 15479,
+          "code": 234
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 25076,
+          "code": 228
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 9663,
+          "code": 190
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 11883,
+          "code": 184
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 13098,
+          "code": 165
+        }
+      ]
+    },
+    {
+      "version": "6.8.12",
+      "series": "6.8",
+      "tarball": "linux-6.8.12.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.8.12.tar.xz",
+      "files": 64,
+      "bytes": 727667,
+      "code": 9444,
+      "comment": 9922,
+      "blank": 1565,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 14,
+          "bytes": 333558,
+          "code": 4288,
+          "comment": 4701,
+          "blank": 681
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 27,
+          "bytes": 308501,
+          "code": 3610,
+          "comment": 4518,
+          "blank": 629
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 53755,
+          "code": 939,
+          "comment": 484,
+          "blank": 102
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 18740,
+          "code": 322,
+          "comment": 125,
+          "blank": 74
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3598,
+          "code": 92,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3363,
+          "code": 53,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1437,
+          "code": 30,
+          "comment": 15,
+          "blank": 5
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 703,
+          "code": 15,
+          "comment": 8,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 128219,
+          "code": 1153
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 78949,
+          "code": 999
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 56424,
+          "code": 691
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 31501,
+          "code": 469
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 31499,
+          "code": 464
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 46526,
+          "code": 389
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 19378,
+          "code": 323
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 23285,
+          "code": 304
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 15667,
+          "code": 283
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 23935,
+          "code": 256
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 12838,
+          "code": 249
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 16305,
+          "code": 235
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 25072,
+          "code": 228
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 9613,
+          "code": 190
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 12087,
+          "code": 186
+        }
+      ]
+    },
+    {
+      "version": "6.9.12",
+      "series": "6.9",
+      "tarball": "linux-6.9.12.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.12.tar.xz",
+      "files": 65,
+      "bytes": 744984,
+      "code": 9717,
+      "comment": 10061,
+      "blank": 1598,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "files": 14,
+          "bytes": 338034,
+          "code": 4357,
+          "comment": 4734,
+          "blank": 687
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 28,
+          "bytes": 321222,
+          "code": 3812,
+          "comment": 4624,
+          "blank": 656
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 53755,
+          "code": 939,
+          "comment": 484,
+          "blank": 102
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 18860,
+          "code": 324,
+          "comment": 125,
+          "blank": 74
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3598,
+          "code": 92,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3363,
+          "code": 53,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1437,
+          "code": 30,
+          "comment": 15,
+          "blank": 5
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 703,
+          "code": 15,
+          "comment": 8,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/alloc/vec/mod.rs",
+          "bytes": 130183,
+          "code": 1181
+        },
+        {
+          "path": "rust/alloc/boxed.rs",
+          "bytes": 79308,
+          "code": 1002
+        },
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 56424,
+          "code": 691
+        },
+        {
+          "path": "rust/alloc/slice.rs",
+          "bytes": 31501,
+          "code": 469
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 31623,
+          "code": 464
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 26476,
+          "code": 447
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 46506,
+          "code": 389
+        },
+        {
+          "path": "rust/alloc/raw_vec.rs",
+          "bytes": 24897,
+          "code": 326
+        },
+        {
+          "path": "rust/alloc/vec/into_iter.rs",
+          "bytes": 15932,
+          "code": 288
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 23760,
+          "code": 253
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 12838,
+          "code": 249
+        },
+        {
+          "path": "rust/alloc/alloc.rs",
+          "bytes": 16558,
+          "code": 244
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 25183,
+          "code": 234
+        },
+        {
+          "path": "rust/alloc/lib.rs",
+          "bytes": 9600,
+          "code": 191
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 12108,
+          "code": 186
+        }
+      ]
+    },
+    {
+      "version": "6.10.14",
+      "series": "6.10",
+      "tarball": "linux-6.10.14.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.14.tar.xz",
+      "files": 54,
+      "bytes": 431291,
+      "code": 5642,
+      "comment": 5625,
+      "blank": 980,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 31,
+          "bytes": 342666,
+          "code": 4057,
+          "comment": 4890,
+          "blank": 724
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 56559,
+          "code": 975,
+          "comment": 516,
+          "blank": 103
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 18913,
+          "code": 325,
+          "comment": 125,
+          "blank": 74
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3638,
+          "code": 92,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3363,
+          "code": 53,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1437,
+          "code": 30,
+          "comment": 15,
+          "blank": 5
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 703,
+          "code": 15,
+          "comment": 8,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 57388,
+          "code": 706
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 29550,
+          "code": 469
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 31602,
+          "code": 464
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 46794,
+          "code": 389
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 28171,
+          "code": 279
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 12946,
+          "code": 252
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 25196,
+          "code": 239
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 11935,
+          "code": 177
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 13012,
+          "code": 162
+        },
+        {
+          "path": "rust/macros/helpers.rs",
+          "bytes": 8018,
+          "code": 155
+        },
+        {
+          "path": "scripts/rustdoc_test_gen.rs",
+          "bytes": 9704,
+          "code": 152
+        },
+        {
+          "path": "rust/kernel/types.rs",
+          "bytes": 14517,
+          "code": 152
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 5883,
+          "code": 142
+        },
+        {
+          "path": "rust/macros/quote.rs",
+          "bytes": 5932,
+          "code": 134
+        },
+        {
+          "path": "rust/kernel/init/__internal.rs",
+          "bytes": 6899,
+          "code": 116
+        }
+      ]
+    },
+    {
+      "version": "6.11.11",
+      "series": "6.11",
+      "tarball": "linux-6.11.11.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.11.11.tar.xz",
+      "files": 66,
+      "bytes": 506918,
+      "code": 6513,
+      "comment": 6589,
+      "blank": 1169,
+      "categories": [
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 42,
+          "bytes": 414165,
+          "code": 4845,
+          "comment": 5807,
+          "blank": 901
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 58042,
+          "code": 989,
+          "comment": 549,
+          "blank": 103
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 19611,
+          "code": 341,
+          "comment": 126,
+          "blank": 74
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 2,
+          "bytes": 5874,
+          "code": 143,
+          "comment": 29,
+          "blank": 36
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 5,
+          "bytes": 3638,
+          "code": 92,
+          "comment": 14,
+          "blank": 36
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 2,
+          "bytes": 3413,
+          "code": 56,
+          "comment": 41,
+          "blank": 11
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 1457,
+          "code": 31,
+          "comment": 15,
+          "blank": 5
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 718,
+          "code": 16,
+          "comment": 8,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 4012,
+          "code": 95,
+          "comment": 16,
+          "blank": 24
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 1862,
+          "code": 48,
+          "comment": 13,
+          "blank": 12
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/kernel/init/macros.rs",
+          "bytes": 57388,
+          "code": 706
+        },
+        {
+          "path": "rust/kernel/str.rs",
+          "bytes": 29550,
+          "code": 469
+        },
+        {
+          "path": "rust/kernel/net/phy.rs",
+          "bytes": 31603,
+          "code": 464
+        },
+        {
+          "path": "rust/kernel/init.rs",
+          "bytes": 46732,
+          "code": 384
+        },
+        {
+          "path": "rust/kernel/sync/arc.rs",
+          "bytes": 28171,
+          "code": 279
+        },
+        {
+          "path": "rust/macros/module.rs",
+          "bytes": 13285,
+          "code": 266
+        },
+        {
+          "path": "rust/kernel/workqueue.rs",
+          "bytes": 25255,
+          "code": 239
+        },
+        {
+          "path": "rust/kernel/types.rs",
+          "bytes": 17227,
+          "code": 181
+        },
+        {
+          "path": "rust/kernel/error.rs",
+          "bytes": 12157,
+          "code": 181
+        },
+        {
+          "path": "rust/kernel/uaccess.rs",
+          "bytes": 14314,
+          "code": 173
+        },
+        {
+          "path": "rust/kernel/print.rs",
+          "bytes": 13012,
+          "code": 162
+        },
+        {
+          "path": "scripts/generate_rust_target.rs",
+          "bytes": 6581,
+          "code": 158
+        },
+        {
+          "path": "rust/macros/helpers.rs",
+          "bytes": 8018,
+          "code": 155
+        },
+        {
+          "path": "scripts/rustdoc_test_gen.rs",
+          "bytes": 9704,
+          "code": 152
+        },
+        {
+          "path": "rust/macros/quote.rs",
+          "bytes": 5932,
+          "code": 134
+        }
+      ]
+    },
     {
       "version": "6.12.95",
       "series": "6.12",

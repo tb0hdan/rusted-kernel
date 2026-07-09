@@ -42,7 +42,10 @@ def build_svg(data: dict) -> str:
     if not V:
         raise SystemExit("ogimage: no versions in data")
     first, last = V[0], V[-1]
-    gcode = last["code"] / first["code"] if first["code"] else 0
+    # Anchor the growth multiple to the first release that ships Rust, so a
+    # zero-Rust starting series (e.g. 6.0) doesn't yield a meaningless 0.0x.
+    baseline = next((v for v in V if v["code"]), first)
+    gcode = last["code"] / baseline["code"] if baseline["code"] else 0
     n = len(V)
     cloc = data.get("cloc_version", "cloc")
 
@@ -79,7 +82,7 @@ def build_svg(data: dict) -> str:
              f'<tspan fill="{MUTE}"> SLOC</tspan>'
              f'<tspan fill="{FAINT}">{sep}</tspan>'
              f'<tspan fill="{RUST_HI}">{gcode:.1f}×</tspan>'
-             f'<tspan fill="{MUTE}"> since {first["series"]}</tspan></text>')
+             f'<tspan fill="{MUTE}"> since {baseline["series"]}</tspan></text>')
 
     # mini stacked bars (the signature growth viz)
     x0, x1, base_y, top_y = PAD, W - PAD, 560, 452
