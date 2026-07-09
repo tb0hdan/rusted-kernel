@@ -128,15 +128,16 @@ details .body{padding:4px 16px 16px}
   display:flex;align-items:center;gap:8px;margin-bottom:5px}
 .gitem .p{font-size:12.5px;color:#9aa0aa;margin:0}
 
+code{background:#1b1e24;border:1px solid #282c34;border-radius:5px;padding:1px 6px;
+  font-family:ui-monospace,Menlo,Consolas,monospace;color:#9aa0aa;font-size:.92em}
+.method{color:#9aa0aa;max-width:80ch;margin:0}
+
 footer{padding:40px 0 70px;color:#6b7280;font-size:12.5px}
-footer code{background:#1b1e24;border:1px solid #282c34;border-radius:5px;padding:1px 6px;
-  font-family:ui-monospace,Menlo,Consolas,monospace;color:#9aa0aa}
-footer p{max-width:80ch}
-.tag{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;
-  color:#e4552e;border:1px solid #282c34;border-radius:20px;padding:2px 10px;margin-right:6px}
 
 .brandfoot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;
-  padding:20px 0 26px;margin-bottom:18px;border-bottom:1px solid #282c34}
+  padding:6px 0}
+.brandfoot .bfleft{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+.brandfoot .fdate{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#6b7280}
 .brandfoot .mark{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:19px;font-weight:700;color:#e7e9ec}
 .brandfoot .mark .p{color:#e4552e}
 .brandfoot .mark .tld{color:#6b7280}
@@ -449,23 +450,30 @@ footer p{max-width:80ch}
   <div class="glossary"><div class="gitem"><div class="h"><span class="dot" style="background:#e4552e"></span>Kernel crate</div><p class="p">Safe Rust abstractions layered over the C kernel APIs</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#c792ea"></span>Procedural macros</div><p class="p">Compiler plumbing: module!, #[vtable], pin-data, etc.</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#f2c14e"></span>pin-init crate</div><p class="p">Safe in-place (pinned) initialisation primitives</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#5aa9e6"></span>Generated bindings</div><p class="p">Auto-generated raw FFI bindings to C kernel symbols</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#66d1c4"></span>UAPI bindings</div><p class="p">Raw bindings to the kernel&#x27;s userspace API headers</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#9aa0a6"></span>Samples &amp; examples</div><p class="p">Reference modules demonstrating the Rust API</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#57b894"></span>Drivers</div><p class="p">Production device drivers written in Rust</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#b08968"></span>Kernel build tooling</div><p class="p">Codegen and helpers used during the kernel build</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#8fa3ad"></span>Tooling &amp; tests</div><p class="p">Out-of-tree tooling and test harnesses</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#7bb0a8"></span>Library code</div><p class="p">Shared library-style Rust code</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#c9a227"></span>Vendored crates</div><p class="p">Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel&#x27;s procedural macros</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#e08ba8"></span>Core runtime &amp; shims</div><p class="p">compiler_builtins, ffi and other crate-root shims</p></div><div class="gitem"><div class="h"><span class="dot" style="background:#5b667a"></span>Other subsystems</div><p class="p">Rust code elsewhere in the tree</p></div></div>
 </div></section>
 
-<footer><div class="wrap">
-  <div class="brandfoot">
-    <span class="mark"><span class="p">~/</span>rusted-kernel<span class="tld">.com</span></span>
-    <div class="flinks">
-      <a href="https://github.com/tb0hdan/rusted-kernel"><svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>tb0hdan/rusted-kernel <span class="arr" style="color:#e4552e">↗</span></a>
-      <a class="dp-link" href="https://domainsproject.org">Part of <b>DomainsProject.org</b> ↗</a>
-    </div>
-  </div>
-  <p><span class="tag">methodology</span></p>
-  <p>For each kernel series ≥ 6.12 the latest patch release is
+<section><div class="wrap">
+  <h2>Methodology</h2>
+  <p class="sectlede">How the numbers are produced — fully reproducible from the
+     scripts in the repository.</p>
+  <p class="method">For each kernel series ≥ 6.12 the latest patch release is
      resolved from <a href="https://cdn.kernel.org/pub/linux/kernel">https://cdn.kernel.org/pub/linux/kernel</a>, the source tarball downloaded and only
      <code>*.rs</code> files extracted. File sizes come from the extracted sources; line
      counts (code / comment / blank) from <code>1.98</code>. Generated bindings that
      are produced only at build time are <em>not</em> shipped in the tarball and therefore
      not counted. Data regenerated with <code>scripts/build.sh</code>;
      machine-readable results live in <code>data/kernels.json</code>.</p>
-  <p style="margin-top:14px">Generated 2026-07-08 · <a href="https://rusted-kernel.com">rusted-kernel.com</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="brandfoot">
+    <div class="bfleft">
+      <span class="mark"><span class="p">~/</span>rusted-kernel<span class="tld">.com</span></span>
+      <span class="fdate">· 2026-07-08</span>
+    </div>
+    <div class="flinks">
+      <a href="https://github.com/tb0hdan/rusted-kernel"><svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>tb0hdan/rusted-kernel <span class="arr" style="color:#e4552e">↗</span></a>
+      <a class="dp-link" href="https://domainsproject.org">Part of <b>DomainsProject.org</b> ↗</a>
+    </div>
+  </div>
 </div></footer>
 
 </body>

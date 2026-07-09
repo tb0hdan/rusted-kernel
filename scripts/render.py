@@ -372,15 +372,16 @@ details .body{padding:4px 16px 16px}
   display:flex;align-items:center;gap:8px;margin-bottom:5px}
 .gitem .p{font-size:12.5px;color:__MUTE__;margin:0}
 
+code{background:__PANEL2__;border:1px solid __BORDER__;border-radius:5px;padding:1px 6px;
+  font-family:ui-monospace,Menlo,Consolas,monospace;color:__MUTE__;font-size:.92em}
+.method{color:__MUTE__;max-width:80ch;margin:0}
+
 footer{padding:40px 0 70px;color:__FAINT__;font-size:12.5px}
-footer code{background:__PANEL2__;border:1px solid __BORDER__;border-radius:5px;padding:1px 6px;
-  font-family:ui-monospace,Menlo,Consolas,monospace;color:__MUTE__}
-footer p{max-width:80ch}
-.tag{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;
-  color:__RUST__;border:1px solid __BORDER__;border-radius:20px;padding:2px 10px;margin-right:6px}
 
 .brandfoot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;
-  padding:20px 0 26px;margin-bottom:18px;border-bottom:1px solid __BORDER__}
+  padding:6px 0}
+.brandfoot .bfleft{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+.brandfoot .fdate{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:__FAINT__}
 .brandfoot .mark{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:19px;font-weight:700;color:__INK__}
 .brandfoot .mark .p{color:__RUST__}
 .brandfoot .mark .tld{color:__FAINT__}
@@ -695,23 +696,30 @@ def render(data: dict) -> str:
   <div class="glossary">{gloss}</div>
 </div></section>
 
-<footer><div class="wrap">
-  <div class="brandfoot">
-    <span class="mark"><span class="p">~/</span>rusted-kernel<span class="tld">.com</span></span>
-    <div class="flinks">
-      <a href="{REPO_URL}">{GH_ICON}tb0hdan/rusted-kernel <span class="arr" style="color:{RUST}">↗</span></a>
-      <a class="dp-link" href="{DP_URL}">Part of <b>{DP_NAME}</b> ↗</a>
-    </div>
-  </div>
-  <p><span class="tag">methodology</span></p>
-  <p>For each kernel series ≥ {e(data.get('floor',''))} the latest patch release is
+<section><div class="wrap">
+  <h2>Methodology</h2>
+  <p class="sectlede">How the numbers are produced — fully reproducible from the
+     scripts in the repository.</p>
+  <p class="method">For each kernel series ≥ {e(data.get('floor',''))} the latest patch release is
      resolved from <a href="{src}">{src}</a>, the source tarball downloaded and only
      <code>*.rs</code> files extracted. File sizes come from the extracted sources; line
      counts (code / comment / blank) from <code>{cloc_v}</code>. Generated bindings that
      are produced only at build time are <em>not</em> shipped in the tarball and therefore
      not counted. Data regenerated with <code>scripts/build.sh</code>;
      machine-readable results live in <code>data/kernels.json</code>.</p>
-  <p style="margin-top:14px">Generated {gen} · <a href="{SITE_URL}">{SITE}</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="brandfoot">
+    <div class="bfleft">
+      <span class="mark"><span class="p">~/</span>rusted-kernel<span class="tld">.com</span></span>
+      <span class="fdate">· {gen}</span>
+    </div>
+    <div class="flinks">
+      <a href="{REPO_URL}">{GH_ICON}tb0hdan/rusted-kernel <span class="arr" style="color:{RUST}">↗</span></a>
+      <a class="dp-link" href="{DP_URL}">Part of <b>{DP_NAME}</b> ↗</a>
+    </div>
+  </div>
 </div></footer>
 
 </body>
