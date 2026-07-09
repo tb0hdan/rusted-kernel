@@ -11,11 +11,17 @@ detailed breakdown of:
   * their purpose (categorised by location in the kernel tree)
   * SLOC / comment / blank counts (via the ``cloc`` tool)
 
+It also measures the **whole tree** (all languages) with a second ``cloc`` pass
+so the report can express Rust as a share of the total kernel SLOC and show the
+per-language composition. That pass fully extracts each tarball (unlike the
+cheap ``*.rs``-only path), so it is cached independently and can be disabled
+with ``--skip-kernel-totals``.
+
 Results are written to ``data/kernels.json`` for the site renderer to consume.
 
-The script shells out to ``curl``, ``tar``, ``xz`` and ``cloc``; it keeps at
-most one extracted tree on disk at a time and streams ``*.rs`` files straight
-out of each compressed tarball, so peak disk usage stays small.
+The script shells out to ``curl``, ``tar``, ``xz`` and ``cloc``; the ``*.rs``
+path streams only Rust files straight out of each compressed tarball (small peak
+disk), while the totals path extracts the full tree one release at a time.
 """
 
 from __future__ import annotations
@@ -136,6 +142,15 @@ class VersionReport:
     categories: list[dict] = field(default_factory=list)
     drivers: list[dict] = field(default_factory=list)
     largest_files: list[dict] = field(default_factory=list)
+    # Whole-tree (all languages) totals from the second cloc pass. Zero until a
+    # kernel-totals measurement has run for this version (see measure_kernel_totals).
+    kernel_files: int = 0
+    kernel_code: int = 0
+    kernel_comment: int = 0
+    kernel_blank: int = 0
+    # Per-language SLOC breakdown, [{language, files, code, comment, blank}]
+    # sorted by code desc. Feeds the language-composition bar.
+    languages: list[dict] = field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -242,6 +257,24 @@ def extract_rust(tarball: Path, dest: Path) -> None:
             f"extract failed for {tarball.name}: {proc.stderr.strip()[:300]}")
 
 
+def extract_full(tarball: Path, dest: Path) -> None:
+    """Extract the *entire* tree (all files, every language).
+
+    Used only by the whole-tree totals pass; far larger on disk than
+    :func:`extract_rust`, so callers extract one release at a time and clean up.
+    """
+    if dest.exists():
+        shutil.rmtree(dest)
+    dest.mkdir(parents=True)
+    proc = subprocess.run(
+        ["tar", "-xf", str(tarball), "-C", str(dest)],
+        capture_output=True, text=True,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"full extract failed for {tarball.name}: {proc.stderr.strip()[:300]}")
+
+
 # ---------------------------------------------------------------------------
 # cloc
 # ---------------------------------------------------------------------------
@@ -269,6 +302,51 @@ def run_cloc(root: Path) -> dict[str, dict]:
             "blank": val.get("blank", 0),
         }
     return result
+
+
+def run_cloc_totals(root: Path) -> dict:
+    """Whole-tree cloc summary across *all* languages.
+
+    Returns ``{"total": {files, code, comment, blank}, "languages": [...]}``
+    where ``languages`` is ``[{language, files, code, comment, blank}]`` sorted
+    by code descending. Raises on cloc failure so a silent zero is never cached.
+    """
+    # No --follow-links here: the kernel tree symlinks directories across arches
+    # (e.g. arch/*/boot/dts), which makes cloc's File::Find abort with "encountered
+    # a second time", and following them would double-count anyway.
+    out = subprocess.run(
+        ["cloc", "--json", "--quiet", str(root)],
+        capture_output=True, text=True,
+    )
+    if not out.stdout.strip():
+        raise RuntimeError(
+            "cloc produced no output for full tree "
+            f"(rc={out.returncode}, stderr={out.stderr.strip()[:300]!r})")
+    data = json.loads(out.stdout)
+    summ = data.get("SUM")
+    if not summ:
+        raise RuntimeError("cloc output missing SUM for full tree")
+    languages = []
+    for lang, val in data.items():
+        if lang in ("header", "SUM"):
+            continue
+        languages.append({
+            "language": lang,
+            "files": val.get("nFiles", 0),
+            "code": val.get("code", 0),
+            "comment": val.get("comment", 0),
+            "blank": val.get("blank", 0),
+        })
+    languages.sort(key=lambda x: x["code"], reverse=True)
+    return {
+        "total": {
+            "files": summ.get("nFiles", 0),
+            "code": summ.get("code", 0),
+            "comment": summ.get("comment", 0),
+            "blank": summ.get("blank", 0),
+        },
+        "languages": languages,
+    }
 
 
 def strip_top(rel: str) -> str:
@@ -339,6 +417,49 @@ def measure_files(info: dict, cache_dir: Path, work_dir: Path,
     return records
 
 
+def measure_kernel_totals(info: dict, cache_dir: Path, work_dir: Path,
+                          meas_cache: Path, keep_extract: bool,
+                          refresh: bool) -> dict:
+    """Whole-tree (all languages) totals for one release.
+
+    Fully extracts the tarball, runs a summary ``cloc`` across every language,
+    then removes the tree. Cached to ``meas_cache/kernel-<version>.json`` so the
+    expensive extraction only happens once per release. Returned dict matches
+    :func:`run_cloc_totals` (``{"total": {...}, "languages": [...]}``).
+    """
+    cache_file = meas_cache / f"kernel-{info['version']}.json"
+    if cache_file.exists() and not refresh:
+        try:
+            totals = json.loads(cache_file.read_text())
+            print("    using cached kernel totals")
+            return totals
+        except (json.JSONDecodeError, ValueError):
+            print("    cached kernel totals corrupt -> re-measuring")
+            cache_file.unlink(missing_ok=True)
+
+    tarball = cache_dir / info["tarball"]
+    download(info["url"], tarball)
+
+    extract_dir = work_dir / f"full-linux-{info['version']}"
+    print("    extracting full tree (all languages) ...")
+    extract_full(tarball, extract_dir)
+    try:
+        print("    running cloc on full tree ...")
+        totals = run_cloc_totals(extract_dir)
+    finally:
+        if not keep_extract:
+            shutil.rmtree(extract_dir, ignore_errors=True)
+
+    print(f"    => kernel {totals['total']['code']:,} SLOC across "
+          f"{len(totals['languages'])} languages")
+
+    meas_cache.mkdir(parents=True, exist_ok=True)
+    tmp = cache_file.with_name(cache_file.name + ".tmp")
+    tmp.write_text(json.dumps(totals))
+    os.replace(tmp, cache_file)
+    return totals
+
+
 def build_report(info: dict, records: list[dict]) -> VersionReport:
     rep = VersionReport(version=info["version"], series=info["series"],
                         tarball=info["tarball"], url=info["url"])
@@ -406,6 +527,9 @@ def main() -> int:
                     help="do not delete extracted trees (debugging)")
     ap.add_argument("--refresh", action="store_true",
                     help="ignore the per-file measurement cache and re-measure")
+    ap.add_argument("--skip-kernel-totals", action="store_true",
+                    help="skip the whole-tree (all languages) cloc pass that "
+                         "measures total kernel SLOC (fast .rs-only run)")
     args = ap.parse_args()
 
     # Fail fast on a missing external dependency, before any expensive work --
@@ -438,7 +562,23 @@ def main() -> int:
             try:
                 records = measure_files(info, cache_dir, work_dir, meas_cache,
                                         args.keep_extract, args.refresh)
-                reports.append(build_report(info, records))
+                rep = build_report(info, records)
+                if not args.skip_kernel_totals:
+                    # Supplementary, non-fatal: a totals failure must not drop the
+                    # (primary) Rust breakdown for this release. The renderer
+                    # treats kernel_code == 0 as "share unavailable".
+                    try:
+                        totals = measure_kernel_totals(
+                            info, cache_dir, work_dir, meas_cache,
+                            args.keep_extract, args.refresh)
+                        rep.kernel_files = totals["total"]["files"]
+                        rep.kernel_code = totals["total"]["code"]
+                        rep.kernel_comment = totals["total"]["comment"]
+                        rep.kernel_blank = totals["total"]["blank"]
+                        rep.languages = totals["languages"]
+                    except Exception as e:  # noqa: BLE001
+                        print(f"    !! kernel totals failed: {e}", file=sys.stderr)
+                reports.append(rep)
             except Exception as e:  # noqa: BLE001
                 print(f"    !! failed: {e}", file=sys.stderr)
 

@@ -12,6 +12,7 @@ from __future__ import annotations
 import base64
 import html
 import json
+import math
 from pathlib import Path
 
 # Inline SVG favicon (terminal ">" prompt + cursor, Rust orange) so the page is
@@ -42,6 +43,7 @@ SITE = "rusted-kernel.com"
 SITE_URL = "https://rusted-kernel.com"
 REPO_URL = "https://github.com/tb0hdan/rusted-kernel"
 KERNEL_RUST_DOCS = "https://docs.kernel.org/rust/index.html"
+CLOC_URL = "https://github.com/aldanial/cloc"
 DP_URL = "https://domainsproject.org"
 DP_NAME = "DomainsProject.org"
 
@@ -88,6 +90,12 @@ CAT_ORDER = [
     ("Other subsystems", "#5b667a"),
 ]
 CAT_COLOR = dict(CAT_ORDER)
+
+# The two "crate" blocks that dominate the SLOC totals — the first-party
+# rust/kernel abstraction crate and the third-party vendored crates
+# (syn/quote/proc-macro2, formerly rust/alloc). The companion chart drops both
+# so the remaining categories become legible.
+CRATE_CATEGORIES = {"Kernel crate", "Vendored crates"}
 
 
 def color_for(cat: str) -> str:
@@ -137,6 +145,20 @@ def fi(n: int) -> str:
     return f"{n:,}"
 
 
+def mabbr(n: int) -> str:
+    """Compact SLOC count, e.g. 30101072 -> '30.1M', 4877 -> '4.9k'."""
+    if n >= 1_000_000:
+        return f"{n / 1_000_000:.1f}M"
+    if n >= 1_000:
+        return f"{n / 1_000:.1f}k"
+    return f"{n:,}"
+
+
+def share_pct(part: int, whole: int, decimals: int = 2) -> str:
+    """Rust share as a percentage string; '—' when the total is unavailable."""
+    return f"{100 * part / whole:.{decimals}f}%" if whole else "—"
+
+
 def human_bytes(n: int) -> str:
     f = float(n)
     for unit in ("B", "KiB", "MiB", "GiB"):
@@ -151,13 +173,19 @@ def e(s: str) -> str:
 
 
 # --- SVG chart builders ----------------------------------------------------
-def stacked_bars(versions: list[dict], title: str, source: str, note: str) -> str:
+def stacked_bars(versions: list[dict], title: str, source: str, note: str,
+                 exclude: set[str] | None = None) -> str:
     """Stacked bar chart: Rust SLOC by category, one bar per version.
+
+    ``exclude`` drops the named categories entirely (bars, totals and y-scale),
+    so a companion chart can suppress a dominating block and let the rest of the
+    categories become legible.
 
     Self-branding: carries a title + source caption at the top and a
     ``~/rusted-kernel.com`` wordmark + methodology note at the bottom, so the
     chart reads as a standalone artefact when shared.
     """
+    exclude = exclude or set()
     W, H = 960, 500
     ml, mr, mt, mb = 64, 22, 66, 96
     plot_w = W - ml - mr
@@ -169,6 +197,8 @@ def stacked_bars(versions: list[dict], title: str, source: str, note: str) -> st
     # Per-version category -> code map, only categories present anywhere.
     present: list[str] = []
     for cat, _ in CAT_ORDER:
+        if cat in exclude:
+            continue
         if any(any(c["category"] == cat for c in v["categories"]) for v in versions):
             present.append(cat)
 
@@ -300,6 +330,115 @@ def line_chart(versions: list[dict], key: str, label: str, color: str) -> str:
     return "".join(parts)
 
 
+def share_line_chart(versions: list[dict]) -> str:
+    """Rust as a % of total kernel SLOC, across versions.
+
+    Only versions that carry a whole-tree measurement (kernel_code > 0) are
+    plotted; a zero-Rust release like 6.0 still contributes a real 0.00% point,
+    which is the point of the chart — the share climbs from literally nothing.
+    """
+    pts_data = [(v, 100 * v["code"] / v["kernel_code"])
+                for v in versions if v.get("kernel_code")]
+    n = len(pts_data)
+    if n == 0:
+        return ""
+    W, H = 460, 240
+    ml, mr, mt, mb = 52, 14, 22, 40
+    plot_w, plot_h = W - ml - mr, H - mt - mb
+    shares = [s for _, s in pts_data]
+    smax = max(shares) or 1
+    # "nice" ceiling rounded up to the next 0.05 so the tiny values have headroom.
+    ymax_r = max(0.05, math.ceil(smax * 20) / 20)
+    gap = plot_w / max(1, n - 1) if n > 1 else plot_w
+
+    def X(i):
+        return ml + (gap * i if n > 1 else plot_w / 2)
+
+    def Y(val):
+        return mt + plot_h * (1 - val / ymax_r)
+
+    pts = [(X(i), Y(shares[i])) for i in range(n)]
+    parts = [f'<svg viewBox="0 0 {W} {H}" role="img" '
+             f'aria-label="Rust share of total kernel SLOC across versions" '
+             f'preserveAspectRatio="xMidYMid meet" class="chart">']
+    parts.append(wordmark_svg(W - mr, 12, "end", 10.5))
+    ticks = 3
+    for t in range(ticks + 1):
+        val = ymax_r * t / ticks
+        yy = Y(val)
+        parts.append(f'<line x1="{ml}" y1="{yy:.1f}" x2="{W-mr}" y2="{yy:.1f}" '
+                     f'stroke="{BORDER}" stroke-width="1"/>')
+        parts.append(f'<text x="{ml-8}" y="{yy+4:.1f}" text-anchor="end" '
+                     f'class="axis">{val:.2f}%</text>')
+    area = f'M {pts[0][0]:.1f} {Y(0):.1f} ' + \
+        " ".join(f'L {x:.1f} {y:.1f}' for x, y in pts) + \
+        f' L {pts[-1][0]:.1f} {Y(0):.1f} Z'
+    parts.append(f'<path d="{area}" fill="{RUST}" fill-opacity="0.16"/>')
+    line = "M " + " L ".join(f'{x:.1f} {y:.1f}' for x, y in pts)
+    parts.append(f'<path d="{line}" fill="none" stroke="{RUST}" stroke-width="2.5"/>')
+    for i, (x, y) in enumerate(pts):
+        v = pts_data[i][0]
+        parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{RUST}">'
+                     f'<title>{e(v["version"])}: {shares[i]:.3f}% of kernel SLOC</title></circle>')
+        ly = H - mb / 2
+        parts.append(f'<text x="{x:.1f}" y="{ly:.1f}" text-anchor="middle" '
+                     f'dominant-baseline="central" '
+                     f'transform="rotate(-90 {x:.1f} {ly:.1f})" '
+                     f'class="axis small">{e(v["series"])}</text>')
+    parts.append('</svg>')
+    return "".join(parts)
+
+
+def composition_bar(buckets: list[tuple], total: int) -> str:
+    """True-scale 100% stacked bar of kernel SLOC by language bucket.
+
+    ``buckets`` is an ordered list of ``(name, code, color)``; the ``Rust``
+    bucket is drawn true-to-scale (a bright hairline at ~0.3%) and given a
+    leader-line callout so it can be found without distorting any proportion.
+    """
+    if not total:
+        return ""
+    W, H = 1000, 118
+    bx, bw = 0, W
+    by, bh = 52, 46
+    parts = [f'<svg viewBox="0 0 {W} {H}" role="img" '
+             f'aria-label="Kernel SLOC composition by language" '
+             f'preserveAspectRatio="xMidYMid meet" class="compbar">']
+    x = float(bx)
+    for name, code, color in buckets:
+        w = bw * code / total
+        share = 100 * code / total
+        parts.append(
+            f'<rect x="{x:.2f}" y="{by}" width="{max(w,0.4):.2f}" height="{bh}" '
+            f'fill="{color}"><title>{e(name)}: {fi(code)} SLOC ({share:.2f}%)</title></rect>')
+        # inline label only where the segment is wide enough to hold text
+        if w > 130:
+            parts.append(
+                f'<text x="{x + w/2:.1f}" y="{by + bh/2 - 3:.1f}" text-anchor="middle" '
+                f'class="complab">{e(name)}</text>'
+                f'<text x="{x + w/2:.1f}" y="{by + bh/2 + 13:.1f}" text-anchor="middle" '
+                f'class="compsub">{share:.1f}%</text>')
+        if name == "Rust":
+            cx = x + w / 2
+            # Rust is the rightmost (tiny) segment, so a centred label would clip
+            # the edge — anchor the callout to whichever side keeps it on-canvas.
+            if cx > W * 0.6:
+                anchor, lx = "end", W - 2
+            elif cx < W * 0.4:
+                anchor, lx = "start", 2
+            else:
+                anchor, lx = "middle", cx
+            parts.append(
+                f'<line x1="{cx:.2f}" y1="{by-4:.1f}" x2="{cx:.2f}" y2="28" '
+                f'stroke="{RUST}" stroke-width="1.5"/>'
+                f'<circle cx="{cx:.2f}" cy="{by-4:.1f}" r="2.6" fill="{RUST}"/>'
+                f'<text x="{lx:.1f}" y="20" text-anchor="{anchor}" '
+                f'class="callout">Rust · {share:.2f}%</text>')
+        x += w
+    parts.append('</svg>')
+    return "".join(parts)
+
+
 def cat_bar_row(cat: dict, maxcode: int) -> str:
     pct = (cat["code"] / maxcode * 100) if maxcode else 0
     col = color_for(cat["category"])
@@ -354,6 +493,9 @@ section{padding:46px 0;border-bottom:1px solid __BORDER__}
 h2{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;letter-spacing:.22em;
   text-transform:uppercase;color:__MUTE__;margin:0 0 6px}
 h2::before{content:"// ";color:__RUST__}
+.subhead{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:__INK__;margin:34px 0 6px}
+.subhead::before{content:"└ ";color:__RUST__}
 .sectlede{color:__MUTE__;margin:0 0 26px;max-width:74ch}
 
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
@@ -387,6 +529,23 @@ h2::before{content:"// ";color:__RUST__}
   font-size:11.5px;color:__MUTE__;background:__PANEL2__;border:1px solid __BORDER__;
   border-radius:20px;padding:4px 11px 4px 9px}
 .dot{display:inline-block;width:11px;height:11px;border-radius:3px;flex:none}
+
+/* Rust's share of the kernel */
+.sharetop{display:grid;grid-template-columns:minmax(210px,320px) 1fr;gap:16px;
+  align-items:stretch;margin-bottom:16px}
+@media(max-width:720px){.sharetop{grid-template-columns:1fr}}
+.bigshare{background:__PANEL__;border:1px solid __BORDER__;border-radius:12px;
+  padding:24px 22px;display:flex;flex-direction:column;justify-content:center}
+.bigshare .pct{font-family:ui-monospace,Menlo,Consolas,monospace;
+  font-size:clamp(42px,8vw,66px);font-weight:700;color:__RUST__;line-height:1}
+.bigshare .ofwhat{color:__INK__;margin-top:12px;font-size:14px;max-width:32ch}
+.bigshare .ofwhat b{color:__RUST_HI__;font-weight:700}
+.bigshare .caveat{color:__MUTE__;margin-top:10px;font-size:12.5px;max-width:34ch}
+.compwrap .compbar{width:100%;height:auto;display:block;min-width:520px}
+.compbar text{font-family:ui-monospace,Menlo,Consolas,monospace}
+.compbar .complab{fill:#fff;font-size:15px;font-weight:700;letter-spacing:.02em}
+.compbar .compsub{fill:rgba(255,255,255,.8);font-size:12px}
+.compbar .callout{fill:__RUST__;font-size:15px;font-weight:700}
 
 table{width:100%;border-collapse:collapse;font-size:13.5px}
 .scroll{overflow-x:auto}
@@ -561,14 +720,26 @@ def render(data: dict) -> str:
         a, b = baseline[key], last[key]
         return (b / a) if a else 0
 
+    # Rust's share of the whole kernel (all languages), latest release.
+    ktotal = last.get("kernel_code", 0)
+    share_str = share_pct(last["code"], ktotal, 2)      # "0.31%"
+    share_has = ktotal > 0
+
     # legend (only categories present)
     present_cats = []
     for cat, _ in CAT_ORDER:
         if any(any(c["category"] == cat for c in v["categories"]) for v in versions):
             present_cats.append(cat)
-    legend = "".join(
-        f'<span class="item"><span class="dot" style="background:{color_for(c)}"></span>{e(c)}</span>'
-        for c in present_cats)
+
+    def legend_html(cats):
+        return "".join(
+            f'<span class="item"><span class="dot" style="background:{color_for(c)}">'
+            f'</span>{e(c)}</span>' for c in cats)
+
+    legend = legend_html(present_cats)
+    # companion legend: the same categories minus the two dominating crate blocks
+    legend_no_crates = legend_html(
+        [c for c in present_cats if c not in CRATE_CATEGORIES])
 
     # metric cards (latest version)
     n_drivers = len(last["drivers"])
@@ -582,6 +753,8 @@ def render(data: dict) -> str:
       <p class="v">{human_bytes(last['bytes'])}</p><p class="s">total .rs payload</p></div>
     <div class="card"><p class="k">Comment lines</p>
       <p class="v">{fi(last['comment'])}</p><p class="s">doc density {(last['comment']/last['code']) if last['code'] else 0:.2f}× code</p></div>
+    <div class="card"><p class="k">Share of kernel</p>
+      <p class="v">{share_str}</p><p class="s">of {mabbr(ktotal) if share_has else "—"} SLOC · all languages</p></div>
     <div class="card"><p class="k">Categories</p>
       <p class="v">{n_cats}</p><p class="s">distinct purposes in-tree</p></div>
     <div class="card"><p class="k">Driver subsystems</p>
@@ -597,6 +770,7 @@ def render(data: dict) -> str:
             delta = f'<span class="delta-pos">+{fi(d)}</span>' if d >= 0 else fi(d)
         else:
             delta = "—"
+        kcode = v.get("kernel_code", 0)
         rows.append(
             f'<tr><td class="mono">{e(v["version"])}</td>'
             f'<td class="num">{fi(v["files"])}</td>'
@@ -604,7 +778,9 @@ def render(data: dict) -> str:
             f'<td class="num">{fi(v["code"])}</td>'
             f'<td class="num">{fi(v["comment"])}</td>'
             f'<td class="num">{fi(v["blank"])}</td>'
-            f'<td class="num">{delta}</td></tr>')
+            f'<td class="num">{delta}</td>'
+            f'<td class="num">{fi(kcode) if kcode else "—"}</td>'
+            f'<td class="num">{share_pct(v["code"], kcode, 3)}</td></tr>')
         prev = v
     summary_rows = "".join(rows)
 
@@ -664,6 +840,7 @@ def render(data: dict) -> str:
     gen = e(data.get("generated_utc", ""))
     cloc_v = e(data.get("cloc_version", ""))
     src = e(data.get("source", ""))
+    cloc_link = f'<a href="{CLOC_URL}">CLOC tool v{cloc_v}</a>'
 
     stacked = stacked_bars(
         versions,
@@ -671,8 +848,75 @@ def render(data: dict) -> str:
         source=f"source: kernel.org  ·  latest patch of each series  ·  "
                f"{first['series']} → {last['series']}",
         note=f"SLOC = code lines, excl. comments & blanks  ·  cloc {cloc_v}")
+    # Companion chart: identical, but with the two dominating crate blocks removed
+    # so the smaller categories (drivers, samples, bindings, macros, …) are legible.
+    stacked_no_crates = stacked_bars(
+        versions,
+        title="RUST SLOC BY PURPOSE — CRATES EXCLUDED",
+        source=f"excl. Kernel crate + Vendored crates  ·  "
+               f"{first['series']} → {last['series']}",
+        note=f"SLOC = code lines, excl. comments & blanks  ·  cloc {cloc_v}",
+        exclude=CRATE_CATEGORIES)
     files_line = line_chart(versions, "files", "files", "#5aa9e6")
     comment_line = line_chart(versions, "comment", "comment lines", RUST_HI)
+
+    # Rust's share of the kernel: composition bar + share-over-time line, plus a
+    # legend of the language buckets. Built only when totals were measured.
+    share_section = ""
+    if share_has:
+        langs = {l["language"]: l["code"] for l in last.get("languages", [])}
+        c_code = langs.get("C", 0)
+        hdr_code = langs.get("C/C++ Header", 0)
+        asm_code = langs.get("Assembly", 0)
+        rust_code = last["code"]
+        other_code = max(0, ktotal - c_code - hdr_code - asm_code - rust_code)
+        # ordered largest → smallest so Rust is the rightmost (called-out) sliver
+        buckets = [
+            ("C", c_code, "#4d6a8a"),
+            ("C/C++ headers", hdr_code, "#6f8cab"),
+            ("Other", other_code, "#39424f"),
+            ("Assembly", asm_code, "#93a9c4"),
+            ("Rust", rust_code, RUST),
+        ]
+        comp_svg = composition_bar(buckets, ktotal)
+        comp_legend = "".join(
+            f'<span class="item"><span class="dot" style="background:{col}"></span>'
+            f'{e(nm)} · {share_pct(code, ktotal, 2)}</span>'
+            for nm, code, col in buckets)
+        share_line = share_line_chart(versions)
+        first_rust = baseline  # first Rust-bearing release
+        fr_share = share_pct(first_rust["code"], first_rust.get("kernel_code", 0), 3)
+        # First-party kernel Rust excludes the in-tree vendored crates so the
+        # caveat separates authored kernel code from third-party tooling deps.
+        vendored = sum(c["code"] for c in last["categories"]
+                       if "Vendored" in c["category"])
+        firstparty = last["code"] - vendored
+        share_section = f"""
+<section><div class="wrap">
+  <h2>Rust's share of the kernel</h2>
+  <p class="sectlede">The whole mainline tree is about <b>{mabbr(ktotal)}</b> lines of code
+     across {len(last.get('languages', []))} languages — overwhelmingly C and C headers.
+     Rust is still a sliver, but a fast-growing one: it went from <b>0%</b> in
+     {e(first['series'])} (no <span class="mono">.rs</span> at all) to
+     <b>{fr_share}</b> when it first landed in {e(first_rust['series'])}, to
+     <b>{share_str}</b> in {e(last['series'])}.</p>
+  <div class="sharetop">
+    <div class="bigshare">
+      <span class="pct">{share_str}</span>
+      <span class="ofwhat">of the kernel's <b>{mabbr(ktotal)}</b> SLOC is Rust
+        ({fi(last['code'])} of {fi(ktotal)} lines).</span>
+      <span class="caveat">Of that, ~{mabbr(vendored)} is vendored crates; first-party
+        kernel Rust is {mabbr(firstparty)} ({share_pct(firstparty, ktotal, 3)}).</span>
+    </div>
+    <div class="chartwrap sharechart"><p class="cap">Rust share of kernel · per version</p>{share_line}</div>
+  </div>
+  <div class="chartwrap compwrap">
+    <p class="cap">Kernel SLOC by language · {e(last['version'])}</p>
+    {comp_svg}
+    <div class="legend">{comp_legend}</div>
+  </div>
+</div></section>
+"""
 
     seo_title, seo_desc, seo_meta, seo_jsonld = build_seo(data, first, last, baseline)
 
@@ -700,11 +944,11 @@ def render(data: dict) -> str:
     <span class="big">{e(first['series'])}</span>
     <span class="arrow">→</span>
     <span class="big">{e(last['series'])}</span>
-    <span class="mult">&nbsp;·&nbsp;{growth('code'):.1f}× SLOC · {growth('files'):.1f}× files{since}</span>
+    <span class="mult">&nbsp;·&nbsp;{growth('code'):.1f}× SLOC · {growth('files'):.1f}× files{since}{f' · {share_str} of the kernel' if share_has else ''}</span>
   </div>
   <p class="meta"><b>Range</b> {e(first['version'])} … {e(last['version'])} &nbsp;·&nbsp;
      <b>Series</b> {len(versions)} &nbsp;·&nbsp; <b>Generated</b> {gen} &nbsp;·&nbsp;
-     <b>Tool</b> {cloc_v} &nbsp;·&nbsp; <b>Source</b> kernel.org</p>
+     {cloc_link} &nbsp;·&nbsp; <b>Source</b> kernel.org</p>
 </div></header>
 
 <section><div class="wrap">
@@ -712,7 +956,7 @@ def render(data: dict) -> str:
   <p class="sectlede">Where Rust stands in the newest analysed release.</p>
   <div class="cards">{cards}</div>
 </div></section>
-
+{share_section}
 <section><div class="wrap">
   <h2>Growth by category</h2>
   <p class="sectlede">Rust source lines (SLOC) per kernel release, stacked by purpose.
@@ -723,6 +967,16 @@ def render(data: dict) -> str:
      <span class="mono">proc-macro2</span>) that the kernel's macros depend on.</p>
   <div class="chartwrap">{stacked}</div>
   <div class="legend">{legend}</div>
+
+  <h3 class="subhead">Same chart, kernel &amp; vendored crates excluded</h3>
+  <p class="sectlede">The <span class="mono">rust/kernel</span> abstraction crate and the
+     vendored third-party crates together dwarf everything else, flattening the rest of
+     the chart. Dropping both isolates the growth of Rust's <em>applied</em> surface —
+     production drivers, samples, generated &amp; UAPI bindings, procedural macros,
+     <span class="mono">pin-init</span> and core shims.</p>
+  <div class="chartwrap">{stacked_no_crates}</div>
+  <div class="legend">{legend_no_crates}</div>
+
   <div class="smallcharts">
     <div class="chartwrap"><p class="cap">Rust files per version</p>{files_line}</div>
     <div class="chartwrap"><p class="cap">Comment lines per version</p>{comment_line}</div>
@@ -732,11 +986,12 @@ def render(data: dict) -> str:
 <section><div class="wrap">
   <h2>Per-version totals</h2>
   <p class="sectlede">Files, on-disk size and cloc line counts for each release, with the
-     change in SLOC versus the previous series.</p>
+     change in SLOC versus the previous series. <b>Kernel SLOC</b> is the whole tree
+     (all languages) and <b>Rust %</b> is Rust's share of it.</p>
   <div class="scroll"><table>
     <thead><tr><th>Version</th><th class="num">Files</th><th class="num">Size</th>
       <th class="num">SLOC</th><th class="num">Comments</th><th class="num">Blank</th>
-      <th class="num">Δ SLOC</th></tr></thead>
+      <th class="num">Δ SLOC</th><th class="num">Kernel SLOC</th><th class="num">Rust %</th></tr></thead>
     <tbody>{summary_rows}</tbody>
   </table></div>
 </div></section>
@@ -762,9 +1017,12 @@ def render(data: dict) -> str:
   <p class="method">For each kernel series ≥ {e(data.get('floor',''))} the latest patch release is
      resolved from <a href="{src}">{src}</a>, the source tarball downloaded and only
      <code>*.rs</code> files extracted. File sizes come from the extracted sources; line
-     counts (code / comment / blank) from <code>{cloc_v}</code>. Generated bindings that
+     counts (code / comment / blank) from {cloc_link}. Generated bindings that
      are produced only at build time are <em>not</em> shipped in the tarball and therefore
-     not counted. Data regenerated with <code>scripts/build.sh</code>;
+     not counted. The <b>share-of-kernel</b> figures come from a second
+     <code>cloc</code> pass over the <em>entire</em> extracted tree (all languages), so
+     the denominator is the whole kernel's SLOC measured the same way as the Rust
+     numerator. Data regenerated with <code>scripts/build.sh</code>;
      machine-readable results live in <code>data/kernels.json</code>.</p>
 </div></section>
 

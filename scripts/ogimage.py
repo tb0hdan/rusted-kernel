@@ -33,6 +33,15 @@ def fi(n: int) -> str:
     return f"{n:,}"
 
 
+def mabbr(n: int) -> str:
+    """Compact SLOC count, e.g. 30101072 -> '30.1M'."""
+    if n >= 1_000_000:
+        return f"{n / 1_000_000:.1f}M"
+    if n >= 1_000:
+        return f"{n / 1_000:.1f}k"
+    return f"{n:,}"
+
+
 def group(v: dict, name: str) -> int:
     return sum(c["code"] for c in v["categories"] if c["category"] == name)
 
@@ -72,6 +81,19 @@ def build_svg(data: dict) -> str:
     # subtitle
     p.append(f'<text x="{PAD}" y="372" font-size="24" fill="{MUTE}">'
              f'A version-by-version analysis of Rust in the mainline kernel tree</text>')
+
+    # share-of-kernel callout, right-aligned in the otherwise-empty top-right
+    # (beside the title). Skipped gracefully if the whole-tree totals are absent.
+    ktotal = last.get("kernel_code", 0)
+    if ktotal:
+        share = 100 * last["code"] / ktotal
+        rx = W - PAD
+        p.append(f'<text x="{rx}" y="196" text-anchor="end" font-size="19" '
+                 f'font-weight="700" letter-spacing="3" fill="{MUTE}">SHARE OF THE KERNEL</text>')
+        p.append(f'<text x="{rx}" y="278" text-anchor="end" font-size="82" '
+                 f'font-weight="700" fill="{RUST}">{share:.2f}%</text>')
+        p.append(f'<text x="{rx}" y="312" text-anchor="end" font-size="21" fill="{FAINT}">'
+                 f'of {mabbr(ktotal)} SLOC · all languages</text>')
     # stat line (non-breaking spaces: SVG collapses/strips ordinary whitespace)
     sep = "    ·    "
     p.append(f'<text x="{PAD}" y="424" font-size="27" font-weight="700" xml:space="preserve">'

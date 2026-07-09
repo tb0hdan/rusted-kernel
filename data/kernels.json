@@ -78,7 +78,265 @@
       "blank": 0,
       "categories": [],
       "drivers": [],
-      "largest_files": []
+      "largest_files": [],
+      "kernel_files": 69052,
+      "kernel_code": 25029959,
+      "kernel_comment": 4089312,
+      "kernel_blank": 4258844,
+      "languages": [
+        {
+          "language": "C",
+          "files": 31803,
+          "code": 16520259,
+          "comment": 2546070,
+          "blank": 3222709
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 23217,
+          "code": 6829476,
+          "comment": 1323538,
+          "blank": 696476
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3201,
+          "code": 426909,
+          "comment": 62454,
+          "blank": 155908
+        },
+        {
+          "language": "JSON",
+          "files": 452,
+          "code": 371620,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 2870,
+          "code": 237788,
+          "comment": 13144,
+          "blank": 51992
+        },
+        {
+          "language": "Assembly",
+          "files": 1312,
+          "code": 226286,
+          "comment": 99939,
+          "blank": 46870
+        },
+        {
+          "language": "Text",
+          "files": 2125,
+          "code": 139845,
+          "comment": 0,
+          "blank": 31086
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 857,
+          "code": 101083,
+          "comment": 17668,
+          "blank": 26003
+        },
+        {
+          "language": "make",
+          "files": 2755,
+          "code": 48631,
+          "comment": 11644,
+          "blank": 10641
+        },
+        {
+          "language": "SVG",
+          "files": 65,
+          "code": 41845,
+          "comment": 1162,
+          "blank": 81
+        },
+        {
+          "language": "Perl",
+          "files": 66,
+          "code": 36480,
+          "comment": 5026,
+          "blank": 7374
+        },
+        {
+          "language": "Python",
+          "files": 151,
+          "code": 31960,
+          "comment": 6169,
+          "blank": 6427
+        },
+        {
+          "language": "yacc",
+          "files": 9,
+          "code": 4905,
+          "comment": 409,
+          "blank": 698
+        },
+        {
+          "language": "PO File",
+          "files": 5,
+          "code": 3077,
+          "comment": 918,
+          "blank": 791
+        },
+        {
+          "language": "lex",
+          "files": 9,
+          "code": 2108,
+          "comment": 309,
+          "blank": 346
+        },
+        {
+          "language": "C++",
+          "files": 10,
+          "code": 2016,
+          "comment": 138,
+          "blank": 372
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 54,
+          "code": 1477,
+          "comment": 314,
+          "blank": 355
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1323,
+          "comment": 157,
+          "blank": 217
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "CSV",
+          "files": 7,
+          "code": 545,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 509,
+          "comment": 0,
+          "blank": 148
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 187,
+          "comment": 50,
+          "blank": 30
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Clojure",
+          "files": 44,
+          "code": 134,
+          "comment": 0,
+          "blank": 5
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 110,
+          "comment": 11,
+          "blank": 22
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 109,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "CSS",
+          "files": 2,
+          "code": 90,
+          "comment": 37,
+          "blank": 35
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "Umka",
+          "files": 1,
+          "code": 34,
+          "comment": 0,
+          "blank": 16
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "INI",
+          "files": 1,
+          "code": 6,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        }
+      ]
     },
     {
       "version": "6.1.177",
@@ -231,6 +489,285 @@
           "path": "rust/alloc/vec/is_zero.rs",
           "bytes": 3350,
           "code": 83
+        }
+      ],
+      "kernel_files": 69591,
+      "kernel_code": 25411667,
+      "kernel_comment": 4151892,
+      "kernel_blank": 4311026,
+      "languages": [
+        {
+          "language": "C",
+          "files": 32029,
+          "code": 16767588,
+          "comment": 2582708,
+          "blank": 3263092
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 23280,
+          "code": 6912252,
+          "comment": 1341263,
+          "blank": 701588
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3250,
+          "code": 432522,
+          "comment": 62995,
+          "blank": 158114
+        },
+        {
+          "language": "JSON",
+          "files": 479,
+          "code": 388208,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 2984,
+          "code": 248929,
+          "comment": 13700,
+          "blank": 54331
+        },
+        {
+          "language": "Assembly",
+          "files": 1320,
+          "code": 228197,
+          "comment": 100602,
+          "blank": 47186
+        },
+        {
+          "language": "Text",
+          "files": 2081,
+          "code": 137404,
+          "comment": 0,
+          "blank": 30404
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 895,
+          "code": 106493,
+          "comment": 18960,
+          "blank": 27226
+        },
+        {
+          "language": "make",
+          "files": 2781,
+          "code": 49719,
+          "comment": 11915,
+          "blank": 10867
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48177,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 66,
+          "code": 36576,
+          "comment": 5032,
+          "blank": 7386
+        },
+        {
+          "language": "Python",
+          "files": 154,
+          "code": 32749,
+          "comment": 6270,
+          "blank": 6580
+        },
+        {
+          "language": "yacc",
+          "files": 9,
+          "code": 4915,
+          "comment": 411,
+          "blank": 702
+        },
+        {
+          "language": "Rust",
+          "files": 29,
+          "code": 4877,
+          "comment": 4750,
+          "blank": 826
+        },
+        {
+          "language": "PO File",
+          "files": 5,
+          "code": 3077,
+          "comment": 918,
+          "blank": 791
+        },
+        {
+          "language": "lex",
+          "files": 9,
+          "code": 2106,
+          "comment": 312,
+          "blank": 345
+        },
+        {
+          "language": "C++",
+          "files": 10,
+          "code": 2019,
+          "comment": 138,
+          "blank": 373
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 54,
+          "code": 1606,
+          "comment": 320,
+          "blank": 392
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1323,
+          "comment": 157,
+          "blank": 217
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "CSV",
+          "files": 9,
+          "code": 577,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 546,
+          "comment": 0,
+          "blank": 156
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 196,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 115,
+          "comment": 11,
+          "blank": 23
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 109,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "CSS",
+          "files": 2,
+          "code": 90,
+          "comment": 37,
+          "blank": 35
+        },
+        {
+          "language": "Clojure",
+          "files": 31,
+          "code": 73,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 1,
+          "code": 44,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 8
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "INI",
+          "files": 1,
+          "code": 6,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
         }
       ]
     },
@@ -386,6 +923,285 @@
           "bytes": 5202,
           "code": 98
         }
+      ],
+      "kernel_files": 70283,
+      "kernel_code": 25552823,
+      "kernel_comment": 4152733,
+      "kernel_blank": 4336229,
+      "languages": [
+        {
+          "language": "C",
+          "files": 32320,
+          "code": 16894199,
+          "comment": 2581875,
+          "blank": 3278858
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 23479,
+          "code": 6932109,
+          "comment": 1339247,
+          "blank": 704439
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3301,
+          "code": 438204,
+          "comment": 64371,
+          "blank": 160610
+        },
+        {
+          "language": "JSON",
+          "files": 507,
+          "code": 359876,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 3151,
+          "code": 265596,
+          "comment": 14530,
+          "blank": 57693
+        },
+        {
+          "language": "Assembly",
+          "files": 1328,
+          "code": 229989,
+          "comment": 101161,
+          "blank": 47809
+        },
+        {
+          "language": "Text",
+          "files": 1986,
+          "code": 131843,
+          "comment": 0,
+          "blank": 29611
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 900,
+          "code": 108120,
+          "comment": 18998,
+          "blank": 27600
+        },
+        {
+          "language": "make",
+          "files": 2803,
+          "code": 49943,
+          "comment": 11822,
+          "blank": 10872
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48177,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 66,
+          "code": 36569,
+          "comment": 5034,
+          "blank": 7385
+        },
+        {
+          "language": "Python",
+          "files": 157,
+          "code": 33990,
+          "comment": 6365,
+          "blank": 6822
+        },
+        {
+          "language": "Rust",
+          "files": 37,
+          "code": 5543,
+          "comment": 5454,
+          "blank": 948
+        },
+        {
+          "language": "yacc",
+          "files": 9,
+          "code": 4914,
+          "comment": 409,
+          "blank": 700
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 9,
+          "code": 2111,
+          "comment": 309,
+          "blank": 346
+        },
+        {
+          "language": "C++",
+          "files": 10,
+          "code": 2022,
+          "comment": 138,
+          "blank": 373
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 56,
+          "code": 1603,
+          "comment": 322,
+          "blank": 392
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1323,
+          "comment": 157,
+          "blank": 217
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "CSV",
+          "files": 10,
+          "code": 597,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 545,
+          "comment": 0,
+          "blank": 154
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 196,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 110,
+          "comment": 11,
+          "blank": 22
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 110,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 104,
+          "comment": 49,
+          "blank": 38
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 31,
+          "code": 73,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 1,
+          "code": 44,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 8
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "INI",
+          "files": 1,
+          "code": 6,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
+        }
       ]
     },
     {
@@ -539,6 +1355,292 @@
           "path": "rust/alloc/vec/drain_filter.rs",
           "bytes": 5202,
           "code": 98
+        }
+      ],
+      "kernel_files": 70285,
+      "kernel_code": 25619851,
+      "kernel_comment": 4161972,
+      "kernel_blank": 4348012,
+      "languages": [
+        {
+          "language": "C",
+          "files": 32212,
+          "code": 16922597,
+          "comment": 2581133,
+          "blank": 3282594
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 23417,
+          "code": 6939431,
+          "comment": 1344164,
+          "blank": 704697
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3322,
+          "code": 443352,
+          "comment": 66890,
+          "blank": 162861
+        },
+        {
+          "language": "JSON",
+          "files": 505,
+          "code": 359558,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 3356,
+          "code": 286763,
+          "comment": 15529,
+          "blank": 62000
+        },
+        {
+          "language": "Assembly",
+          "files": 1330,
+          "code": 232593,
+          "comment": 101556,
+          "blank": 48107
+        },
+        {
+          "language": "Text",
+          "files": 1913,
+          "code": 128067,
+          "comment": 0,
+          "blank": 28781
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 918,
+          "code": 111075,
+          "comment": 19474,
+          "blank": 28401
+        },
+        {
+          "language": "make",
+          "files": 2797,
+          "code": 50495,
+          "comment": 11881,
+          "blank": 10995
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48177,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Python",
+          "files": 163,
+          "code": 36782,
+          "comment": 6733,
+          "blank": 7586
+        },
+        {
+          "language": "Perl",
+          "files": 66,
+          "code": 36686,
+          "comment": 5035,
+          "blank": 7415
+        },
+        {
+          "language": "Rust",
+          "files": 38,
+          "code": 5538,
+          "comment": 5696,
+          "blank": 980
+        },
+        {
+          "language": "yacc",
+          "files": 9,
+          "code": 4919,
+          "comment": 409,
+          "blank": 700
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 9,
+          "code": 2114,
+          "comment": 309,
+          "blank": 345
+        },
+        {
+          "language": "C++",
+          "files": 10,
+          "code": 2022,
+          "comment": 138,
+          "blank": 373
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 55,
+          "code": 1593,
+          "comment": 310,
+          "blank": 393
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1359,
+          "comment": 158,
+          "blank": 227
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "CSV",
+          "files": 10,
+          "code": 601,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 537,
+          "comment": 0,
+          "blank": 153
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 196,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 136,
+          "comment": 60,
+          "blank": 41
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 110,
+          "comment": 11,
+          "blank": 22
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 110,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 31,
+          "code": 73,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 1,
+          "code": 44,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 8
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 1,
+          "code": 10,
+          "comment": 5,
+          "blank": 1
+        },
+        {
+          "language": "INI",
+          "files": 1,
+          "code": 6,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
         }
       ]
     },
@@ -703,6 +1805,292 @@
           "bytes": 13474,
           "code": 139
         }
+      ],
+      "kernel_files": 70907,
+      "kernel_code": 25929516,
+      "kernel_comment": 4199523,
+      "kernel_blank": 4382750,
+      "languages": [
+        {
+          "language": "C",
+          "files": 32456,
+          "code": 17046425,
+          "comment": 2595076,
+          "blank": 3305473
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 23566,
+          "code": 7072444,
+          "comment": 1361899,
+          "blank": 709148
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3341,
+          "code": 451347,
+          "comment": 67628,
+          "blank": 165157
+        },
+        {
+          "language": "JSON",
+          "files": 549,
+          "code": 376183,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 3489,
+          "code": 300186,
+          "comment": 16151,
+          "blank": 64397
+        },
+        {
+          "language": "Assembly",
+          "files": 1334,
+          "code": 233977,
+          "comment": 101863,
+          "blank": 48472
+        },
+        {
+          "language": "Text",
+          "files": 1852,
+          "code": 125482,
+          "comment": 0,
+          "blank": 28236
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 947,
+          "code": 114955,
+          "comment": 20022,
+          "blank": 29336
+        },
+        {
+          "language": "make",
+          "files": 2811,
+          "code": 50911,
+          "comment": 11948,
+          "blank": 11080
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48177,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Python",
+          "files": 183,
+          "code": 44997,
+          "comment": 7767,
+          "blank": 8953
+        },
+        {
+          "language": "Perl",
+          "files": 69,
+          "code": 37635,
+          "comment": 5160,
+          "blank": 7562
+        },
+        {
+          "language": "Rust",
+          "files": 55,
+          "code": 7696,
+          "comment": 8126,
+          "blank": 1280
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4996,
+          "comment": 409,
+          "blank": 710
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2253,
+          "comment": 309,
+          "blank": 373
+        },
+        {
+          "language": "C++",
+          "files": 12,
+          "code": 2070,
+          "comment": 145,
+          "blank": 384
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 55,
+          "code": 1611,
+          "comment": 309,
+          "blank": 392
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1373,
+          "comment": 154,
+          "blank": 238
+        },
+        {
+          "language": "CSV",
+          "files": 10,
+          "code": 654,
+          "comment": 0,
+          "blank": 74
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 540,
+          "comment": 0,
+          "blank": 153
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 198,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 136,
+          "comment": 60,
+          "blank": 41
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 110,
+          "comment": 11,
+          "blank": 22
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 75,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 1,
+          "code": 44,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 8
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "INI",
+          "files": 2,
+          "code": 11,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "HTML",
+          "files": 1,
+          "code": 10,
+          "comment": 5,
+          "blank": 1
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
+        }
       ]
     },
     {
@@ -865,6 +2253,292 @@
           "path": "rust/alloc/vec/drain.rs",
           "bytes": 9020,
           "code": 147
+        }
+      ],
+      "kernel_files": 71512,
+      "kernel_code": 26179852,
+      "kernel_comment": 4232957,
+      "kernel_blank": 4420215,
+      "languages": [
+        {
+          "language": "C",
+          "files": 32704,
+          "code": 17231823,
+          "comment": 2612919,
+          "blank": 3335404
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 23699,
+          "code": 7111715,
+          "comment": 1374561,
+          "blank": 713007
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3364,
+          "code": 454702,
+          "comment": 69006,
+          "blank": 166475
+        },
+        {
+          "language": "JSON",
+          "files": 570,
+          "code": 385930,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 3605,
+          "code": 310042,
+          "comment": 16630,
+          "blank": 66266
+        },
+        {
+          "language": "Assembly",
+          "files": 1337,
+          "code": 234440,
+          "comment": 102004,
+          "blank": 48566
+        },
+        {
+          "language": "Text",
+          "files": 1814,
+          "code": 124223,
+          "comment": 0,
+          "blank": 27947
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 966,
+          "code": 116980,
+          "comment": 20257,
+          "blank": 29835
+        },
+        {
+          "language": "make",
+          "files": 2889,
+          "code": 51678,
+          "comment": 12084,
+          "blank": 11164
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48177,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Python",
+          "files": 184,
+          "code": 45342,
+          "comment": 7914,
+          "blank": 9010
+        },
+        {
+          "language": "Perl",
+          "files": 69,
+          "code": 37666,
+          "comment": 5169,
+          "blank": 7565
+        },
+        {
+          "language": "Rust",
+          "files": 55,
+          "code": 8086,
+          "comment": 8524,
+          "blank": 1333
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4967,
+          "comment": 412,
+          "blank": 706
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2227,
+          "comment": 312,
+          "blank": 365
+        },
+        {
+          "language": "C++",
+          "files": 12,
+          "code": 2070,
+          "comment": 145,
+          "blank": 384
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 55,
+          "code": 1611,
+          "comment": 309,
+          "blank": 392
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1373,
+          "comment": 154,
+          "blank": 238
+        },
+        {
+          "language": "CSV",
+          "files": 10,
+          "code": 658,
+          "comment": 0,
+          "blank": 74
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 535,
+          "comment": 0,
+          "blank": 151
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 198,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 136,
+          "comment": 60,
+          "blank": 41
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 110,
+          "comment": 11,
+          "blank": 22
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 75,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 45,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 27,
+          "comment": 0,
+          "blank": 9
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "INI",
+          "files": 2,
+          "code": 11,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "HTML",
+          "files": 1,
+          "code": 10,
+          "comment": 5,
+          "blank": 1
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
         }
       ]
     },
@@ -1048,6 +2722,292 @@
           "bytes": 9704,
           "code": 152
         }
+      ],
+      "kernel_files": 72076,
+      "kernel_code": 26422294,
+      "kernel_comment": 4280006,
+      "kernel_blank": 4470192,
+      "languages": [
+        {
+          "language": "C",
+          "files": 32958,
+          "code": 17416483,
+          "comment": 2643883,
+          "blank": 3375229
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 23784,
+          "code": 7139497,
+          "comment": 1387195,
+          "blank": 717839
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3387,
+          "code": 458242,
+          "comment": 69677,
+          "blank": 167792
+        },
+        {
+          "language": "JSON",
+          "files": 585,
+          "code": 387790,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 3715,
+          "code": 323602,
+          "comment": 17216,
+          "blank": 68529
+        },
+        {
+          "language": "Assembly",
+          "files": 1340,
+          "code": 235661,
+          "comment": 102057,
+          "blank": 48745
+        },
+        {
+          "language": "Text",
+          "files": 1805,
+          "code": 125099,
+          "comment": 0,
+          "blank": 27416
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 998,
+          "code": 122579,
+          "comment": 21364,
+          "blank": 31254
+        },
+        {
+          "language": "make",
+          "files": 2923,
+          "code": 51987,
+          "comment": 12135,
+          "blank": 11181
+        },
+        {
+          "language": "Python",
+          "files": 199,
+          "code": 48244,
+          "comment": 8441,
+          "blank": 9650
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48177,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 69,
+          "code": 37759,
+          "comment": 5178,
+          "blank": 7572
+        },
+        {
+          "language": "Rust",
+          "files": 61,
+          "code": 8704,
+          "comment": 9020,
+          "blank": 1429
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4957,
+          "comment": 414,
+          "blank": 713
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2200,
+          "comment": 315,
+          "blank": 359
+        },
+        {
+          "language": "C++",
+          "files": 7,
+          "code": 1803,
+          "comment": 127,
+          "blank": 337
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 57,
+          "code": 1626,
+          "comment": 309,
+          "blank": 392
+        },
+        {
+          "language": "awk",
+          "files": 12,
+          "code": 1076,
+          "comment": 118,
+          "blank": 195
+        },
+        {
+          "language": "CSV",
+          "files": 10,
+          "code": 658,
+          "comment": 0,
+          "blank": 74
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 538,
+          "comment": 0,
+          "blank": 152
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 198,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 136,
+          "comment": 60,
+          "blank": 41
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 115,
+          "comment": 11,
+          "blank": 23
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 75,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 45,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 27,
+          "comment": 0,
+          "blank": 9
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "INI",
+          "files": 2,
+          "code": 11,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "HTML",
+          "files": 1,
+          "code": 10,
+          "comment": 5,
+          "blank": 1
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
+        }
       ]
     },
     {
@@ -1210,6 +3170,292 @@
           "path": "rust/kernel/print.rs",
           "bytes": 13098,
           "code": 165
+        }
+      ],
+      "kernel_files": 72649,
+      "kernel_code": 26791593,
+      "kernel_comment": 4296729,
+      "kernel_blank": 4504629,
+      "languages": [
+        {
+          "language": "C",
+          "files": 33220,
+          "code": 17548537,
+          "comment": 2646297,
+          "blank": 3400031
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 24016,
+          "code": 7353469,
+          "comment": 1404668,
+          "blank": 724382
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3421,
+          "code": 463138,
+          "comment": 70237,
+          "blank": 169753
+        },
+        {
+          "language": "JSON",
+          "files": 597,
+          "code": 403274,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 3803,
+          "code": 332582,
+          "comment": 17554,
+          "blank": 70162
+        },
+        {
+          "language": "Assembly",
+          "files": 1317,
+          "code": 229767,
+          "comment": 97648,
+          "blank": 48061
+        },
+        {
+          "language": "Text",
+          "files": 1769,
+          "code": 123989,
+          "comment": 0,
+          "blank": 27254
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 995,
+          "code": 122759,
+          "comment": 21307,
+          "blank": 31352
+        },
+        {
+          "language": "make",
+          "files": 2932,
+          "code": 52416,
+          "comment": 12153,
+          "blank": 11278
+        },
+        {
+          "language": "Python",
+          "files": 197,
+          "code": 48473,
+          "comment": 8453,
+          "blank": 9767
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48159,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 69,
+          "code": 37721,
+          "comment": 5184,
+          "blank": 7577
+        },
+        {
+          "language": "Rust",
+          "files": 61,
+          "code": 8838,
+          "comment": 9387,
+          "blank": 1456
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4946,
+          "comment": 413,
+          "blank": 710
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2202,
+          "comment": 315,
+          "blank": 360
+        },
+        {
+          "language": "C++",
+          "files": 7,
+          "code": 1800,
+          "comment": 127,
+          "blank": 336
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 57,
+          "code": 1633,
+          "comment": 311,
+          "blank": 395
+        },
+        {
+          "language": "awk",
+          "files": 12,
+          "code": 1076,
+          "comment": 118,
+          "blank": 195
+        },
+        {
+          "language": "CSV",
+          "files": 10,
+          "code": 660,
+          "comment": 0,
+          "blank": 74
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 542,
+          "comment": 0,
+          "blank": 152
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 198,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 136,
+          "comment": 60,
+          "blank": 41
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 115,
+          "comment": 11,
+          "blank": 23
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 75,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 45,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 27,
+          "comment": 0,
+          "blank": 9
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "INI",
+          "files": 2,
+          "code": 11,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "HTML",
+          "files": 1,
+          "code": 10,
+          "comment": 5,
+          "blank": 1
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
         }
       ]
     },
@@ -1393,6 +3639,306 @@
           "bytes": 12087,
           "code": 186
         }
+      ],
+      "kernel_files": 73541,
+      "kernel_code": 26991688,
+      "kernel_comment": 4342474,
+      "kernel_blank": 4543407,
+      "languages": [
+        {
+          "language": "C",
+          "files": 33541,
+          "code": 17689989,
+          "comment": 2667873,
+          "blank": 3427183
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 24414,
+          "code": 7387081,
+          "comment": 1426529,
+          "blank": 731311
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3475,
+          "code": 469413,
+          "comment": 70981,
+          "blank": 171754
+        },
+        {
+          "language": "JSON",
+          "files": 611,
+          "code": 406416,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 3906,
+          "code": 344640,
+          "comment": 17993,
+          "blank": 72012
+        },
+        {
+          "language": "Assembly",
+          "files": 1317,
+          "code": 229695,
+          "comment": 97686,
+          "blank": 48007
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1009,
+          "code": 124671,
+          "comment": 21510,
+          "blank": 31797
+        },
+        {
+          "language": "Text",
+          "files": 1735,
+          "code": 122861,
+          "comment": 0,
+          "blank": 27015
+        },
+        {
+          "language": "make",
+          "files": 2941,
+          "code": 53218,
+          "comment": 12219,
+          "blank": 11500
+        },
+        {
+          "language": "Python",
+          "files": 202,
+          "code": 49741,
+          "comment": 8725,
+          "blank": 10092
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48159,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 69,
+          "code": 37780,
+          "comment": 5188,
+          "blank": 7596
+        },
+        {
+          "language": "Rust",
+          "files": 64,
+          "code": 9444,
+          "comment": 9922,
+          "blank": 1565
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4946,
+          "comment": 413,
+          "blank": 710
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2202,
+          "comment": 315,
+          "blank": 360
+        },
+        {
+          "language": "C++",
+          "files": 7,
+          "code": 1800,
+          "comment": 127,
+          "blank": 336
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 57,
+          "code": 1637,
+          "comment": 311,
+          "blank": 396
+        },
+        {
+          "language": "awk",
+          "files": 11,
+          "code": 1049,
+          "comment": 112,
+          "blank": 194
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 693,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 543,
+          "comment": 0,
+          "blank": 152
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 199,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 156,
+          "comment": 74,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 115,
+          "comment": 11,
+          "blank": 23
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 78,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 45,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 38,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 27,
+          "comment": 0,
+          "blank": 9
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 12,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "CMake",
+          "files": 2,
+          "code": 8,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
+        }
       ]
     },
     {
@@ -1575,6 +4121,306 @@
           "bytes": 12108,
           "code": 186
         }
+      ],
+      "kernel_files": 74247,
+      "kernel_code": 27325387,
+      "kernel_comment": 4378302,
+      "kernel_blank": 4590152,
+      "languages": [
+        {
+          "language": "C",
+          "files": 33826,
+          "code": 17834904,
+          "comment": 2690330,
+          "blank": 3459767
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 24641,
+          "code": 7540152,
+          "comment": 1435588,
+          "blank": 738054
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3540,
+          "code": 478159,
+          "comment": 73683,
+          "blank": 176683
+        },
+        {
+          "language": "JSON",
+          "files": 626,
+          "code": 419988,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 4017,
+          "code": 356251,
+          "comment": 18587,
+          "blank": 73993
+        },
+        {
+          "language": "Assembly",
+          "files": 1322,
+          "code": 230467,
+          "comment": 97869,
+          "blank": 48135
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1028,
+          "code": 125996,
+          "comment": 21928,
+          "blank": 32236
+        },
+        {
+          "language": "Text",
+          "files": 1689,
+          "code": 120557,
+          "comment": 0,
+          "blank": 26515
+        },
+        {
+          "language": "make",
+          "files": 2955,
+          "code": 53801,
+          "comment": 12254,
+          "blank": 11586
+        },
+        {
+          "language": "Python",
+          "files": 211,
+          "code": 50944,
+          "comment": 8959,
+          "blank": 10395
+        },
+        {
+          "language": "SVG",
+          "files": 74,
+          "code": 48159,
+          "comment": 1171,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 71,
+          "code": 37709,
+          "comment": 5186,
+          "blank": 7604
+        },
+        {
+          "language": "Rust",
+          "files": 65,
+          "code": 9717,
+          "comment": 10061,
+          "blank": 1598
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4957,
+          "comment": 418,
+          "blank": 719
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2194,
+          "comment": 320,
+          "blank": 361
+        },
+        {
+          "language": "C++",
+          "files": 7,
+          "code": 1800,
+          "comment": 127,
+          "blank": 336
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 57,
+          "code": 1638,
+          "comment": 312,
+          "blank": 396
+        },
+        {
+          "language": "awk",
+          "files": 11,
+          "code": 1049,
+          "comment": 112,
+          "blank": 194
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 697,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 546,
+          "comment": 0,
+          "blank": 153
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 201,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 153,
+          "comment": 72,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 115,
+          "comment": 11,
+          "blank": 23
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 78,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 45,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 27,
+          "comment": 0,
+          "blank": 9
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 12,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "sed",
+          "files": 1,
+          "code": 5,
+          "comment": 5,
+          "blank": 2
+        },
+        {
+          "language": "CMake",
+          "files": 1,
+          "code": 4,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
+        }
       ]
     },
     {
@@ -1747,6 +4593,313 @@
           "path": "rust/kernel/init/__internal.rs",
           "bytes": 6899,
           "code": 116
+        }
+      ],
+      "kernel_files": 74776,
+      "kernel_code": 27476112,
+      "kernel_comment": 4402513,
+      "kernel_blank": 4620851,
+      "languages": [
+        {
+          "language": "C",
+          "files": 34063,
+          "code": 17964937,
+          "comment": 2709196,
+          "blank": 3487885
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 24767,
+          "code": 7528145,
+          "comment": 1440687,
+          "blank": 735485
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3580,
+          "code": 482459,
+          "comment": 74927,
+          "blank": 178217
+        },
+        {
+          "language": "JSON",
+          "files": 633,
+          "code": 417199,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 4112,
+          "code": 367194,
+          "comment": 19003,
+          "blank": 75880
+        },
+        {
+          "language": "Assembly",
+          "files": 1323,
+          "code": 230826,
+          "comment": 97776,
+          "blank": 48070
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1046,
+          "code": 127771,
+          "comment": 22599,
+          "blank": 32785
+        },
+        {
+          "language": "Text",
+          "files": 1625,
+          "code": 118792,
+          "comment": 0,
+          "blank": 26108
+        },
+        {
+          "language": "Python",
+          "files": 238,
+          "code": 55217,
+          "comment": 9470,
+          "blank": 11312
+        },
+        {
+          "language": "make",
+          "files": 2976,
+          "code": 54130,
+          "comment": 12315,
+          "blank": 11674
+        },
+        {
+          "language": "SVG",
+          "files": 76,
+          "code": 48954,
+          "comment": 1300,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 71,
+          "code": 37723,
+          "comment": 5187,
+          "blank": 7606
+        },
+        {
+          "language": "XML",
+          "files": 23,
+          "code": 18136,
+          "comment": 1660,
+          "blank": 1189
+        },
+        {
+          "language": "Rust",
+          "files": 54,
+          "code": 5642,
+          "comment": 5625,
+          "blank": 980
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4900,
+          "comment": 436,
+          "blank": 717
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2255,
+          "comment": 335,
+          "blank": 368
+        },
+        {
+          "language": "C++",
+          "files": 7,
+          "code": 1807,
+          "comment": 127,
+          "blank": 338
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 57,
+          "code": 1644,
+          "comment": 305,
+          "blank": 406
+        },
+        {
+          "language": "awk",
+          "files": 11,
+          "code": 1059,
+          "comment": 114,
+          "blank": 195
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 698,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 546,
+          "comment": 0,
+          "blank": 153
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 201,
+          "comment": 58,
+          "blank": 34
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 154,
+          "comment": 72,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 115,
+          "comment": 11,
+          "blank": 23
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 78,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 46,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "CMake",
+          "files": 7,
+          "code": 32,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 29,
+          "comment": 50,
+          "blank": 21
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 12,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
         }
       ]
     },
@@ -1929,6 +5082,306 @@
           "path": "rust/macros/quote.rs",
           "bytes": 5932,
           "code": 134
+        }
+      ],
+      "kernel_files": 75490,
+      "kernel_code": 28015512,
+      "kernel_comment": 4473267,
+      "kernel_blank": 4674361,
+      "languages": [
+        {
+          "language": "C",
+          "files": 34382,
+          "code": 18182842,
+          "comment": 2733916,
+          "blank": 3527934
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 25005,
+          "code": 7774356,
+          "comment": 1484285,
+          "blank": 746068
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3559,
+          "code": 484681,
+          "comment": 74349,
+          "blank": 178255
+        },
+        {
+          "language": "JSON",
+          "files": 662,
+          "code": 478525,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 4277,
+          "code": 381711,
+          "comment": 19739,
+          "blank": 78724
+        },
+        {
+          "language": "Assembly",
+          "files": 1325,
+          "code": 229193,
+          "comment": 97910,
+          "blank": 47624
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1055,
+          "code": 129919,
+          "comment": 22866,
+          "blank": 33304
+        },
+        {
+          "language": "Text",
+          "files": 1561,
+          "code": 112719,
+          "comment": 0,
+          "blank": 25176
+        },
+        {
+          "language": "Python",
+          "files": 243,
+          "code": 56445,
+          "comment": 10012,
+          "blank": 11732
+        },
+        {
+          "language": "make",
+          "files": 3003,
+          "code": 54762,
+          "comment": 12668,
+          "blank": 11906
+        },
+        {
+          "language": "SVG",
+          "files": 76,
+          "code": 48954,
+          "comment": 1300,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 71,
+          "code": 37749,
+          "comment": 5186,
+          "blank": 7606
+        },
+        {
+          "language": "XML",
+          "files": 23,
+          "code": 18136,
+          "comment": 1660,
+          "blank": 1189
+        },
+        {
+          "language": "Rust",
+          "files": 66,
+          "code": 6513,
+          "comment": 6589,
+          "blank": 1169
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4909,
+          "comment": 441,
+          "blank": 718
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2257,
+          "comment": 335,
+          "blank": 368
+        },
+        {
+          "language": "C++",
+          "files": 7,
+          "code": 1798,
+          "comment": 126,
+          "blank": 340
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 57,
+          "code": 1683,
+          "comment": 316,
+          "blank": 414
+        },
+        {
+          "language": "awk",
+          "files": 11,
+          "code": 1059,
+          "comment": 114,
+          "blank": 195
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 698,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 546,
+          "comment": 0,
+          "blank": 153
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 212,
+          "comment": 62,
+          "blank": 37
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 154,
+          "comment": 72,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 4,
+          "code": 115,
+          "comment": 11,
+          "blank": 23
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 78,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 46,
+          "comment": 0,
+          "blank": 17
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 29,
+          "comment": 50,
+          "blank": 21
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 12,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "TOML",
+          "files": 1,
+          "code": 2,
+          "comment": 9,
+          "blank": 1
         }
       ]
     },
@@ -2130,6 +5583,320 @@
           "bytes": 12841,
           "code": 191
         }
+      ],
+      "kernel_files": 76057,
+      "kernel_code": 28232844,
+      "kernel_comment": 4511150,
+      "kernel_blank": 4718950,
+      "languages": [
+        {
+          "language": "C",
+          "files": 34647,
+          "code": 18346318,
+          "comment": 2762764,
+          "blank": 3561284
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 25096,
+          "code": 7796326,
+          "comment": 1487229,
+          "blank": 750450
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3603,
+          "code": 490852,
+          "comment": 75176,
+          "blank": 180365
+        },
+        {
+          "language": "JSON",
+          "files": 663,
+          "code": 481192,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 4389,
+          "code": 391370,
+          "comment": 20171,
+          "blank": 80715
+        },
+        {
+          "language": "Assembly",
+          "files": 1334,
+          "code": 230932,
+          "comment": 98605,
+          "blank": 48026
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1080,
+          "code": 133195,
+          "comment": 23395,
+          "blank": 34135
+        },
+        {
+          "language": "Text",
+          "files": 1501,
+          "code": 110661,
+          "comment": 0,
+          "blank": 24684
+        },
+        {
+          "language": "Python",
+          "files": 276,
+          "code": 59781,
+          "comment": 10522,
+          "blank": 12606
+        },
+        {
+          "language": "make",
+          "files": 3027,
+          "code": 55691,
+          "comment": 12872,
+          "blank": 12126
+        },
+        {
+          "language": "SVG",
+          "files": 77,
+          "code": 49268,
+          "comment": 1301,
+          "blank": 90
+        },
+        {
+          "language": "Perl",
+          "files": 72,
+          "code": 37850,
+          "comment": 5190,
+          "blank": 7622
+        },
+        {
+          "language": "XML",
+          "files": 23,
+          "code": 19284,
+          "comment": 1662,
+          "blank": 1219
+        },
+        {
+          "language": "Rust",
+          "files": 79,
+          "code": 9651,
+          "comment": 9123,
+          "blank": 1775
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4927,
+          "comment": 439,
+          "blank": 725
+        },
+        {
+          "language": "PO File",
+          "files": 6,
+          "code": 3733,
+          "comment": 1088,
+          "blank": 948
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2273,
+          "comment": 335,
+          "blank": 369
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1964,
+          "comment": 150,
+          "blank": 361
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 57,
+          "code": 1693,
+          "comment": 315,
+          "blank": 416
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1497,
+          "comment": 442,
+          "blank": 312
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1267,
+          "comment": 0,
+          "blank": 106
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 542,
+          "comment": 0,
+          "blank": 156
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 212,
+          "comment": 62,
+          "blank": 37
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 197,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 124,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 79,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 54,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "Logos",
+          "files": 1,
+          "code": 32,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 29,
+          "comment": 50,
+          "blank": 21
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 12,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "TOML",
+          "files": 2,
+          "code": 7,
+          "comment": 12,
+          "blank": 4
+        }
       ]
     },
     {
@@ -2330,6 +6097,320 @@
           "bytes": 12841,
           "code": 191
         }
+      ],
+      "kernel_files": 76422,
+      "kernel_code": 28305706,
+      "kernel_comment": 4502361,
+      "kernel_blank": 4728499,
+      "languages": [
+        {
+          "language": "C",
+          "files": 34776,
+          "code": 18389324,
+          "comment": 2754647,
+          "blank": 3566209
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 25165,
+          "code": 7802265,
+          "comment": 1483402,
+          "blank": 749982
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3641,
+          "code": 497034,
+          "comment": 75972,
+          "blank": 182758
+        },
+        {
+          "language": "JSON",
+          "files": 669,
+          "code": 483336,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 4499,
+          "code": 403178,
+          "comment": 20673,
+          "blank": 82992
+        },
+        {
+          "language": "Assembly",
+          "files": 1340,
+          "code": 231056,
+          "comment": 98885,
+          "blank": 47959
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1090,
+          "code": 134556,
+          "comment": 23543,
+          "blank": 34487
+        },
+        {
+          "language": "Text",
+          "files": 1464,
+          "code": 109393,
+          "comment": 0,
+          "blank": 24368
+        },
+        {
+          "language": "Python",
+          "files": 274,
+          "code": 60293,
+          "comment": 10652,
+          "blank": 12612
+        },
+        {
+          "language": "make",
+          "files": 3047,
+          "code": 56128,
+          "comment": 12892,
+          "blank": 12245
+        },
+        {
+          "language": "SVG",
+          "files": 79,
+          "code": 50727,
+          "comment": 1303,
+          "blank": 92
+        },
+        {
+          "language": "Perl",
+          "files": 71,
+          "code": 37677,
+          "comment": 5173,
+          "blank": 7597
+        },
+        {
+          "language": "XML",
+          "files": 24,
+          "code": 19289,
+          "comment": 1661,
+          "blank": 1220
+        },
+        {
+          "language": "Rust",
+          "files": 91,
+          "code": 10538,
+          "comment": 10243,
+          "blank": 1993
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4897,
+          "comment": 439,
+          "blank": 721
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2266,
+          "comment": 335,
+          "blank": 368
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1896,
+          "comment": 143,
+          "blank": 354
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 57,
+          "code": 1679,
+          "comment": 316,
+          "blank": 414
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1497,
+          "comment": 442,
+          "blank": 312
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1268,
+          "comment": 0,
+          "blank": 106
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 509,
+          "comment": 0,
+          "blank": 147
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 201,
+          "comment": 62,
+          "blank": 37
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 197,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 124,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 34,
+          "code": 83,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 46,
+          "comment": 0,
+          "blank": 18
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "Logos",
+          "files": 1,
+          "code": 32,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 29,
+          "comment": 50,
+          "blank": 21
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "TOML",
+          "files": 2,
+          "code": 6,
+          "comment": 12,
+          "blank": 3
+        }
       ]
     },
     {
@@ -2529,6 +6610,320 @@
           "path": "scripts/generate_rust_target.rs",
           "bytes": 8771,
           "code": 203
+        }
+      ],
+      "kernel_files": 76896,
+      "kernel_code": 28480734,
+      "kernel_comment": 4529788,
+      "kernel_blank": 4762655,
+      "languages": [
+        {
+          "language": "C",
+          "files": 34983,
+          "code": 18521322,
+          "comment": 2773492,
+          "blank": 3592866
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 25307,
+          "code": 7827988,
+          "comment": 1489692,
+          "blank": 754335
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3676,
+          "code": 501585,
+          "comment": 76500,
+          "blank": 184164
+        },
+        {
+          "language": "JSON",
+          "files": 700,
+          "code": 486759,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "YAML",
+          "files": 4550,
+          "code": 409057,
+          "comment": 20963,
+          "blank": 83988
+        },
+        {
+          "language": "Assembly",
+          "files": 1341,
+          "code": 231114,
+          "comment": 99017,
+          "blank": 47993
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1085,
+          "code": 135803,
+          "comment": 23649,
+          "blank": 34764
+        },
+        {
+          "language": "Text",
+          "files": 1443,
+          "code": 108981,
+          "comment": 0,
+          "blank": 24231
+        },
+        {
+          "language": "Python",
+          "files": 281,
+          "code": 61542,
+          "comment": 10805,
+          "blank": 12869
+        },
+        {
+          "language": "make",
+          "files": 3054,
+          "code": 55940,
+          "comment": 12863,
+          "blank": 12170
+        },
+        {
+          "language": "SVG",
+          "files": 79,
+          "code": 50727,
+          "comment": 1303,
+          "blank": 92
+        },
+        {
+          "language": "Perl",
+          "files": 71,
+          "code": 37668,
+          "comment": 5174,
+          "blank": 7597
+        },
+        {
+          "language": "XML",
+          "files": 24,
+          "code": 19307,
+          "comment": 1662,
+          "blank": 1222
+        },
+        {
+          "language": "Rust",
+          "files": 105,
+          "code": 11769,
+          "comment": 11310,
+          "blank": 2321
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4913,
+          "comment": 437,
+          "blank": 725
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2273,
+          "comment": 343,
+          "blank": 370
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1895,
+          "comment": 143,
+          "blank": 354
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 60,
+          "code": 1741,
+          "comment": 318,
+          "blank": 423
+        },
+        {
+          "language": "awk",
+          "files": 13,
+          "code": 1497,
+          "comment": 442,
+          "blank": 312
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1269,
+          "comment": 0,
+          "blank": 106
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 515,
+          "comment": 0,
+          "blank": 148
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 199,
+          "comment": 97,
+          "blank": 37
+        },
+        {
+          "language": "Markdown",
+          "files": 1,
+          "code": 197,
+          "comment": 0,
+          "blank": 73
+        },
+        {
+          "language": "Logos",
+          "files": 2,
+          "code": 180,
+          "comment": 0,
+          "blank": 42
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 124,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 113,
+          "comment": 0,
+          "blank": 15
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 34,
+          "code": 84,
+          "comment": 0,
+          "blank": 0
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 46,
+          "comment": 0,
+          "blank": 18
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 29,
+          "comment": 50,
+          "blank": 21
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 28,
+          "comment": 12,
+          "blank": 7
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
         }
       ]
     },
@@ -2738,6 +7133,320 @@
           "path": "scripts/generate_rust_target.rs",
           "bytes": 8855,
           "code": 205
+        }
+      ],
+      "kernel_files": 77698,
+      "kernel_code": 28796193,
+      "kernel_comment": 4565781,
+      "kernel_blank": 4802334,
+      "languages": [
+        {
+          "language": "C",
+          "files": 35274,
+          "code": 18692880,
+          "comment": 2790152,
+          "blank": 3622935
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 25550,
+          "code": 7915840,
+          "comment": 1505340,
+          "blank": 758518
+        },
+        {
+          "language": "JSON",
+          "files": 760,
+          "code": 518853,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3722,
+          "code": 506922,
+          "comment": 77215,
+          "blank": 186224
+        },
+        {
+          "language": "YAML",
+          "files": 4642,
+          "code": 421057,
+          "comment": 21481,
+          "blank": 85947
+        },
+        {
+          "language": "Assembly",
+          "files": 1346,
+          "code": 231407,
+          "comment": 99127,
+          "blank": 47989
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1105,
+          "code": 137185,
+          "comment": 23851,
+          "blank": 35190
+        },
+        {
+          "language": "Text",
+          "files": 1425,
+          "code": 108937,
+          "comment": 0,
+          "blank": 24098
+        },
+        {
+          "language": "Python",
+          "files": 293,
+          "code": 63710,
+          "comment": 11180,
+          "blank": 13540
+        },
+        {
+          "language": "make",
+          "files": 3071,
+          "code": 56518,
+          "comment": 12918,
+          "blank": 12282
+        },
+        {
+          "language": "SVG",
+          "files": 79,
+          "code": 50727,
+          "comment": 1303,
+          "blank": 92
+        },
+        {
+          "language": "Perl",
+          "files": 70,
+          "code": 36870,
+          "comment": 5003,
+          "blank": 7345
+        },
+        {
+          "language": "XML",
+          "files": 29,
+          "code": 19553,
+          "comment": 1673,
+          "blank": 1243
+        },
+        {
+          "language": "Rust",
+          "files": 131,
+          "code": 14195,
+          "comment": 13151,
+          "blank": 2792
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4915,
+          "comment": 437,
+          "blank": 726
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2275,
+          "comment": 349,
+          "blank": 371
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1895,
+          "comment": 143,
+          "blank": 354
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 61,
+          "code": 1770,
+          "comment": 330,
+          "blank": 432
+        },
+        {
+          "language": "awk",
+          "files": 14,
+          "code": 1566,
+          "comment": 451,
+          "blank": 325
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1277,
+          "comment": 0,
+          "blank": 106
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 511,
+          "comment": 0,
+          "blank": 148
+        },
+        {
+          "language": "Markdown",
+          "files": 3,
+          "code": 429,
+          "comment": 2,
+          "blank": 139
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 196,
+          "comment": 97,
+          "blank": 37
+        },
+        {
+          "language": "Logos",
+          "files": 2,
+          "code": 180,
+          "comment": 0,
+          "blank": 42
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 34,
+          "code": 90,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 46,
+          "comment": 0,
+          "blank": 18
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 29,
+          "comment": 50,
+          "blank": 21
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 28,
+          "comment": 12,
+          "blank": 7
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
         }
       ]
     },
@@ -2957,6 +7666,320 @@
           "bytes": 13502,
           "code": 261
         }
+      ],
+      "kernel_files": 78402,
+      "kernel_code": 28997206,
+      "kernel_comment": 4592007,
+      "kernel_blank": 4842982,
+      "languages": [
+        {
+          "language": "C",
+          "files": 35577,
+          "code": 18827250,
+          "comment": 2804137,
+          "blank": 3650620
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 25705,
+          "code": 7947214,
+          "comment": 1510600,
+          "blank": 763325
+        },
+        {
+          "language": "JSON",
+          "files": 752,
+          "code": 520144,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3786,
+          "code": 515625,
+          "comment": 78155,
+          "blank": 188813
+        },
+        {
+          "language": "YAML",
+          "files": 4863,
+          "code": 437685,
+          "comment": 22265,
+          "blank": 89467
+        },
+        {
+          "language": "Assembly",
+          "files": 1348,
+          "code": 231808,
+          "comment": 99262,
+          "blank": 48068
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1132,
+          "code": 140646,
+          "comment": 24217,
+          "blank": 35976
+        },
+        {
+          "language": "Text",
+          "files": 1290,
+          "code": 103889,
+          "comment": 0,
+          "blank": 22930
+        },
+        {
+          "language": "Python",
+          "files": 305,
+          "code": 66568,
+          "comment": 12287,
+          "blank": 14670
+        },
+        {
+          "language": "make",
+          "files": 3104,
+          "code": 57123,
+          "comment": 12981,
+          "blank": 12406
+        },
+        {
+          "language": "SVG",
+          "files": 82,
+          "code": 52010,
+          "comment": 1306,
+          "blank": 93
+        },
+        {
+          "language": "Perl",
+          "files": 70,
+          "code": 36892,
+          "comment": 5005,
+          "blank": 7349
+        },
+        {
+          "language": "XML",
+          "files": 29,
+          "code": 19553,
+          "comment": 1673,
+          "blank": 1243
+        },
+        {
+          "language": "Rust",
+          "files": 158,
+          "code": 19071,
+          "comment": 16730,
+          "blank": 3843
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4915,
+          "comment": 437,
+          "blank": 726
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2276,
+          "comment": 349,
+          "blank": 371
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1895,
+          "comment": 143,
+          "blank": 354
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 61,
+          "code": 1770,
+          "comment": 330,
+          "blank": 432
+        },
+        {
+          "language": "awk",
+          "files": 14,
+          "code": 1571,
+          "comment": 452,
+          "blank": 326
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1378,
+          "comment": 0,
+          "blank": 126
+        },
+        {
+          "language": "Glade",
+          "files": 1,
+          "code": 603,
+          "comment": 0,
+          "blank": 58
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 589,
+          "comment": 0,
+          "blank": 164
+        },
+        {
+          "language": "Markdown",
+          "files": 3,
+          "code": 433,
+          "comment": 3,
+          "blank": 142
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 196,
+          "comment": 97,
+          "blank": 37
+        },
+        {
+          "language": "Logos",
+          "files": 2,
+          "code": 180,
+          "comment": 0,
+          "blank": 42
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 172,
+          "comment": 69,
+          "blank": 54
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 34,
+          "code": 90,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 46,
+          "comment": 0,
+          "blank": 18
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 29,
+          "comment": 50,
+          "blank": 21
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 28,
+          "comment": 12,
+          "blank": 7
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
+        }
       ]
     },
     {
@@ -3174,6 +8197,320 @@
           "path": "rust/kernel/sync/arc.rs",
           "bytes": 32957,
           "code": 345
+        }
+      ],
+      "kernel_files": 79005,
+      "kernel_code": 29153996,
+      "kernel_comment": 4613552,
+      "kernel_blank": 4875204,
+      "languages": [
+        {
+          "language": "C",
+          "files": 35761,
+          "code": 18934585,
+          "comment": 2812917,
+          "blank": 3672544
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 25907,
+          "code": 7965224,
+          "comment": 1517555,
+          "blank": 766900
+        },
+        {
+          "language": "JSON",
+          "files": 766,
+          "code": 524954,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3816,
+          "code": 519759,
+          "comment": 79004,
+          "blank": 190324
+        },
+        {
+          "language": "YAML",
+          "files": 5069,
+          "code": 453997,
+          "comment": 23021,
+          "blank": 92831
+        },
+        {
+          "language": "Assembly",
+          "files": 1352,
+          "code": 231687,
+          "comment": 99229,
+          "blank": 48046
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1157,
+          "code": 143900,
+          "comment": 24732,
+          "blank": 36818
+        },
+        {
+          "language": "Text",
+          "files": 1160,
+          "code": 99020,
+          "comment": 0,
+          "blank": 22119
+        },
+        {
+          "language": "Python",
+          "files": 322,
+          "code": 70167,
+          "comment": 13196,
+          "blank": 15573
+        },
+        {
+          "language": "make",
+          "files": 3131,
+          "code": 57283,
+          "comment": 13010,
+          "blank": 12412
+        },
+        {
+          "language": "SVG",
+          "files": 82,
+          "code": 52010,
+          "comment": 1306,
+          "blank": 93
+        },
+        {
+          "language": "Perl",
+          "files": 70,
+          "code": 37014,
+          "comment": 5017,
+          "blank": 7370
+        },
+        {
+          "language": "Rust",
+          "files": 182,
+          "code": 23186,
+          "comment": 19474,
+          "blank": 4752
+        },
+        {
+          "language": "XML",
+          "files": 29,
+          "code": 19562,
+          "comment": 1689,
+          "blank": 1244
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4909,
+          "comment": 437,
+          "blank": 725
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2264,
+          "comment": 349,
+          "blank": 371
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1905,
+          "comment": 143,
+          "blank": 356
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 62,
+          "code": 1812,
+          "comment": 340,
+          "blank": 435
+        },
+        {
+          "language": "awk",
+          "files": 14,
+          "code": 1569,
+          "comment": 452,
+          "blank": 326
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1380,
+          "comment": 0,
+          "blank": 126
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 590,
+          "comment": 0,
+          "blank": 164
+        },
+        {
+          "language": "Qt",
+          "files": 1,
+          "code": 486,
+          "comment": 0,
+          "blank": 50
+        },
+        {
+          "language": "Markdown",
+          "files": 3,
+          "code": 433,
+          "comment": 3,
+          "blank": 142
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 189,
+          "comment": 97,
+          "blank": 37
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 183,
+          "comment": 71,
+          "blank": 56
+        },
+        {
+          "language": "Logos",
+          "files": 2,
+          "code": 180,
+          "comment": 0,
+          "blank": 42
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 87,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 46,
+          "comment": 0,
+          "blank": 18
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 30,
+          "comment": 51,
+          "blank": 22
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 28,
+          "comment": 12,
+          "blank": 7
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 21,
+          "comment": 9,
+          "blank": 3
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
         }
       ]
     },
@@ -3410,6 +8747,320 @@
           "path": "rust/kernel/net/phy.rs",
           "bytes": 32063,
           "code": 454
+        }
+      ],
+      "kernel_files": 79497,
+      "kernel_code": 29317955,
+      "kernel_comment": 4649456,
+      "kernel_blank": 4904712,
+      "languages": [
+        {
+          "language": "C",
+          "files": 35970,
+          "code": 19041533,
+          "comment": 2832486,
+          "blank": 3693169
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 25967,
+          "code": 7980946,
+          "comment": 1524616,
+          "blank": 768256
+        },
+        {
+          "language": "JSON",
+          "files": 771,
+          "code": 530456,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3843,
+          "code": 522635,
+          "comment": 79838,
+          "blank": 191492
+        },
+        {
+          "language": "YAML",
+          "files": 5229,
+          "code": 469300,
+          "comment": 23730,
+          "blank": 95940
+        },
+        {
+          "language": "Assembly",
+          "files": 1355,
+          "code": 232422,
+          "comment": 99504,
+          "blank": 48147
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1172,
+          "code": 145991,
+          "comment": 25177,
+          "blank": 37318
+        },
+        {
+          "language": "Text",
+          "files": 1084,
+          "code": 97319,
+          "comment": 0,
+          "blank": 21530
+        },
+        {
+          "language": "Python",
+          "files": 341,
+          "code": 73382,
+          "comment": 14427,
+          "blank": 16568
+        },
+        {
+          "language": "make",
+          "files": 3141,
+          "code": 57786,
+          "comment": 13063,
+          "blank": 12458
+        },
+        {
+          "language": "SVG",
+          "files": 82,
+          "code": 52010,
+          "comment": 1306,
+          "blank": 93
+        },
+        {
+          "language": "Perl",
+          "files": 69,
+          "code": 36621,
+          "comment": 4966,
+          "blank": 7218
+        },
+        {
+          "language": "Rust",
+          "files": 243,
+          "code": 36225,
+          "comment": 25249,
+          "blank": 6989
+        },
+        {
+          "language": "XML",
+          "files": 29,
+          "code": 19542,
+          "comment": 1675,
+          "blank": 1327
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4939,
+          "comment": 447,
+          "blank": 732
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2261,
+          "comment": 355,
+          "blank": 372
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1917,
+          "comment": 143,
+          "blank": 357
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 62,
+          "code": 1838,
+          "comment": 341,
+          "blank": 438
+        },
+        {
+          "language": "awk",
+          "files": 14,
+          "code": 1620,
+          "comment": 454,
+          "blank": 337
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1383,
+          "comment": 0,
+          "blank": 126
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 592,
+          "comment": 0,
+          "blank": 164
+        },
+        {
+          "language": "Qt",
+          "files": 1,
+          "code": 486,
+          "comment": 0,
+          "blank": 50
+        },
+        {
+          "language": "Markdown",
+          "files": 3,
+          "code": 443,
+          "comment": 3,
+          "blank": 144
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 185,
+          "comment": 97,
+          "blank": 37
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 183,
+          "comment": 71,
+          "blank": 56
+        },
+        {
+          "language": "Logos",
+          "files": 2,
+          "code": 180,
+          "comment": 0,
+          "blank": 42
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 87,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 54,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 31,
+          "comment": 52,
+          "blank": 23
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 28,
+          "comment": 12,
+          "blank": 7
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 24,
+          "comment": 6,
+          "blank": 4
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
         }
       ]
     },
@@ -3664,6 +9315,320 @@
           "path": "rust/proc-macro2/fallback.rs",
           "bytes": 34318,
           "code": 1054
+        }
+      ],
+      "kernel_files": 80342,
+      "kernel_code": 29607055,
+      "kernel_comment": 4702329,
+      "kernel_blank": 4953801,
+      "languages": [
+        {
+          "language": "C",
+          "files": 36312,
+          "code": 19208533,
+          "comment": 2855587,
+          "blank": 3725782
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 26190,
+          "code": 8024756,
+          "comment": 1541570,
+          "blank": 774632
+        },
+        {
+          "language": "JSON",
+          "files": 775,
+          "code": 532933,
+          "comment": 0,
+          "blank": 3
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3900,
+          "code": 529982,
+          "comment": 80988,
+          "blank": 194296
+        },
+        {
+          "language": "YAML",
+          "files": 5342,
+          "code": 482095,
+          "comment": 24279,
+          "blank": 98242
+        },
+        {
+          "language": "Assembly",
+          "files": 1355,
+          "code": 233308,
+          "comment": 99912,
+          "blank": 48308
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1197,
+          "code": 147917,
+          "comment": 25297,
+          "blank": 37918
+        },
+        {
+          "language": "Text",
+          "files": 1028,
+          "code": 94441,
+          "comment": 0,
+          "blank": 20979
+        },
+        {
+          "language": "Rust",
+          "files": 338,
+          "code": 89336,
+          "comment": 35461,
+          "blank": 11140
+        },
+        {
+          "language": "Python",
+          "files": 352,
+          "code": 75349,
+          "comment": 15027,
+          "blank": 17217
+        },
+        {
+          "language": "make",
+          "files": 3167,
+          "code": 58564,
+          "comment": 13196,
+          "blank": 12581
+        },
+        {
+          "language": "SVG",
+          "files": 82,
+          "code": 52010,
+          "comment": 1306,
+          "blank": 93
+        },
+        {
+          "language": "Perl",
+          "files": 66,
+          "code": 34386,
+          "comment": 4513,
+          "blank": 6733
+        },
+        {
+          "language": "XML",
+          "files": 31,
+          "code": 21064,
+          "comment": 1685,
+          "blank": 1469
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4841,
+          "comment": 447,
+          "blank": 722
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 63,
+          "code": 2443,
+          "comment": 404,
+          "blank": 612
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2220,
+          "comment": 355,
+          "blank": 367
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1917,
+          "comment": 143,
+          "blank": 357
+        },
+        {
+          "language": "awk",
+          "files": 16,
+          "code": 1722,
+          "comment": 480,
+          "blank": 374
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1384,
+          "comment": 0,
+          "blank": 126
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 594,
+          "comment": 0,
+          "blank": 164
+        },
+        {
+          "language": "Qt",
+          "files": 1,
+          "code": 486,
+          "comment": 0,
+          "blank": 50
+        },
+        {
+          "language": "Markdown",
+          "files": 6,
+          "code": 472,
+          "comment": 3,
+          "blank": 153
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 187,
+          "comment": 97,
+          "blank": 37
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 183,
+          "comment": 71,
+          "blank": 56
+        },
+        {
+          "language": "Logos",
+          "files": 2,
+          "code": 180,
+          "comment": 0,
+          "blank": 42
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 87,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 46,
+          "comment": 0,
+          "blank": 18
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 35,
+          "comment": 0,
+          "blank": 7
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 31,
+          "comment": 52,
+          "blank": 23
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 28,
+          "comment": 12,
+          "blank": 7
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 24,
+          "comment": 6,
+          "blank": 4
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
         }
       ]
     },
@@ -3928,6 +9893,320 @@
           "bytes": 34318,
           "code": 1054
         }
+      ],
+      "kernel_files": 80985,
+      "kernel_code": 29902966,
+      "kernel_comment": 4741370,
+      "kernel_blank": 4994340,
+      "languages": [
+        {
+          "language": "C",
+          "files": 36545,
+          "code": 19357886,
+          "comment": 2874113,
+          "blank": 3755777
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 26369,
+          "code": 8141995,
+          "comment": 1559561,
+          "blank": 780559
+        },
+        {
+          "language": "JSON",
+          "files": 788,
+          "code": 537120,
+          "comment": 0,
+          "blank": 3
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3931,
+          "code": 532424,
+          "comment": 81229,
+          "blank": 194988
+        },
+        {
+          "language": "YAML",
+          "files": 5460,
+          "code": 494142,
+          "comment": 24940,
+          "blank": 100824
+        },
+        {
+          "language": "Assembly",
+          "files": 1359,
+          "code": 233633,
+          "comment": 100224,
+          "blank": 48384
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1254,
+          "code": 151864,
+          "comment": 25920,
+          "blank": 39001
+        },
+        {
+          "language": "Text",
+          "files": 1001,
+          "code": 91662,
+          "comment": 0,
+          "blank": 20085
+        },
+        {
+          "language": "Rust",
+          "files": 345,
+          "code": 90607,
+          "comment": 35502,
+          "blank": 11446
+        },
+        {
+          "language": "Python",
+          "files": 362,
+          "code": 78318,
+          "comment": 15550,
+          "blank": 17826
+        },
+        {
+          "language": "make",
+          "files": 3179,
+          "code": 59172,
+          "comment": 13290,
+          "blank": 12699
+        },
+        {
+          "language": "SVG",
+          "files": 87,
+          "code": 56094,
+          "comment": 1311,
+          "blank": 98
+        },
+        {
+          "language": "Perl",
+          "files": 67,
+          "code": 34502,
+          "comment": 4529,
+          "blank": 6757
+        },
+        {
+          "language": "XML",
+          "files": 31,
+          "code": 21070,
+          "comment": 1685,
+          "blank": 1469
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4841,
+          "comment": 447,
+          "blank": 722
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 63,
+          "code": 2458,
+          "comment": 407,
+          "blank": 614
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2218,
+          "comment": 355,
+          "blank": 366
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1917,
+          "comment": 143,
+          "blank": 356
+        },
+        {
+          "language": "awk",
+          "files": 16,
+          "code": 1722,
+          "comment": 480,
+          "blank": 374
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1389,
+          "comment": 0,
+          "blank": 126
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 609,
+          "comment": 0,
+          "blank": 167
+        },
+        {
+          "language": "Qt",
+          "files": 1,
+          "code": 486,
+          "comment": 0,
+          "blank": 50
+        },
+        {
+          "language": "Markdown",
+          "files": 6,
+          "code": 467,
+          "comment": 3,
+          "blank": 151
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "Logos",
+          "files": 2,
+          "code": 230,
+          "comment": 0,
+          "blank": 53
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 193,
+          "comment": 76,
+          "blank": 59
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 188,
+          "comment": 97,
+          "blank": 37
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "Clojure",
+          "files": 33,
+          "code": 87,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 54,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 34,
+          "comment": 0,
+          "blank": 6
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 31,
+          "comment": 52,
+          "blank": 23
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 28,
+          "comment": 12,
+          "blank": 7
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 24,
+          "comment": 6,
+          "blank": 4
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
+        }
       ]
     },
     {
@@ -4190,6 +10469,320 @@
           "path": "rust/proc-macro2/fallback.rs",
           "bytes": 34318,
           "code": 1054
+        }
+      ],
+      "kernel_files": 81428,
+      "kernel_code": 30101072,
+      "kernel_comment": 4779550,
+      "kernel_blank": 5018368,
+      "languages": [
+        {
+          "language": "C",
+          "files": 36669,
+          "code": 19432437,
+          "comment": 2886565,
+          "blank": 3769227
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 26485,
+          "code": 8232703,
+          "comment": 1579426,
+          "blank": 783837
+        },
+        {
+          "language": "JSON",
+          "files": 820,
+          "code": 541804,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "reStructuredText",
+          "files": 3956,
+          "code": 537345,
+          "comment": 81623,
+          "blank": 196731
+        },
+        {
+          "language": "YAML",
+          "files": 5552,
+          "code": 506060,
+          "comment": 25439,
+          "blank": 102911
+        },
+        {
+          "language": "Assembly",
+          "files": 1361,
+          "code": 232574,
+          "comment": 100269,
+          "blank": 48368
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1305,
+          "code": 156019,
+          "comment": 26702,
+          "blank": 40115
+        },
+        {
+          "language": "Rust",
+          "files": 349,
+          "code": 93245,
+          "comment": 37782,
+          "blank": 11974
+        },
+        {
+          "language": "Text",
+          "files": 972,
+          "code": 90013,
+          "comment": 0,
+          "blank": 19805
+        },
+        {
+          "language": "Python",
+          "files": 383,
+          "code": 84458,
+          "comment": 17339,
+          "blank": 19730
+        },
+        {
+          "language": "make",
+          "files": 3179,
+          "code": 59857,
+          "comment": 13328,
+          "blank": 12848
+        },
+        {
+          "language": "SVG",
+          "files": 87,
+          "code": 56094,
+          "comment": 1311,
+          "blank": 98
+        },
+        {
+          "language": "Perl",
+          "files": 68,
+          "code": 34647,
+          "comment": 4557,
+          "blank": 6788
+        },
+        {
+          "language": "XML",
+          "files": 31,
+          "code": 21072,
+          "comment": 1686,
+          "blank": 1469
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4839,
+          "comment": 442,
+          "blank": 722
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 63,
+          "code": 2477,
+          "comment": 408,
+          "blank": 614
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2218,
+          "comment": 355,
+          "blank": 366
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1917,
+          "comment": 143,
+          "blank": 356
+        },
+        {
+          "language": "awk",
+          "files": 16,
+          "code": 1743,
+          "comment": 480,
+          "blank": 374
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1413,
+          "comment": 0,
+          "blank": 126
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 609,
+          "comment": 0,
+          "blank": 167
+        },
+        {
+          "language": "Qt",
+          "files": 1,
+          "code": 486,
+          "comment": 0,
+          "blank": 50
+        },
+        {
+          "language": "Markdown",
+          "files": 6,
+          "code": 466,
+          "comment": 3,
+          "blank": 151
+        },
+        {
+          "language": "Logos",
+          "files": 3,
+          "code": 406,
+          "comment": 0,
+          "blank": 88
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "CSS",
+          "files": 3,
+          "code": 205,
+          "comment": 87,
+          "blank": 62
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 190,
+          "comment": 97,
+          "blank": 38
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "Clojure",
+          "files": 36,
+          "code": 95,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 54,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 36,
+          "comment": 12,
+          "blank": 9
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 34,
+          "comment": 0,
+          "blank": 6
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 31,
+          "comment": 52,
+          "blank": 23
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 24,
+          "comment": 6,
+          "blank": 4
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
         }
       ]
     }
