@@ -123,7 +123,7 @@ VERSION_NOTES: dict[str, str] = {
     ),
     "6.19": (
         'Total Rust '
-        'leaps from 36,225 SLOC (6.18) to 89,336 — but almost all of that is '
+        'leaps from 36,319 SLOC (6.18) to 89,336 — but almost all of that is '
         '<b>vendored crates</b>: third-party libraries from the Rust ecosystem '
         '(crates.io) copied verbatim into <span class="mono">rust/</span>, because '
         "the kernel build is self-contained and can't fetch dependencies over the "
@@ -134,8 +134,26 @@ VERSION_NOTES: dict[str, str] = {
         "the kernel's own macros (<span class=\"mono\">rust/macros/</span>) can lean "
         'on them instead of hand-rolled parsing. This is external tooling, not '
         'kernel logic: set it aside and first-party kernel Rust grew steadily, '
-        '36,225 → 42,378 SLOC (6.18 → 6.19). The hero chart breaks it out as its own '
+        '36,319 → 42,378 SLOC (6.18 → 6.19). The hero chart breaks it out as its own '
         '"Vendored crates" band for exactly this reason.'
+    ),
+    "7.2": (
+        '<b>A second vendoring step — and the drivers keep growing.</b> Total Rust '
+        'rises 93,310 SLOC (7.1) to 114,520, but 16,859 of that — 101 files — is '
+        'one more third-party crate copied into <span class="mono">rust/</span>: '
+        '<span class="mono">zerocopy</span> (14,297 SLOC) and its companion derive '
+        'macro <span class="mono">zerocopy-derive</span> (2,562), which give checked, '
+        'zero-cost conversions between raw byte buffers and typed structs '
+        '(<span class="mono">FromBytes</span> / <span class="mono">IntoBytes</span>). '
+        'They are re-exported straight from '
+        '<span class="mono">rust/kernel/prelude.rs</span>, so every Rust driver gets '
+        "them; the first in-tree user is nova-core's VBIOS parser "
+        '(<span class="mono">drivers/gpu/nova-core/vbios.rs</span>). Set the vendored '
+        'crates aside and first-party kernel Rust still grew 46,352 to 50,703 SLOC — '
+        'past 50k for the first time — led by GPU/DRM (9,120 to 11,825): nova-core '
+        'gains FSP/GSP hardware-abstraction layers for tu102/gh100/gb100/gb202 '
+        '(7,678 to 9,442) and the Arm Mali driver <span class="mono">tyr</span> '
+        'nearly triples (495 to 1,424).'
     ),
 }
 
@@ -214,6 +232,12 @@ def stacked_bars(versions: list[dict], title: str, source: str, note: str,
     gap = plot_w / n
     bw = min(gap * 0.62, 64)
 
+    # Total labels sit above each bar. Past ~20 series they no longer fit side by
+    # side (10.5px monospace is ~6.3px per glyph), so they rotate to read
+    # bottom-to-top instead -- same trick the line charts use for their x labels.
+    label_w = max((len(fi(t)) for t in totals), default=1) * 6.3
+    rotate_totals = label_w + 4 > gap
+
     def x_center(i):
         return ml + gap * (i + 0.5)
 
@@ -255,9 +279,16 @@ def stacked_bars(versions: list[dict], title: str, source: str, note: str,
                 f'<title>{e(v["version"])} — {e(cat)}: {fi(val)} SLOC</title></rect>'
             )
             acc += val
-        # total label above bar
-        parts.append(f'<text x="{cx:.1f}" y="{y(acc)-8:.1f}" text-anchor="middle" '
-                     f'class="bartot">{fi(acc)}</text>')
+        # total label above bar (rotated when the bars are too tightly packed)
+        if rotate_totals:
+            ty = y(acc) - 6
+            parts.append(f'<text x="{cx:.1f}" y="{ty:.1f}" text-anchor="start" '
+                         f'dominant-baseline="central" '
+                         f'transform="rotate(-90 {cx:.1f} {ty:.1f})" '
+                         f'class="bartot">{fi(acc)}</text>')
+        else:
+            parts.append(f'<text x="{cx:.1f}" y="{y(acc)-8:.1f}" text-anchor="middle" '
+                         f'class="bartot">{fi(acc)}</text>')
         # x label (series)
         parts.append(f'<text x="{cx:.1f}" y="{H-mb+22:.1f}" text-anchor="middle" '
                      f'class="axis strong">{e(v["series"])}</text>')
@@ -968,7 +999,10 @@ def render(data: dict) -> str:
      crate plus production drivers — grows steadily release over release, while the
      large step at <b>6.19</b> is the one-time in-tree vendoring of the proc-macro
      crates (<span class="mono">syn</span>, <span class="mono">quote</span>,
-     <span class="mono">proc-macro2</span>) that the kernel's macros depend on.</p>
+     <span class="mono">proc-macro2</span>) that the kernel's macros depend on. The
+     smaller step at <b>7.2</b> is the same phenomenon:
+     <span class="mono">zerocopy</span> and <span class="mono">zerocopy-derive</span>
+     vendored in for checked byte-buffer conversions.</p>
   <div class="chartwrap">{stacked}</div>
   <div class="legend">{legend}</div>
 

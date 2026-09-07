@@ -5,7 +5,7 @@
 #
 # Usage:
 #   scripts/build.sh            # full run, all series >= 6.12
-#   scripts/build.sh --only 6.12.95,7.1.3   # quick subset (passed to analyze.py)
+#   scripts/build.sh --only 6.12.109,7.2.4  # quick subset (passed to analyze.py)
 set -euo pipefail
 
 here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

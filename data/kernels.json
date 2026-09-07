@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-09",
+  "generated_utc": "2026-09-07",
   "cloc_version": "1.98",
   "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
@@ -54,7 +54,7 @@
     },
     {
       "category": "Vendored crates",
-      "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros"
+      "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against"
     },
     {
       "category": "Core runtime & shims",
@@ -340,11 +340,11 @@
       ]
     },
     {
-      "version": "6.1.177",
+      "version": "6.1.187",
       "series": "6.1",
-      "tarball": "linux-6.1.177.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.177.tar.xz",
-      "released": "2026-07-04",
+      "tarball": "linux-6.1.187.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.187.tar.xz",
+      "released": "2026-09-02",
       "files": 29,
       "bytes": 353491,
       "code": 4877,
@@ -353,7 +353,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 13,
           "bytes": 309872,
           "code": 4115,
@@ -493,31 +493,31 @@
           "code": 83
         }
       ],
-      "kernel_files": 69591,
-      "kernel_code": 25411667,
-      "kernel_comment": 4151892,
-      "kernel_blank": 4311026,
+      "kernel_files": 69588,
+      "kernel_code": 25416647,
+      "kernel_comment": 4154247,
+      "kernel_blank": 4312108,
       "languages": [
         {
           "language": "C",
-          "files": 32029,
-          "code": 16767588,
-          "comment": 2582708,
-          "blank": 3263092
+          "files": 32026,
+          "code": 16772324,
+          "comment": 2584774,
+          "blank": 3264122
         },
         {
           "language": "C/C++ Header",
-          "files": 23280,
-          "code": 6912252,
-          "comment": 1341263,
-          "blank": 701588
+          "files": 23278,
+          "code": 6912493,
+          "comment": 1341494,
+          "blank": 701626
         },
         {
           "language": "reStructuredText",
           "files": 3250,
-          "code": 432522,
-          "comment": 62995,
-          "blank": 158114
+          "code": 432508,
+          "comment": 62997,
+          "blank": 158110
         },
         {
           "language": "JSON",
@@ -529,16 +529,16 @@
         {
           "language": "YAML",
           "files": 2984,
-          "code": 248929,
-          "comment": 13700,
-          "blank": 54331
+          "code": 248932,
+          "comment": 13704,
+          "blank": 54333
         },
         {
           "language": "Assembly",
           "files": 1320,
-          "code": 228197,
-          "comment": 100602,
-          "blank": 47186
+          "code": 228221,
+          "comment": 100649,
+          "blank": 47199
         },
         {
           "language": "Text",
@@ -550,16 +550,16 @@
         {
           "language": "Bourne Shell",
           "files": 895,
-          "code": 106493,
+          "code": 106490,
           "comment": 18960,
-          "blank": 27226
+          "blank": 27225
         },
         {
           "language": "make",
-          "files": 2781,
-          "code": 49719,
-          "comment": 11915,
-          "blank": 10867
+          "files": 2783,
+          "code": 49712,
+          "comment": 11920,
+          "blank": 10871
         },
         {
           "language": "SVG",
@@ -787,7 +787,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 13,
           "bytes": 314419,
           "code": 4146,
@@ -1221,7 +1221,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 12,
           "bytes": 300626,
           "code": 3890,
@@ -1662,7 +1662,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 14,
           "bytes": 312123,
           "code": 4106,
@@ -2112,7 +2112,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 14,
           "bytes": 333434,
           "code": 4323,
@@ -2549,11 +2549,11 @@
       ]
     },
     {
-      "version": "6.6.144",
+      "version": "6.6.156",
       "series": "6.6",
-      "tarball": "linux-6.6.144.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.144.tar.xz",
-      "released": "2026-07-04",
+      "tarball": "linux-6.6.156.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.156.tar.xz",
+      "released": "2026-09-02",
       "files": 61,
       "bytes": 663419,
       "code": 8704,
@@ -2562,7 +2562,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 14,
           "bytes": 329576,
           "code": 4271,
@@ -2730,31 +2730,31 @@
           "code": 152
         }
       ],
-      "kernel_files": 72076,
-      "kernel_code": 26422294,
-      "kernel_comment": 4280006,
-      "kernel_blank": 4470192,
+      "kernel_files": 72083,
+      "kernel_code": 26430824,
+      "kernel_comment": 4282937,
+      "kernel_blank": 4471836,
       "languages": [
         {
           "language": "C",
-          "files": 32958,
-          "code": 17416483,
-          "comment": 2643883,
-          "blank": 3375229
+          "files": 32959,
+          "code": 17424161,
+          "comment": 2646479,
+          "blank": 3376722
         },
         {
           "language": "C/C++ Header",
-          "files": 23784,
-          "code": 7139497,
-          "comment": 1387195,
-          "blank": 717839
+          "files": 23788,
+          "code": 7140371,
+          "comment": 1387512,
+          "blank": 717994
         },
         {
           "language": "reStructuredText",
           "files": 3387,
-          "code": 458242,
-          "comment": 69677,
-          "blank": 167792
+          "code": 458228,
+          "comment": 69679,
+          "blank": 167788
         },
         {
           "language": "JSON",
@@ -2766,16 +2766,16 @@
         {
           "language": "YAML",
           "files": 3715,
-          "code": 323602,
-          "comment": 17216,
-          "blank": 68529
+          "code": 323598,
+          "comment": 17220,
+          "blank": 68518
         },
         {
           "language": "Assembly",
           "files": 1340,
-          "code": 235661,
-          "comment": 102057,
-          "blank": 48745
+          "code": 235666,
+          "comment": 102067,
+          "blank": 48754
         },
         {
           "language": "Text",
@@ -2787,16 +2787,16 @@
         {
           "language": "Bourne Shell",
           "files": 998,
-          "code": 122579,
+          "code": 122576,
           "comment": 21364,
-          "blank": 31254
+          "blank": 31253
         },
         {
           "language": "make",
-          "files": 2923,
-          "code": 51987,
-          "comment": 12135,
-          "blank": 11181
+          "files": 2925,
+          "code": 51981,
+          "comment": 12137,
+          "blank": 11184
         },
         {
           "language": "Python",
@@ -3031,7 +3031,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 14,
           "bytes": 329576,
           "code": 4271,
@@ -3481,7 +3481,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 14,
           "bytes": 333558,
           "code": 4288,
@@ -3964,7 +3964,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 14,
           "bytes": 338034,
           "code": 4357,
@@ -5398,25 +5398,25 @@
       ]
     },
     {
-      "version": "6.12.95",
+      "version": "6.12.109",
       "series": "6.12",
-      "tarball": "linux-6.12.95.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.95.tar.xz",
-      "released": "2026-07-04",
+      "tarball": "linux-6.12.109.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.109.tar.xz",
+      "released": "2026-09-07",
       "files": 79,
-      "bytes": 734230,
-      "code": 9651,
-      "comment": 9123,
-      "blank": 1775,
+      "bytes": 735152,
+      "code": 9666,
+      "comment": 9128,
+      "blank": 1778,
       "categories": [
         {
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 51,
-          "bytes": 597699,
-          "code": 7023,
-          "comment": 8158,
-          "blank": 1383
+          "bytes": 598372,
+          "code": 7030,
+          "comment": 8163,
+          "blank": 1386
         },
         {
           "category": "Drivers",
@@ -5467,8 +5467,8 @@
           "category": "Generated bindings",
           "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
           "files": 1,
-          "bytes": 1741,
-          "code": 36,
+          "bytes": 1865,
+          "code": 40,
           "comment": 16,
           "blank": 6
         },
@@ -5476,8 +5476,8 @@
           "category": "UAPI bindings",
           "purpose": "Raw bindings to the kernel's userspace API headers",
           "files": 1,
-          "bytes": 981,
-          "code": 21,
+          "bytes": 1106,
+          "code": 25,
           "comment": 9,
           "blank": 4
         },
@@ -5553,7 +5553,7 @@
         },
         {
           "path": "rust/kernel/alloc/kvec.rs",
-          "bytes": 28075,
+          "bytes": 28086,
           "code": 401
         },
         {
@@ -5597,31 +5597,31 @@
           "code": 191
         }
       ],
-      "kernel_files": 76057,
-      "kernel_code": 28232844,
-      "kernel_comment": 4511150,
-      "kernel_blank": 4718950,
+      "kernel_files": 76067,
+      "kernel_code": 28245459,
+      "kernel_comment": 4515676,
+      "kernel_blank": 4721549,
       "languages": [
         {
           "language": "C",
-          "files": 34647,
-          "code": 18346318,
-          "comment": 2762764,
-          "blank": 3561284
+          "files": 34648,
+          "code": 18357344,
+          "comment": 2766656,
+          "blank": 3563572
         },
         {
           "language": "C/C++ Header",
-          "files": 25096,
-          "code": 7796326,
-          "comment": 1487229,
-          "blank": 750450
+          "files": 25103,
+          "code": 7797646,
+          "comment": 1487809,
+          "blank": 750703
         },
         {
           "language": "reStructuredText",
           "files": 3603,
-          "code": 490852,
-          "comment": 75176,
-          "blank": 180365
+          "code": 490924,
+          "comment": 75180,
+          "blank": 180396
         },
         {
           "language": "JSON",
@@ -5633,23 +5633,23 @@
         {
           "language": "YAML",
           "files": 4389,
-          "code": 391370,
-          "comment": 20171,
-          "blank": 80715
+          "code": 391425,
+          "comment": 20175,
+          "blank": 80705
         },
         {
           "language": "Assembly",
           "files": 1334,
-          "code": 230932,
-          "comment": 98605,
-          "blank": 48026
+          "code": 230960,
+          "comment": 98630,
+          "blank": 48040
         },
         {
           "language": "Bourne Shell",
           "files": 1080,
-          "code": 133195,
-          "comment": 23395,
-          "blank": 34135
+          "code": 133219,
+          "comment": 23396,
+          "blank": 34138
         },
         {
           "language": "Text",
@@ -5661,16 +5661,16 @@
         {
           "language": "Python",
           "files": 276,
-          "code": 59781,
-          "comment": 10522,
-          "blank": 12606
+          "code": 59851,
+          "comment": 10525,
+          "blank": 12620
         },
         {
           "language": "make",
-          "files": 3027,
-          "code": 55691,
-          "comment": 12872,
-          "blank": 12126
+          "files": 3029,
+          "code": 55696,
+          "comment": 12884,
+          "blank": 12129
         },
         {
           "language": "SVG",
@@ -5696,9 +5696,9 @@
         {
           "language": "Rust",
           "files": 79,
-          "code": 9651,
-          "comment": 9123,
-          "blank": 1775
+          "code": 9666,
+          "comment": 9128,
+          "blank": 1778
         },
         {
           "language": "yacc",
@@ -8533,34 +8533,34 @@
       ]
     },
     {
-      "version": "6.18.38",
+      "version": "6.18.50",
       "series": "6.18",
-      "tarball": "linux-6.18.38.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.38.tar.xz",
-      "released": "2026-07-04",
+      "tarball": "linux-6.18.50.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.50.tar.xz",
+      "released": "2026-09-07",
       "files": 243,
-      "bytes": 2399227,
-      "code": 36225,
-      "comment": 25249,
-      "blank": 6989,
+      "bytes": 2404000,
+      "code": 36319,
+      "comment": 25276,
+      "blank": 7013,
       "categories": [
         {
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 130,
-          "bytes": 1478367,
-          "code": 18388,
-          "comment": 18955,
-          "blank": 4027
+          "bytes": 1480009,
+          "code": 18415,
+          "comment": 18971,
+          "blank": 4033
         },
         {
           "category": "Drivers",
           "purpose": "Production device drivers written in Rust",
           "files": 64,
-          "bytes": 605358,
-          "code": 12596,
-          "comment": 3005,
-          "blank": 2182
+          "bytes": 607989,
+          "code": 12657,
+          "comment": 3010,
+          "blank": 2200
         },
         {
           "category": "pin-init crate",
@@ -8593,9 +8593,9 @@
           "category": "Kernel build tooling",
           "purpose": "Codegen and helpers used during the kernel build",
           "files": 3,
-          "bytes": 22617,
-          "code": 408,
-          "comment": 136,
+          "bytes": 22868,
+          "code": 406,
+          "comment": 142,
           "blank": 76
         },
         {
@@ -8620,8 +8620,8 @@
           "category": "Generated bindings",
           "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
           "files": 1,
-          "bytes": 2175,
-          "code": 41,
+          "bytes": 2299,
+          "code": 45,
           "comment": 20,
           "blank": 8
         },
@@ -8629,8 +8629,8 @@
           "category": "UAPI bindings",
           "purpose": "Raw bindings to the kernel's userspace API headers",
           "files": 1,
-          "bytes": 1086,
-          "code": 25,
+          "bytes": 1211,
+          "code": 29,
           "comment": 9,
           "blank": 5
         },
@@ -8649,10 +8649,10 @@
           "category": "drivers/android (Android (binder))",
           "purpose": "",
           "files": 18,
-          "bytes": 327823,
-          "code": 6840,
-          "comment": 1403,
-          "blank": 1062
+          "bytes": 330454,
+          "code": 6901,
+          "comment": 1408,
+          "blank": 1080
         },
         {
           "category": "drivers/gpu (GPU / DRM)",
@@ -8694,13 +8694,13 @@
       "largest_files": [
         {
           "path": "drivers/android/binder/process.rs",
-          "bytes": 59666,
-          "code": 1316
+          "bytes": 60312,
+          "code": 1330
         },
         {
           "path": "drivers/android/binder/thread.rs",
-          "bytes": 61947,
-          "code": 1246
+          "bytes": 63358,
+          "code": 1283
         },
         {
           "path": "rust/pin-init/src/macros.rs",
@@ -8709,8 +8709,8 @@
         },
         {
           "path": "drivers/android/binder/node.rs",
-          "bytes": 39480,
-          "code": 844
+          "bytes": 39519,
+          "code": 846
         },
         {
           "path": "drivers/gpu/nova-core/vbios.rs",
@@ -8724,12 +8724,12 @@
         },
         {
           "path": "rust/kernel/cpufreq.rs",
-          "bytes": 46123,
+          "bytes": 46119,
           "code": 687
         },
         {
           "path": "rust/kernel/alloc/kvec.rs",
-          "bytes": 43495,
+          "bytes": 43506,
           "code": 590
         },
         {
@@ -8739,8 +8739,8 @@
         },
         {
           "path": "rust/kernel/str.rs",
-          "bytes": 37206,
-          "code": 559
+          "bytes": 37322,
+          "code": 573
         },
         {
           "path": "rust/kernel/configfs.rs",
@@ -8768,24 +8768,24 @@
           "code": 454
         }
       ],
-      "kernel_files": 79497,
-      "kernel_code": 29317955,
-      "kernel_comment": 4649456,
-      "kernel_blank": 4904712,
+      "kernel_files": 79509,
+      "kernel_code": 29334507,
+      "kernel_comment": 4655685,
+      "kernel_blank": 4908002,
       "languages": [
         {
           "language": "C",
-          "files": 35970,
-          "code": 19041533,
-          "comment": 2832486,
-          "blank": 3693169
+          "files": 35976,
+          "code": 19056681,
+          "comment": 2837997,
+          "blank": 3696174
         },
         {
           "language": "C/C++ Header",
-          "files": 25967,
-          "code": 7980946,
-          "comment": 1524616,
-          "blank": 768256
+          "files": 25973,
+          "code": 7982058,
+          "comment": 1525251,
+          "blank": 768476
         },
         {
           "language": "JSON",
@@ -8797,51 +8797,51 @@
         {
           "language": "reStructuredText",
           "files": 3843,
-          "code": 522635,
-          "comment": 79838,
-          "blank": 191492
+          "code": 522667,
+          "comment": 79846,
+          "blank": 191506
         },
         {
           "language": "YAML",
           "files": 5229,
-          "code": 469300,
-          "comment": 23730,
-          "blank": 95940
+          "code": 469308,
+          "comment": 23734,
+          "blank": 95928
         },
         {
           "language": "Assembly",
           "files": 1355,
-          "code": 232422,
-          "comment": 99504,
-          "blank": 48147
+          "code": 232450,
+          "comment": 99529,
+          "blank": 48161
         },
         {
           "language": "Bourne Shell",
           "files": 1172,
-          "code": 145991,
-          "comment": 25177,
-          "blank": 37318
+          "code": 146031,
+          "comment": 25185,
+          "blank": 37325
         },
         {
           "language": "Text",
           "files": 1084,
-          "code": 97319,
+          "code": 97331,
           "comment": 0,
-          "blank": 21530
+          "blank": 21532
         },
         {
           "language": "Python",
           "files": 341,
-          "code": 73382,
-          "comment": 14427,
-          "blank": 16568
+          "code": 73446,
+          "comment": 14430,
+          "blank": 16583
         },
         {
           "language": "make",
           "files": 3141,
-          "code": 57786,
-          "comment": 13063,
-          "blank": 12458
+          "code": 57800,
+          "comment": 13071,
+          "blank": 12459
         },
         {
           "language": "SVG",
@@ -8860,9 +8860,9 @@
         {
           "language": "Rust",
           "files": 243,
-          "code": 36225,
-          "comment": 25249,
-          "blank": 6989
+          "code": 36319,
+          "comment": 25276,
+          "blank": 7013
         },
         {
           "language": "XML",
@@ -9097,7 +9097,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 75,
           "bytes": 1915516,
           "code": 46958,
@@ -9666,7 +9666,7 @@
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 75,
           "bytes": 1915516,
           "code": 46958,
@@ -10231,20 +10231,20 @@
       ]
     },
     {
-      "version": "7.1.3",
+      "version": "7.1.13",
       "series": "7.1",
-      "tarball": "linux-7.1.3.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.1.3.tar.xz",
-      "released": "2026-07-04",
+      "tarball": "linux-7.1.13.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.1.13.tar.xz",
+      "released": "2026-09-02",
       "files": 349,
-      "bytes": 4841751,
-      "code": 93245,
-      "comment": 37782,
-      "blank": 11974,
+      "bytes": 4845371,
+      "code": 93310,
+      "comment": 37803,
+      "blank": 11987,
       "categories": [
         {
           "category": "Vendored crates",
-          "purpose": "Third-party crates vendored in-tree (syn, quote, proc-macro2) to build the kernel's procedural macros",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
           "files": 75,
           "bytes": 1915516,
           "code": 46958,
@@ -10255,19 +10255,19 @@
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 150,
-          "bytes": 1834316,
-          "code": 23811,
-          "comment": 23674,
-          "blank": 5138
+          "bytes": 1835431,
+          "code": 23834,
+          "comment": 23683,
+          "blank": 5142
         },
         {
           "category": "Drivers",
           "purpose": "Production device drivers written in Rust",
           "files": 71,
-          "bytes": 804758,
-          "code": 16988,
-          "comment": 3783,
-          "blank": 2812
+          "bytes": 806763,
+          "code": 17024,
+          "comment": 3789,
+          "blank": 2821
         },
         {
           "category": "pin-init crate",
@@ -10300,9 +10300,9 @@
           "category": "Kernel build tooling",
           "purpose": "Codegen and helpers used during the kernel build",
           "files": 3,
-          "bytes": 22680,
-          "code": 409,
-          "comment": 136,
+          "bytes": 22931,
+          "code": 407,
+          "comment": 142,
           "blank": 76
         },
         {
@@ -10327,8 +10327,8 @@
           "category": "Generated bindings",
           "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
           "files": 1,
-          "bytes": 2262,
-          "code": 51,
+          "bytes": 2386,
+          "code": 55,
           "comment": 19,
           "blank": 9
         },
@@ -10336,8 +10336,8 @@
           "category": "UAPI bindings",
           "purpose": "Raw bindings to the kernel's userspace API headers",
           "files": 1,
-          "bytes": 909,
-          "code": 23,
+          "bytes": 1034,
+          "code": 27,
           "comment": 8,
           "blank": 5
         },
@@ -10374,10 +10374,10 @@
           "category": "drivers/android (Android (binder))",
           "purpose": "",
           "files": 18,
-          "bytes": 335159,
-          "code": 6984,
-          "comment": 1421,
-          "blank": 1086
+          "bytes": 337164,
+          "code": 7020,
+          "comment": 1427,
+          "blank": 1095
         },
         {
           "category": "drivers/block (Block)",
@@ -10469,13 +10469,13 @@
         },
         {
           "path": "drivers/android/binder/process.rs",
-          "bytes": 61318,
-          "code": 1340
+          "bytes": 61934,
+          "code": 1355
         },
         {
           "path": "drivers/android/binder/thread.rs",
-          "bytes": 63246,
-          "code": 1272
+          "bytes": 64214,
+          "code": 1293
         },
         {
           "path": "rust/syn/generics.rs",
@@ -10493,24 +10493,24 @@
           "code": 1054
         }
       ],
-      "kernel_files": 81428,
-      "kernel_code": 30101072,
-      "kernel_comment": 4779550,
-      "kernel_blank": 5018368,
+      "kernel_files": 81437,
+      "kernel_code": 30119362,
+      "kernel_comment": 4785581,
+      "kernel_blank": 5022127,
       "languages": [
         {
           "language": "C",
-          "files": 36669,
-          "code": 19432437,
-          "comment": 2886565,
-          "blank": 3769227
+          "files": 36674,
+          "code": 19449334,
+          "comment": 2892075,
+          "blank": 3772719
         },
         {
           "language": "C/C++ Header",
-          "files": 26485,
-          "code": 8232703,
-          "comment": 1579426,
-          "blank": 783837
+          "files": 26489,
+          "code": 8233890,
+          "comment": 1579854,
+          "blank": 784068
         },
         {
           "language": "JSON",
@@ -10522,58 +10522,58 @@
         {
           "language": "reStructuredText",
           "files": 3956,
-          "code": 537345,
-          "comment": 81623,
-          "blank": 196731
+          "code": 537394,
+          "comment": 81628,
+          "blank": 196737
         },
         {
           "language": "YAML",
           "files": 5552,
-          "code": 506060,
-          "comment": 25439,
-          "blank": 102911
+          "code": 506057,
+          "comment": 25444,
+          "blank": 102895
         },
         {
           "language": "Assembly",
           "files": 1361,
-          "code": 232574,
-          "comment": 100269,
-          "blank": 48368
+          "code": 232582,
+          "comment": 100302,
+          "blank": 48377
         },
         {
           "language": "Bourne Shell",
           "files": 1305,
-          "code": 156019,
-          "comment": 26702,
-          "blank": 40115
+          "code": 156002,
+          "comment": 26713,
+          "blank": 40105
         },
         {
           "language": "Rust",
           "files": 349,
-          "code": 93245,
-          "comment": 37782,
-          "blank": 11974
+          "code": 93310,
+          "comment": 37803,
+          "blank": 11987
         },
         {
           "language": "Text",
           "files": 972,
-          "code": 90013,
+          "code": 90021,
           "comment": 0,
-          "blank": 19805
+          "blank": 19806
         },
         {
           "language": "Python",
-          "files": 383,
-          "code": 84458,
-          "comment": 17339,
-          "blank": 19730
+          "files": 384,
+          "code": 84517,
+          "comment": 17350,
+          "blank": 19758
         },
         {
           "language": "make",
-          "files": 3179,
-          "code": 59857,
-          "comment": 13328,
-          "blank": 12848
+          "files": 3178,
+          "code": 59877,
+          "comment": 13335,
+          "blank": 12849
         },
         {
           "language": "SVG",
@@ -10613,9 +10613,9 @@
         {
           "language": "Bourne Again Shell",
           "files": 63,
-          "code": 2477,
+          "code": 2494,
           "comment": 408,
-          "blank": 614
+          "blank": 618
         },
         {
           "language": "lex",
@@ -10693,6 +10693,584 @@
           "code": 190,
           "comment": 97,
           "blank": 38
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "Clojure",
+          "files": 36,
+          "code": 95,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 54,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 36,
+          "comment": 12,
+          "blank": 9
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 34,
+          "comment": 0,
+          "blank": 6
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 31,
+          "comment": 52,
+          "blank": 23
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 24,
+          "comment": 6,
+          "blank": 4
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
+        }
+      ]
+    },
+    {
+      "version": "7.2.4",
+      "series": "7.2",
+      "tarball": "linux-7.2.4.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.4.tar.xz",
+      "released": "2026-09-07",
+      "files": 473,
+      "bytes": 6335071,
+      "code": 114520,
+      "comment": 52858,
+      "blank": 15276,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
+          "files": 176,
+          "bytes": 3173920,
+          "code": 63817,
+          "comment": 20803,
+          "blank": 5588
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 156,
+          "bytes": 1928807,
+          "code": 25246,
+          "comment": 24745,
+          "blank": 5405
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 87,
+          "bytes": 934490,
+          "code": 19726,
+          "comment": 4528,
+          "blank": 3338
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 140271,
+          "code": 2414,
+          "comment": 1570,
+          "blank": 309
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 18,
+          "bytes": 54446,
+          "code": 1426,
+          "comment": 334,
+          "blank": 308
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 67481,
+          "code": 1186,
+          "comment": 638,
+          "blank": 188
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 23046,
+          "code": 409,
+          "comment": 142,
+          "blank": 76
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5231,
+          "code": 102,
+          "comment": 54,
+          "blank": 26
+        },
+        {
+          "category": "Library code",
+          "purpose": "Shared library-style Rust code",
+          "files": 1,
+          "bytes": 2864,
+          "code": 79,
+          "comment": 8,
+          "blank": 17
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 2386,
+          "code": 55,
+          "comment": 19,
+          "blank": 9
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 1034,
+          "code": 27,
+          "comment": 8,
+          "blank": 5
+        },
+        {
+          "category": "Tooling & tests",
+          "purpose": "Out-of-tree tooling and test harnesses",
+          "files": 1,
+          "bytes": 503,
+          "code": 21,
+          "comment": 2,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 63,
+          "bytes": 561604,
+          "code": 11825,
+          "comment": 2987,
+          "blank": 2048
+        },
+        {
+          "category": "drivers/android (Android (binder))",
+          "purpose": "",
+          "files": 18,
+          "bytes": 337078,
+          "code": 7018,
+          "comment": 1427,
+          "blank": 1095
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 9798,
+          "code": 290,
+          "comment": 11,
+          "blank": 60
+        },
+        {
+          "category": "drivers/pwm (pwm)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 11077,
+          "code": 274,
+          "comment": 32,
+          "blank": 60
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7990,
+          "code": 163,
+          "comment": 42,
+          "blank": 38
+        },
+        {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 6943,
+          "code": 156,
+          "comment": 29,
+          "blank": 37
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/syn/gen/visit.rs",
+          "bytes": 125443,
+          "code": 3933
+        },
+        {
+          "path": "rust/syn/gen/fold.rs",
+          "bytes": 137051,
+          "code": 3894
+        },
+        {
+          "path": "rust/syn/gen/visit_mut.rs",
+          "bytes": 127630,
+          "code": 3750
+        },
+        {
+          "path": "rust/syn/expr.rs",
+          "bytes": 141825,
+          "code": 3377
+        },
+        {
+          "path": "rust/syn/gen/debug.rs",
+          "bytes": 127428,
+          "code": 3235
+        },
+        {
+          "path": "rust/syn/item.rs",
+          "bytes": 121565,
+          "code": 3001
+        },
+        {
+          "path": "rust/syn/gen/hash.rs",
+          "bytes": 76985,
+          "code": 2873
+        },
+        {
+          "path": "rust/zerocopy/src/lib.rs",
+          "bytes": 276927,
+          "code": 2603
+        },
+        {
+          "path": "rust/syn/gen/eq.rs",
+          "bytes": 93199,
+          "code": 2303
+        },
+        {
+          "path": "rust/syn/gen/clone.rs",
+          "bytes": 76399,
+          "code": 2264
+        },
+        {
+          "path": "rust/syn/lit.rs",
+          "bytes": 55843,
+          "code": 1523
+        },
+        {
+          "path": "rust/zerocopy/src/impls.rs",
+          "bytes": 106153,
+          "code": 1473
+        },
+        {
+          "path": "drivers/android/binder/process.rs",
+          "bytes": 61934,
+          "code": 1355
+        },
+        {
+          "path": "drivers/android/binder/thread.rs",
+          "bytes": 64214,
+          "code": 1293
+        },
+        {
+          "path": "rust/zerocopy/src/layout.rs",
+          "bytes": 101004,
+          "code": 1254
+        }
+      ],
+      "kernel_files": 82261,
+      "kernel_code": 30520324,
+      "kernel_comment": 4844004,
+      "kernel_blank": 5068356,
+      "languages": [
+        {
+          "language": "C",
+          "files": 36910,
+          "code": 19625567,
+          "comment": 2914221,
+          "blank": 3804373
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 26697,
+          "code": 8400155,
+          "comment": 1598999,
+          "blank": 790419
+        },
+        {
+          "language": "JSON",
+          "files": 834,
+          "code": 553644,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "reStructuredText",
+          "files": 4011,
+          "code": 540839,
+          "comment": 81995,
+          "blank": 197932
+        },
+        {
+          "language": "YAML",
+          "files": 5675,
+          "code": 518483,
+          "comment": 25957,
+          "blank": 104974
+        },
+        {
+          "language": "Assembly",
+          "files": 1343,
+          "code": 230063,
+          "comment": 99231,
+          "blank": 47643
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1322,
+          "code": 159506,
+          "comment": 27309,
+          "blank": 40932
+        },
+        {
+          "language": "Rust",
+          "files": 473,
+          "code": 114520,
+          "comment": 52858,
+          "blank": 15276
+        },
+        {
+          "language": "Python",
+          "files": 428,
+          "code": 90245,
+          "comment": 18930,
+          "blank": 21168
+        },
+        {
+          "language": "Text",
+          "files": 975,
+          "code": 89640,
+          "comment": 0,
+          "blank": 19725
+        },
+        {
+          "language": "make",
+          "files": 3189,
+          "code": 60624,
+          "comment": 13389,
+          "blank": 12958
+        },
+        {
+          "language": "SVG",
+          "files": 87,
+          "code": 56094,
+          "comment": 1311,
+          "blank": 98
+        },
+        {
+          "language": "Perl",
+          "files": 69,
+          "code": 34796,
+          "comment": 4558,
+          "blank": 6811
+        },
+        {
+          "language": "XML",
+          "files": 32,
+          "code": 23049,
+          "comment": 1706,
+          "blank": 1514
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4848,
+          "comment": 442,
+          "blank": 723
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 63,
+          "code": 2584,
+          "comment": 416,
+          "blank": 631
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2219,
+          "comment": 355,
+          "blank": 366
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1917,
+          "comment": 143,
+          "blank": 356
+        },
+        {
+          "language": "awk",
+          "files": 16,
+          "code": 1743,
+          "comment": 480,
+          "blank": 374
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1413,
+          "comment": 0,
+          "blank": 126
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 611,
+          "comment": 0,
+          "blank": 167
+        },
+        {
+          "language": "Logos",
+          "files": 4,
+          "code": 547,
+          "comment": 0,
+          "blank": 115
+        },
+        {
+          "language": "Markdown",
+          "files": 9,
+          "code": 513,
+          "comment": 3,
+          "blank": 162
+        },
+        {
+          "language": "Qt",
+          "files": 1,
+          "code": 486,
+          "comment": 0,
+          "blank": 50
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "CSS",
+          "files": 4,
+          "code": 244,
+          "comment": 96,
+          "blank": 70
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 199,
+          "comment": 97,
+          "blank": 40
         },
         {
           "language": "TeX",

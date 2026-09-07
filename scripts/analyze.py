@@ -65,8 +65,8 @@ CATEGORY_RULES: list[tuple[str, str, str]] = [
 RUST_FIRST_PARTY = {"kernel", "macros", "pin-init", "bindings", "uapi", "helpers"}
 
 VENDORED = ("Vendored crates",
-            "Third-party crates vendored in-tree (syn, quote, proc-macro2) to "
-            "build the kernel's procedural macros")
+            "Third-party crates copied into the tree (syn, quote, proc-macro2, "
+            "zerocopy) that the kernel's own Rust builds against")
 CORE_SHIMS = ("Core runtime & shims",
               "compiler_builtins, ffi and other crate-root shims")
 DEFAULT_CATEGORY = ("Other subsystems", "Rust code elsewhere in the tree")
@@ -551,7 +551,7 @@ def main() -> int:
                     help="lowest kernel series to include (default 6.0)")
     ap.add_argument("--only", default="",
                     help="comma-separated list of exact versions to analyze "
-                         "(for quick validation), e.g. 6.12.95")
+                         "(for quick validation), e.g. 6.12.109")
     ap.add_argument("--cache-dir", default=None,
                     help="tarball cache dir (default data/tarballs)")
     ap.add_argument("--work-dir", default=None,

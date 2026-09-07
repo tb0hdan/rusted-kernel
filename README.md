@@ -26,7 +26,7 @@ landed and the growth from a true zero baseline.
 
 ```sh
 scripts/build.sh                       # full run: all series >= 6.0
-scripts/build.sh --only 6.12.95,7.1.3  # quick subset while iterating
+scripts/build.sh --only 6.12.109,7.2.4 # quick subset while iterating
 scripts/build.sh --floor 6.12          # raise the floor
 ```
 
