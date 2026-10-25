@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-07",
+  "generated_utc": "2026-10-24",
   "cloc_version": "1.98",
   "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
@@ -340,11 +340,11 @@
       ]
     },
     {
-      "version": "6.1.187",
+      "version": "6.1.190",
       "series": "6.1",
-      "tarball": "linux-6.1.187.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.187.tar.xz",
-      "released": "2026-09-02",
+      "tarball": "linux-6.1.190.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.190.tar.xz",
+      "released": "2026-10-15",
       "files": 29,
       "bytes": 353491,
       "code": 4877,
@@ -493,31 +493,31 @@
           "code": 83
         }
       ],
-      "kernel_files": 69588,
-      "kernel_code": 25416647,
-      "kernel_comment": 4154247,
-      "kernel_blank": 4312108,
+      "kernel_files": 69595,
+      "kernel_code": 25428595,
+      "kernel_comment": 4156827,
+      "kernel_blank": 4314185,
       "languages": [
         {
           "language": "C",
-          "files": 32026,
-          "code": 16772324,
-          "comment": 2584774,
-          "blank": 3264122
+          "files": 32028,
+          "code": 16783401,
+          "comment": 2586921,
+          "blank": 3266060
         },
         {
           "language": "C/C++ Header",
-          "files": 23278,
-          "code": 6912493,
-          "comment": 1341494,
-          "blank": 701626
+          "files": 23282,
+          "code": 6913154,
+          "comment": 1341878,
+          "blank": 701713
         },
         {
           "language": "reStructuredText",
           "files": 3250,
-          "code": 432508,
-          "comment": 62997,
-          "blank": 158110
+          "code": 432559,
+          "comment": 63019,
+          "blank": 158126
         },
         {
           "language": "JSON",
@@ -528,17 +528,17 @@
         },
         {
           "language": "YAML",
-          "files": 2984,
-          "code": 248932,
-          "comment": 13704,
-          "blank": 54333
+          "files": 2985,
+          "code": 248978,
+          "comment": 13709,
+          "blank": 54344
         },
         {
           "language": "Assembly",
           "files": 1320,
-          "code": 228221,
-          "comment": 100649,
-          "blank": 47199
+          "code": 228252,
+          "comment": 100656,
+          "blank": 47205
         },
         {
           "language": "Text",
@@ -550,16 +550,16 @@
         {
           "language": "Bourne Shell",
           "files": 895,
-          "code": 106490,
-          "comment": 18960,
-          "blank": 27225
+          "code": 106552,
+          "comment": 18973,
+          "blank": 27238
         },
         {
           "language": "make",
           "files": 2783,
-          "code": 49712,
-          "comment": 11920,
-          "blank": 10871
+          "code": 49721,
+          "comment": 11922,
+          "blank": 10875
         },
         {
           "language": "SVG",
@@ -578,9 +578,9 @@
         {
           "language": "Python",
           "files": 154,
-          "code": 32749,
+          "code": 32759,
           "comment": 6270,
-          "blank": 6580
+          "blank": 6582
         },
         {
           "language": "yacc",
@@ -655,7 +655,7 @@
         {
           "language": "Cucumber",
           "files": 1,
-          "code": 196,
+          "code": 197,
           "comment": 58,
           "blank": 34
         },
@@ -2549,11 +2549,11 @@
       ]
     },
     {
-      "version": "6.6.156",
+      "version": "6.6.160",
       "series": "6.6",
-      "tarball": "linux-6.6.156.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.156.tar.xz",
-      "released": "2026-09-02",
+      "tarball": "linux-6.6.160.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.160.tar.xz",
+      "released": "2026-10-21",
       "files": 61,
       "bytes": 663419,
       "code": 8704,
@@ -2730,31 +2730,31 @@
           "code": 152
         }
       ],
-      "kernel_files": 72083,
-      "kernel_code": 26430824,
-      "kernel_comment": 4282937,
-      "kernel_blank": 4471836,
+      "kernel_files": 72050,
+      "kernel_code": 26431890,
+      "kernel_comment": 4278272,
+      "kernel_blank": 4473980,
       "languages": [
         {
           "language": "C",
-          "files": 32959,
-          "code": 17424161,
-          "comment": 2646479,
-          "blank": 3376722
+          "files": 32942,
+          "code": 17425510,
+          "comment": 2643415,
+          "blank": 3379041
         },
         {
           "language": "C/C++ Header",
-          "files": 23788,
-          "code": 7140371,
-          "comment": 1387512,
-          "blank": 717994
+          "files": 23774,
+          "code": 7140108,
+          "comment": 1385880,
+          "blank": 717869
         },
         {
           "language": "reStructuredText",
-          "files": 3387,
-          "code": 458228,
-          "comment": 69679,
-          "blank": 167788
+          "files": 3386,
+          "code": 457926,
+          "comment": 69684,
+          "blank": 167703
         },
         {
           "language": "JSON",
@@ -2766,16 +2766,16 @@
         {
           "language": "YAML",
           "files": 3715,
-          "code": 323598,
+          "code": 323600,
           "comment": 17220,
           "blank": 68518
         },
         {
           "language": "Assembly",
           "files": 1340,
-          "code": 235666,
-          "comment": 102067,
-          "blank": 48754
+          "code": 235738,
+          "comment": 102072,
+          "blank": 48761
         },
         {
           "language": "Text",
@@ -2787,23 +2787,23 @@
         {
           "language": "Bourne Shell",
           "files": 998,
-          "code": 122576,
-          "comment": 21364,
-          "blank": 31253
+          "code": 122744,
+          "comment": 21377,
+          "blank": 31282
         },
         {
           "language": "make",
-          "files": 2925,
-          "code": 51981,
-          "comment": 12137,
-          "blank": 11184
+          "files": 2924,
+          "code": 51988,
+          "comment": 12141,
+          "blank": 11182
         },
         {
           "language": "Python",
           "files": 199,
-          "code": 48244,
-          "comment": 8441,
-          "blank": 9650
+          "code": 48276,
+          "comment": 8445,
+          "blank": 9651
         },
         {
           "language": "SVG",
@@ -2892,7 +2892,7 @@
         {
           "language": "Cucumber",
           "files": 1,
-          "code": 198,
+          "code": 199,
           "comment": 58,
           "blank": 34
         },
@@ -5398,14 +5398,14 @@
       ]
     },
     {
-      "version": "6.12.109",
+      "version": "6.12.114",
       "series": "6.12",
-      "tarball": "linux-6.12.109.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.109.tar.xz",
-      "released": "2026-09-07",
+      "tarball": "linux-6.12.114.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.114.tar.xz",
+      "released": "2026-10-21",
       "files": 79,
-      "bytes": 735152,
-      "code": 9666,
+      "bytes": 735211,
+      "code": 9668,
       "comment": 9128,
       "blank": 1778,
       "categories": [
@@ -5467,8 +5467,8 @@
           "category": "Generated bindings",
           "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
           "files": 1,
-          "bytes": 1865,
-          "code": 40,
+          "bytes": 1894,
+          "code": 41,
           "comment": 16,
           "blank": 6
         },
@@ -5476,8 +5476,8 @@
           "category": "UAPI bindings",
           "purpose": "Raw bindings to the kernel's userspace API headers",
           "files": 1,
-          "bytes": 1106,
-          "code": 25,
+          "bytes": 1136,
+          "code": 26,
           "comment": 9,
           "blank": 4
         },
@@ -5597,80 +5597,80 @@
           "code": 191
         }
       ],
-      "kernel_files": 76067,
-      "kernel_code": 28245459,
-      "kernel_comment": 4515676,
-      "kernel_blank": 4721549,
+      "kernel_files": 76103,
+      "kernel_code": 28270273,
+      "kernel_comment": 4522221,
+      "kernel_blank": 4726260,
       "languages": [
         {
           "language": "C",
-          "files": 34648,
-          "code": 18357344,
-          "comment": 2766656,
-          "blank": 3563572
+          "files": 34660,
+          "code": 18377818,
+          "comment": 2772093,
+          "blank": 3567729
         },
         {
           "language": "C/C++ Header",
-          "files": 25103,
-          "code": 7797646,
-          "comment": 1487809,
-          "blank": 750703
+          "files": 25126,
+          "code": 7800998,
+          "comment": 1488849,
+          "blank": 751121
         },
         {
           "language": "reStructuredText",
-          "files": 3603,
-          "code": 490924,
-          "comment": 75180,
-          "blank": 180396
+          "files": 3604,
+          "code": 491246,
+          "comment": 75192,
+          "blank": 180476
         },
         {
           "language": "JSON",
           "files": 663,
-          "code": 481192,
+          "code": 481336,
           "comment": 0,
           "blank": 2
         },
         {
           "language": "YAML",
           "files": 4389,
-          "code": 391425,
-          "comment": 20175,
+          "code": 391470,
+          "comment": 20180,
           "blank": 80705
         },
         {
           "language": "Assembly",
           "files": 1334,
-          "code": 230960,
-          "comment": 98630,
+          "code": 230995,
+          "comment": 98624,
           "blank": 48040
         },
         {
           "language": "Bourne Shell",
           "files": 1080,
-          "code": 133219,
-          "comment": 23396,
-          "blank": 34138
+          "code": 133538,
+          "comment": 23446,
+          "blank": 34183
         },
         {
           "language": "Text",
           "files": 1501,
-          "code": 110661,
+          "code": 110668,
           "comment": 0,
-          "blank": 24684
+          "blank": 24685
         },
         {
           "language": "Python",
           "files": 276,
-          "code": 59851,
+          "code": 59930,
           "comment": 10525,
-          "blank": 12620
+          "blank": 12625
         },
         {
           "language": "make",
           "files": 3029,
-          "code": 55696,
-          "comment": 12884,
-          "blank": 12129
+          "code": 55730,
+          "comment": 12891,
+          "blank": 12134
         },
         {
           "language": "SVG",
@@ -5696,7 +5696,7 @@
         {
           "language": "Rust",
           "files": 79,
-          "code": 9666,
+          "code": 9668,
           "comment": 9128,
           "blank": 1778
         },
@@ -5773,7 +5773,7 @@
         {
           "language": "Cucumber",
           "files": 1,
-          "code": 212,
+          "code": 213,
           "comment": 62,
           "blank": 37
         },
@@ -8533,34 +8533,34 @@
       ]
     },
     {
-      "version": "6.18.50",
+      "version": "6.18.58",
       "series": "6.18",
-      "tarball": "linux-6.18.50.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.50.tar.xz",
-      "released": "2026-09-07",
+      "tarball": "linux-6.18.58.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.58.tar.xz",
+      "released": "2026-10-21",
       "files": 243,
-      "bytes": 2404000,
-      "code": 36319,
+      "bytes": 2406193,
+      "code": 36381,
       "comment": 25276,
-      "blank": 7013,
+      "blank": 7021,
       "categories": [
         {
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 130,
-          "bytes": 1480009,
-          "code": 18415,
-          "comment": 18971,
+          "bytes": 1479868,
+          "code": 18435,
+          "comment": 18960,
           "blank": 4033
         },
         {
           "category": "Drivers",
           "purpose": "Production device drivers written in Rust",
           "files": 64,
-          "bytes": 607989,
-          "code": 12657,
-          "comment": 3010,
-          "blank": 2200
+          "bytes": 609975,
+          "code": 12692,
+          "comment": 3019,
+          "blank": 2208
         },
         {
           "category": "pin-init crate",
@@ -8593,9 +8593,9 @@
           "category": "Kernel build tooling",
           "purpose": "Codegen and helpers used during the kernel build",
           "files": 3,
-          "bytes": 22868,
-          "code": 406,
-          "comment": 142,
+          "bytes": 23098,
+          "code": 409,
+          "comment": 144,
           "blank": 76
         },
         {
@@ -8620,8 +8620,8 @@
           "category": "Generated bindings",
           "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
           "files": 1,
-          "bytes": 2299,
-          "code": 45,
+          "bytes": 2360,
+          "code": 47,
           "comment": 20,
           "blank": 8
         },
@@ -8629,8 +8629,8 @@
           "category": "UAPI bindings",
           "purpose": "Raw bindings to the kernel's userspace API headers",
           "files": 1,
-          "bytes": 1211,
-          "code": 29,
+          "bytes": 1268,
+          "code": 31,
           "comment": 9,
           "blank": 5
         },
@@ -8649,16 +8649,16 @@
           "category": "drivers/android (Android (binder))",
           "purpose": "",
           "files": 18,
-          "bytes": 330454,
-          "code": 6901,
-          "comment": 1408,
-          "blank": 1080
+          "bytes": 332423,
+          "code": 6936,
+          "comment": 1417,
+          "blank": 1088
         },
         {
           "category": "drivers/gpu (GPU / DRM)",
           "purpose": "",
           "files": 41,
-          "bytes": 252864,
+          "bytes": 252881,
           "code": 5148,
           "comment": 1519,
           "blank": 986
@@ -8699,8 +8699,8 @@
         },
         {
           "path": "drivers/android/binder/thread.rs",
-          "bytes": 63358,
-          "code": 1283
+          "bytes": 63585,
+          "code": 1288
         },
         {
           "path": "rust/pin-init/src/macros.rs",
@@ -8709,8 +8709,8 @@
         },
         {
           "path": "drivers/android/binder/node.rs",
-          "bytes": 39519,
-          "code": 846
+          "bytes": 40081,
+          "code": 855
         },
         {
           "path": "drivers/gpu/nova-core/vbios.rs",
@@ -8719,13 +8719,13 @@
         },
         {
           "path": "drivers/gpu/drm/drm_panic_qr.rs",
-          "bytes": 34298,
+          "bytes": 34315,
           "code": 787
         },
         {
           "path": "rust/kernel/cpufreq.rs",
-          "bytes": 46119,
-          "code": 687
+          "bytes": 46417,
+          "code": 694
         },
         {
           "path": "rust/kernel/alloc/kvec.rs",
@@ -8768,59 +8768,59 @@
           "code": 454
         }
       ],
-      "kernel_files": 79509,
-      "kernel_code": 29334507,
-      "kernel_comment": 4655685,
-      "kernel_blank": 4908002,
+      "kernel_files": 79550,
+      "kernel_code": 29364473,
+      "kernel_comment": 4663477,
+      "kernel_blank": 4913591,
       "languages": [
         {
           "language": "C",
-          "files": 35976,
-          "code": 19056681,
-          "comment": 2837997,
-          "blank": 3696174
+          "files": 35989,
+          "code": 19081968,
+          "comment": 2844568,
+          "blank": 3701150
         },
         {
           "language": "C/C++ Header",
-          "files": 25973,
-          "code": 7982058,
-          "comment": 1525251,
-          "blank": 768476
+          "files": 25998,
+          "code": 7985933,
+          "comment": 1526415,
+          "blank": 768962
         },
         {
           "language": "JSON",
           "files": 771,
-          "code": 530456,
+          "code": 530600,
           "comment": 0,
           "blank": 2
         },
         {
           "language": "reStructuredText",
           "files": 3843,
-          "code": 522667,
-          "comment": 79846,
-          "blank": 191506
+          "code": 522788,
+          "comment": 79860,
+          "blank": 191525
         },
         {
           "language": "YAML",
           "files": 5229,
-          "code": 469308,
-          "comment": 23734,
-          "blank": 95928
+          "code": 469330,
+          "comment": 23736,
+          "blank": 95929
         },
         {
           "language": "Assembly",
           "files": 1355,
-          "code": 232450,
-          "comment": 99529,
+          "code": 232469,
+          "comment": 99533,
           "blank": 48161
         },
         {
           "language": "Bourne Shell",
-          "files": 1172,
-          "code": 146031,
-          "comment": 25185,
-          "blank": 37325
+          "files": 1175,
+          "code": 146436,
+          "comment": 25213,
+          "blank": 37419
         },
         {
           "language": "Text",
@@ -8832,16 +8832,16 @@
         {
           "language": "Python",
           "files": 341,
-          "code": 73446,
+          "code": 73464,
           "comment": 14430,
-          "blank": 16583
+          "blank": 16585
         },
         {
           "language": "make",
           "files": 3141,
-          "code": 57800,
-          "comment": 13071,
-          "blank": 12459
+          "code": 57815,
+          "comment": 13080,
+          "blank": 12462
         },
         {
           "language": "SVG",
@@ -8860,9 +8860,9 @@
         {
           "language": "Rust",
           "files": 243,
-          "code": 36319,
+          "code": 36381,
           "comment": 25276,
-          "blank": 7013
+          "blank": 7021
         },
         {
           "language": "XML",
@@ -8949,18 +8949,18 @@
           "blank": 46
         },
         {
-          "language": "Cucumber",
-          "files": 1,
-          "code": 185,
-          "comment": 97,
-          "blank": 37
-        },
-        {
           "language": "CSS",
           "files": 3,
           "code": 183,
           "comment": 71,
           "blank": 56
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 183,
+          "comment": 97,
+          "blank": 37
         },
         {
           "language": "Logos",
@@ -10809,16 +10809,16 @@
       ]
     },
     {
-      "version": "7.2.4",
+      "version": "7.2.12",
       "series": "7.2",
-      "tarball": "linux-7.2.4.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.4.tar.xz",
-      "released": "2026-09-07",
+      "tarball": "linux-7.2.12.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.12.tar.xz",
+      "released": "2026-10-21",
       "files": 473,
-      "bytes": 6335071,
-      "code": 114520,
-      "comment": 52858,
-      "blank": 15276,
+      "bytes": 6341438,
+      "code": 114646,
+      "comment": 52895,
+      "blank": 15304,
       "categories": [
         {
           "category": "Vendored crates",
@@ -10833,26 +10833,26 @@
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 156,
-          "bytes": 1928807,
-          "code": 25246,
-          "comment": 24745,
-          "blank": 5405
+          "bytes": 1930837,
+          "code": 25277,
+          "comment": 24761,
+          "blank": 5408
         },
         {
           "category": "Drivers",
           "purpose": "Production device drivers written in Rust",
           "files": 87,
-          "bytes": 934490,
-          "code": 19726,
-          "comment": 4528,
-          "blank": 3338
+          "bytes": 938558,
+          "code": 19815,
+          "comment": 4547,
+          "blank": 3363
         },
         {
           "category": "pin-init crate",
           "purpose": "Safe in-place (pinned) initialisation primitives",
           "files": 15,
-          "bytes": 140271,
-          "code": 2414,
+          "bytes": 140108,
+          "code": 2408,
           "comment": 1570,
           "blank": 309
         },
@@ -10860,8 +10860,8 @@
           "category": "Samples & examples",
           "purpose": "Reference modules demonstrating the Rust API",
           "files": 18,
-          "bytes": 54446,
-          "code": 1426,
+          "bytes": 54530,
+          "code": 1431,
           "comment": 334,
           "blank": 308
         },
@@ -10878,9 +10878,9 @@
           "category": "Kernel build tooling",
           "purpose": "Codegen and helpers used during the kernel build",
           "files": 3,
-          "bytes": 23046,
-          "code": 409,
-          "comment": 142,
+          "bytes": 23276,
+          "code": 412,
+          "comment": 144,
           "blank": 76
         },
         {
@@ -10905,8 +10905,8 @@
           "category": "Generated bindings",
           "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
           "files": 1,
-          "bytes": 2386,
-          "code": 55,
+          "bytes": 2447,
+          "code": 57,
           "comment": 19,
           "blank": 9
         },
@@ -10914,8 +10914,8 @@
           "category": "UAPI bindings",
           "purpose": "Raw bindings to the kernel's userspace API headers",
           "files": 1,
-          "bytes": 1034,
-          "code": 27,
+          "bytes": 1091,
+          "code": 29,
           "comment": 8,
           "blank": 5
         },
@@ -10943,19 +10943,19 @@
           "category": "drivers/gpu (GPU / DRM)",
           "purpose": "",
           "files": 63,
-          "bytes": 561604,
-          "code": 11825,
-          "comment": 2987,
-          "blank": 2048
+          "bytes": 563703,
+          "code": 11879,
+          "comment": 2997,
+          "blank": 2065
         },
         {
           "category": "drivers/android (Android (binder))",
           "purpose": "",
           "files": 18,
-          "bytes": 337078,
-          "code": 7018,
-          "comment": 1427,
-          "blank": 1095
+          "bytes": 339047,
+          "code": 7053,
+          "comment": 1436,
+          "blank": 1103
         },
         {
           "category": "drivers/block (Block)",
@@ -11062,8 +11062,8 @@
         },
         {
           "path": "drivers/android/binder/thread.rs",
-          "bytes": 64214,
-          "code": 1293
+          "bytes": 64441,
+          "code": 1298
         },
         {
           "path": "rust/zerocopy/src/layout.rs",
@@ -11071,87 +11071,87 @@
           "code": 1254
         }
       ],
-      "kernel_files": 82261,
-      "kernel_code": 30520324,
-      "kernel_comment": 4844004,
-      "kernel_blank": 5068356,
+      "kernel_files": 82281,
+      "kernel_code": 30546121,
+      "kernel_comment": 4850818,
+      "kernel_blank": 5073380,
       "languages": [
         {
           "language": "C",
-          "files": 36910,
-          "code": 19625567,
-          "comment": 2914221,
-          "blank": 3804373
+          "files": 36919,
+          "code": 19647905,
+          "comment": 2920190,
+          "blank": 3808774
         },
         {
           "language": "C/C++ Header",
-          "files": 26697,
-          "code": 8400155,
-          "comment": 1598999,
-          "blank": 790419
+          "files": 26705,
+          "code": 8402580,
+          "comment": 1599713,
+          "blank": 790862
         },
         {
           "language": "JSON",
           "files": 834,
-          "code": 553644,
+          "code": 553812,
           "comment": 0,
           "blank": 2
         },
         {
           "language": "reStructuredText",
           "files": 4011,
-          "code": 540839,
-          "comment": 81995,
-          "blank": 197932
+          "code": 540875,
+          "comment": 81999,
+          "blank": 197933
         },
         {
           "language": "YAML",
           "files": 5675,
-          "code": 518483,
+          "code": 518491,
           "comment": 25957,
           "blank": 104974
         },
         {
           "language": "Assembly",
           "files": 1343,
-          "code": 230063,
-          "comment": 99231,
+          "code": 230078,
+          "comment": 99249,
           "blank": 47643
         },
         {
           "language": "Bourne Shell",
-          "files": 1322,
-          "code": 159506,
-          "comment": 27309,
-          "blank": 40932
+          "files": 1325,
+          "code": 159805,
+          "comment": 27323,
+          "blank": 41010
         },
         {
           "language": "Rust",
           "files": 473,
-          "code": 114520,
-          "comment": 52858,
-          "blank": 15276
+          "code": 114646,
+          "comment": 52895,
+          "blank": 15304
         },
         {
           "language": "Python",
           "files": 428,
-          "code": 90245,
-          "comment": 18930,
-          "blank": 21168
+          "code": 90431,
+          "comment": 18983,
+          "blank": 21219
         },
         {
           "language": "Text",
           "files": 975,
-          "code": 89640,
+          "code": 89609,
           "comment": 0,
-          "blank": 19725
+          "blank": 19719
         },
         {
           "language": "make",
           "files": 3189,
-          "code": 60624,
-          "comment": 13389,
-          "blank": 12958
+          "code": 60633,
+          "comment": 13394,
+          "blank": 12960
         },
         {
           "language": "SVG",
@@ -11191,9 +11191,9 @@
         {
           "language": "Bourne Again Shell",
           "files": 63,
-          "code": 2584,
+          "code": 2589,
           "comment": 416,
-          "blank": 631
+          "blank": 635
         },
         {
           "language": "lex",
@@ -11224,18 +11224,18 @@
           "blank": 126
         },
         {
+          "language": "Logos",
+          "files": 4,
+          "code": 762,
+          "comment": 0,
+          "blank": 137
+        },
+        {
           "language": "NAnt script",
           "files": 2,
           "code": 611,
           "comment": 0,
           "blank": 167
-        },
-        {
-          "language": "Logos",
-          "files": 4,
-          "code": 547,
-          "comment": 0,
-          "blank": 115
         },
         {
           "language": "Markdown",
@@ -11268,7 +11268,585 @@
         {
           "language": "Cucumber",
           "files": 1,
-          "code": 199,
+          "code": 197,
+          "comment": 97,
+          "blank": 40
+        },
+        {
+          "language": "TeX",
+          "files": 1,
+          "code": 155,
+          "comment": 73,
+          "blank": 6
+        },
+        {
+          "language": "TNSDL",
+          "files": 2,
+          "code": 140,
+          "comment": 0,
+          "blank": 33
+        },
+        {
+          "language": "Windows Module Definition",
+          "files": 2,
+          "code": 137,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "Linker Script",
+          "files": 5,
+          "code": 126,
+          "comment": 11,
+          "blank": 25
+        },
+        {
+          "language": "Clojure",
+          "files": 36,
+          "code": 95,
+          "comment": 0,
+          "blank": 1
+        },
+        {
+          "language": "m4",
+          "files": 1,
+          "code": 95,
+          "comment": 1,
+          "blank": 15
+        },
+        {
+          "language": "XSLT",
+          "files": 5,
+          "code": 61,
+          "comment": 26,
+          "blank": 13
+        },
+        {
+          "language": "Umka",
+          "files": 2,
+          "code": 54,
+          "comment": 0,
+          "blank": 20
+        },
+        {
+          "language": "TOML",
+          "files": 3,
+          "code": 36,
+          "comment": 12,
+          "blank": 9
+        },
+        {
+          "language": "MATLAB",
+          "files": 1,
+          "code": 35,
+          "comment": 37,
+          "blank": 17
+        },
+        {
+          "language": "INI",
+          "files": 3,
+          "code": 34,
+          "comment": 0,
+          "blank": 6
+        },
+        {
+          "language": "sed",
+          "files": 2,
+          "code": 31,
+          "comment": 52,
+          "blank": 23
+        },
+        {
+          "language": "vim script",
+          "files": 1,
+          "code": 27,
+          "comment": 12,
+          "blank": 3
+        },
+        {
+          "language": "Ruby",
+          "files": 1,
+          "code": 25,
+          "comment": 0,
+          "blank": 4
+        },
+        {
+          "language": "HTML",
+          "files": 2,
+          "code": 24,
+          "comment": 6,
+          "blank": 4
+        },
+        {
+          "language": "Velocity Template Language",
+          "files": 1,
+          "code": 15,
+          "comment": 0,
+          "blank": 0
+        }
+      ]
+    },
+    {
+      "version": "7.3",
+      "series": "7.3",
+      "tarball": "linux-7.3.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.tar.xz",
+      "released": "2026-10-19",
+      "files": 496,
+      "bytes": 6639855,
+      "code": 120019,
+      "comment": 55287,
+      "blank": 16363,
+      "categories": [
+        {
+          "category": "Vendored crates",
+          "purpose": "Third-party crates copied into the tree (syn, quote, proc-macro2, zerocopy) that the kernel's own Rust builds against",
+          "files": 176,
+          "bytes": 3173920,
+          "code": 63817,
+          "comment": 20803,
+          "blank": 5588
+        },
+        {
+          "category": "Kernel crate",
+          "purpose": "Safe Rust abstractions layered over the C kernel APIs",
+          "files": 163,
+          "bytes": 2103831,
+          "code": 27986,
+          "comment": 26470,
+          "blank": 5932
+        },
+        {
+          "category": "Drivers",
+          "purpose": "Production device drivers written in Rust",
+          "files": 102,
+          "bytes": 1053988,
+          "code": 22237,
+          "comment": 5161,
+          "blank": 3856
+        },
+        {
+          "category": "pin-init crate",
+          "purpose": "Safe in-place (pinned) initialisation primitives",
+          "files": 15,
+          "bytes": 142190,
+          "code": 2479,
+          "comment": 1585,
+          "blank": 326
+        },
+        {
+          "category": "Samples & examples",
+          "purpose": "Reference modules demonstrating the Rust API",
+          "files": 19,
+          "bytes": 58438,
+          "code": 1542,
+          "comment": 343,
+          "blank": 323
+        },
+        {
+          "category": "Procedural macros",
+          "purpose": "Compiler plumbing: module!, #[vtable], pin-data, etc.",
+          "files": 10,
+          "bytes": 70826,
+          "code": 1221,
+          "comment": 681,
+          "blank": 194
+        },
+        {
+          "category": "Kernel build tooling",
+          "purpose": "Codegen and helpers used during the kernel build",
+          "files": 3,
+          "bytes": 23792,
+          "code": 432,
+          "comment": 146,
+          "blank": 79
+        },
+        {
+          "category": "Core runtime & shims",
+          "purpose": "compiler_builtins, ffi and other crate-root shims",
+          "files": 3,
+          "bytes": 5373,
+          "code": 107,
+          "comment": 54,
+          "blank": 27
+        },
+        {
+          "category": "Library code",
+          "purpose": "Shared library-style Rust code",
+          "files": 1,
+          "bytes": 2864,
+          "code": 79,
+          "comment": 8,
+          "blank": 17
+        },
+        {
+          "category": "Generated bindings",
+          "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
+          "files": 1,
+          "bytes": 2447,
+          "code": 57,
+          "comment": 19,
+          "blank": 9
+        },
+        {
+          "category": "UAPI bindings",
+          "purpose": "Raw bindings to the kernel's userspace API headers",
+          "files": 1,
+          "bytes": 1091,
+          "code": 29,
+          "comment": 8,
+          "blank": 5
+        },
+        {
+          "category": "Tooling & tests",
+          "purpose": "Out-of-tree tooling and test harnesses",
+          "files": 1,
+          "bytes": 503,
+          "code": 21,
+          "comment": 2,
+          "blank": 4
+        },
+        {
+          "category": "Other subsystems",
+          "purpose": "Rust code elsewhere in the tree",
+          "files": 1,
+          "bytes": 592,
+          "code": 12,
+          "comment": 7,
+          "blank": 3
+        }
+      ],
+      "drivers": [
+        {
+          "category": "drivers/gpu (GPU / DRM)",
+          "purpose": "",
+          "files": 76,
+          "bytes": 660743,
+          "code": 13868,
+          "comment": 3556,
+          "blank": 2515
+        },
+        {
+          "category": "drivers/android (Android (binder))",
+          "purpose": "",
+          "files": 20,
+          "bytes": 357554,
+          "code": 7479,
+          "comment": 1491,
+          "blank": 1146
+        },
+        {
+          "category": "drivers/block (Block)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 9783,
+          "code": 290,
+          "comment": 11,
+          "blank": 60
+        },
+        {
+          "category": "drivers/pwm (pwm)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 10948,
+          "code": 275,
+          "comment": 32,
+          "blank": 60
+        },
+        {
+          "category": "drivers/net (Networking)",
+          "purpose": "",
+          "files": 2,
+          "bytes": 7990,
+          "code": 163,
+          "comment": 42,
+          "blank": 38
+        },
+        {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 6970,
+          "code": 162,
+          "comment": 29,
+          "blank": 37
+        }
+      ],
+      "largest_files": [
+        {
+          "path": "rust/syn/gen/visit.rs",
+          "bytes": 125443,
+          "code": 3933
+        },
+        {
+          "path": "rust/syn/gen/fold.rs",
+          "bytes": 137051,
+          "code": 3894
+        },
+        {
+          "path": "rust/syn/gen/visit_mut.rs",
+          "bytes": 127630,
+          "code": 3750
+        },
+        {
+          "path": "rust/syn/expr.rs",
+          "bytes": 141825,
+          "code": 3377
+        },
+        {
+          "path": "rust/syn/gen/debug.rs",
+          "bytes": 127428,
+          "code": 3235
+        },
+        {
+          "path": "rust/syn/item.rs",
+          "bytes": 121565,
+          "code": 3001
+        },
+        {
+          "path": "rust/syn/gen/hash.rs",
+          "bytes": 76985,
+          "code": 2873
+        },
+        {
+          "path": "rust/zerocopy/src/lib.rs",
+          "bytes": 276927,
+          "code": 2603
+        },
+        {
+          "path": "rust/syn/gen/eq.rs",
+          "bytes": 93199,
+          "code": 2303
+        },
+        {
+          "path": "rust/syn/gen/clone.rs",
+          "bytes": 76399,
+          "code": 2264
+        },
+        {
+          "path": "rust/syn/lit.rs",
+          "bytes": 55843,
+          "code": 1523
+        },
+        {
+          "path": "rust/zerocopy/src/impls.rs",
+          "bytes": 106153,
+          "code": 1473
+        },
+        {
+          "path": "drivers/android/binder/process.rs",
+          "bytes": 65115,
+          "code": 1431
+        },
+        {
+          "path": "drivers/android/binder/thread.rs",
+          "bytes": 67116,
+          "code": 1361
+        },
+        {
+          "path": "rust/zerocopy/src/layout.rs",
+          "bytes": 101004,
+          "code": 1254
+        }
+      ],
+      "kernel_files": 83261,
+      "kernel_code": 30961328,
+      "kernel_comment": 4918259,
+      "kernel_blank": 5138553,
+      "languages": [
+        {
+          "language": "C",
+          "files": 37368,
+          "code": 19912172,
+          "comment": 2961696,
+          "blank": 3858048
+        },
+        {
+          "language": "C/C++ Header",
+          "files": 27004,
+          "code": 8513410,
+          "comment": 1620010,
+          "blank": 798767
+        },
+        {
+          "language": "JSON",
+          "files": 843,
+          "code": 560572,
+          "comment": 0,
+          "blank": 2
+        },
+        {
+          "language": "reStructuredText",
+          "files": 4064,
+          "code": 550758,
+          "comment": 82750,
+          "blank": 200927
+        },
+        {
+          "language": "YAML",
+          "files": 5792,
+          "code": 530276,
+          "comment": 26532,
+          "blank": 107361
+        },
+        {
+          "language": "Assembly",
+          "files": 1345,
+          "code": 230065,
+          "comment": 99310,
+          "blank": 47644
+        },
+        {
+          "language": "Bourne Shell",
+          "files": 1349,
+          "code": 163856,
+          "comment": 28336,
+          "blank": 41895
+        },
+        {
+          "language": "Rust",
+          "files": 496,
+          "code": 120019,
+          "comment": 55287,
+          "blank": 16363
+        },
+        {
+          "language": "Python",
+          "files": 437,
+          "code": 93003,
+          "comment": 19662,
+          "blank": 21921
+        },
+        {
+          "language": "Text",
+          "files": 938,
+          "code": 87980,
+          "comment": 0,
+          "blank": 19382
+        },
+        {
+          "language": "make",
+          "files": 3210,
+          "code": 61561,
+          "comment": 13527,
+          "blank": 13178
+        },
+        {
+          "language": "SVG",
+          "files": 87,
+          "code": 56094,
+          "comment": 1311,
+          "blank": 98
+        },
+        {
+          "language": "Perl",
+          "files": 69,
+          "code": 34800,
+          "comment": 4561,
+          "blank": 6812
+        },
+        {
+          "language": "XML",
+          "files": 32,
+          "code": 23053,
+          "comment": 1706,
+          "blank": 1514
+        },
+        {
+          "language": "yacc",
+          "files": 10,
+          "code": 4848,
+          "comment": 442,
+          "blank": 723
+        },
+        {
+          "language": "PO File",
+          "files": 7,
+          "code": 4336,
+          "comment": 1269,
+          "blank": 1106
+        },
+        {
+          "language": "Bourne Again Shell",
+          "files": 68,
+          "code": 2852,
+          "comment": 443,
+          "blank": 711
+        },
+        {
+          "language": "lex",
+          "files": 10,
+          "code": 2219,
+          "comment": 355,
+          "blank": 366
+        },
+        {
+          "language": "C++",
+          "files": 9,
+          "code": 1917,
+          "comment": 143,
+          "blank": 356
+        },
+        {
+          "language": "awk",
+          "files": 16,
+          "code": 1743,
+          "comment": 480,
+          "blank": 374
+        },
+        {
+          "language": "CSV",
+          "files": 11,
+          "code": 1414,
+          "comment": 0,
+          "blank": 126
+        },
+        {
+          "language": "Logos",
+          "files": 10,
+          "code": 889,
+          "comment": 0,
+          "blank": 143
+        },
+        {
+          "language": "NAnt script",
+          "files": 2,
+          "code": 612,
+          "comment": 0,
+          "blank": 167
+        },
+        {
+          "language": "Markdown",
+          "files": 9,
+          "code": 513,
+          "comment": 3,
+          "blank": 162
+        },
+        {
+          "language": "Qt",
+          "files": 1,
+          "code": 486,
+          "comment": 0,
+          "blank": 50
+        },
+        {
+          "language": "XSD",
+          "files": 1,
+          "code": 349,
+          "comment": 9,
+          "blank": 46
+        },
+        {
+          "language": "CSS",
+          "files": 4,
+          "code": 244,
+          "comment": 100,
+          "blank": 72
+        },
+        {
+          "language": "Cucumber",
+          "files": 1,
+          "code": 197,
           "comment": 97,
           "blank": 40
         },
