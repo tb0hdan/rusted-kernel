@@ -8533,11 +8533,11 @@
       ]
     },
     {
-      "version": "6.18.58",
+      "version": "6.18.59",
       "series": "6.18",
-      "tarball": "linux-6.18.58.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.58.tar.xz",
-      "released": "2026-10-21",
+      "tarball": "linux-6.18.59.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.59.tar.xz",
+      "released": "2026-10-26",
       "files": 243,
       "bytes": 2406193,
       "code": 36381,
@@ -8769,23 +8769,23 @@
         }
       ],
       "kernel_files": 79550,
-      "kernel_code": 29364473,
-      "kernel_comment": 4663477,
-      "kernel_blank": 4913591,
+      "kernel_code": 29364686,
+      "kernel_comment": 4663542,
+      "kernel_blank": 4913617,
       "languages": [
         {
           "language": "C",
           "files": 35989,
-          "code": 19081968,
-          "comment": 2844568,
-          "blank": 3701150
+          "code": 19082156,
+          "comment": 2844628,
+          "blank": 3701180
         },
         {
           "language": "C/C++ Header",
           "files": 25998,
-          "code": 7985933,
-          "comment": 1526415,
-          "blank": 768962
+          "code": 7985937,
+          "comment": 1526420,
+          "blank": 768958
         },
         {
           "language": "JSON",
@@ -8804,7 +8804,7 @@
         {
           "language": "YAML",
           "files": 5229,
-          "code": 469330,
+          "code": 469345,
           "comment": 23736,
           "blank": 95929
         },
@@ -8839,7 +8839,7 @@
         {
           "language": "make",
           "files": 3141,
-          "code": 57815,
+          "code": 57821,
           "comment": 13080,
           "blank": 12462
         },
