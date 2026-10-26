@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-24",
+  "generated_utc": "2026-10-26",
   "cloc_version": "1.98",
   "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
@@ -10809,11 +10809,11 @@
       ]
     },
     {
-      "version": "7.2.12",
+      "version": "7.2.13",
       "series": "7.2",
-      "tarball": "linux-7.2.12.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.12.tar.xz",
-      "released": "2026-10-21",
+      "tarball": "linux-7.2.13.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.13.tar.xz",
+      "released": "2026-10-26",
       "files": 473,
       "bytes": 6341438,
       "code": 114646,
@@ -11072,23 +11072,23 @@
         }
       ],
       "kernel_files": 82281,
-      "kernel_code": 30546121,
-      "kernel_comment": 4850818,
-      "kernel_blank": 5073380,
+      "kernel_code": 30546846,
+      "kernel_comment": 4851146,
+      "kernel_blank": 5073511,
       "languages": [
         {
           "language": "C",
           "files": 36919,
-          "code": 19647905,
-          "comment": 2920190,
-          "blank": 3808774
+          "code": 19648562,
+          "comment": 2920479,
+          "blank": 3808901
         },
         {
           "language": "C/C++ Header",
           "files": 26705,
-          "code": 8402580,
-          "comment": 1599713,
-          "blank": 790862
+          "code": 8402626,
+          "comment": 1599752,
+          "blank": 790866
         },
         {
           "language": "JSON",
@@ -11107,7 +11107,7 @@
         {
           "language": "YAML",
           "files": 5675,
-          "code": 518491,
+          "code": 518506,
           "comment": 25957,
           "blank": 104974
         },
@@ -11149,7 +11149,7 @@
         {
           "language": "make",
           "files": 3189,
-          "code": 60633,
+          "code": 60640,
           "comment": 13394,
           "blank": 12960
         },
