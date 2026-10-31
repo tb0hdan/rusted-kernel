@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-26",
+  "generated_utc": "2026-10-31",
   "cloc_version": "1.98",
   "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
@@ -340,11 +340,11 @@
       ]
     },
     {
-      "version": "6.1.190",
+      "version": "6.1.191",
       "series": "6.1",
-      "tarball": "linux-6.1.190.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.190.tar.xz",
-      "released": "2026-10-15",
+      "tarball": "linux-6.1.191.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.191.tar.xz",
+      "released": "2026-10-30",
       "files": 29,
       "bytes": 353491,
       "code": 4877,
@@ -493,31 +493,31 @@
           "code": 83
         }
       ],
-      "kernel_files": 69595,
-      "kernel_code": 25428595,
-      "kernel_comment": 4156827,
-      "kernel_blank": 4314185,
+      "kernel_files": 69554,
+      "kernel_code": 25420778,
+      "kernel_comment": 4149643,
+      "kernel_blank": 4314699,
       "languages": [
         {
           "language": "C",
-          "files": 32028,
-          "code": 16783401,
-          "comment": 2586921,
-          "blank": 3266060
+          "files": 32008,
+          "code": 16776731,
+          "comment": 2581798,
+          "blank": 3266932
         },
         {
           "language": "C/C++ Header",
-          "files": 23282,
-          "code": 6913154,
-          "comment": 1341878,
-          "blank": 701713
+          "files": 23263,
+          "code": 6912366,
+          "comment": 1339830,
+          "blank": 701453
         },
         {
           "language": "reStructuredText",
-          "files": 3250,
-          "code": 432559,
-          "comment": 63019,
-          "blank": 158126
+          "files": 3249,
+          "code": 432214,
+          "comment": 63007,
+          "blank": 158030
         },
         {
           "language": "JSON",
@@ -536,9 +536,9 @@
         {
           "language": "Assembly",
           "files": 1320,
-          "code": 228252,
-          "comment": 100656,
-          "blank": 47205
+          "code": 228223,
+          "comment": 100650,
+          "blank": 47206
         },
         {
           "language": "Text",
@@ -549,17 +549,17 @@
         },
         {
           "language": "Bourne Shell",
-          "files": 895,
-          "code": 106552,
-          "comment": 18973,
-          "blank": 27238
+          "files": 896,
+          "code": 106566,
+          "comment": 18977,
+          "blank": 27241
         },
         {
           "language": "make",
-          "files": 2783,
-          "code": 49721,
-          "comment": 11922,
-          "blank": 10875
+          "files": 2781,
+          "code": 49722,
+          "comment": 11923,
+          "blank": 10869
         },
         {
           "language": "SVG",
@@ -2549,11 +2549,11 @@
       ]
     },
     {
-      "version": "6.6.160",
+      "version": "6.6.161",
       "series": "6.6",
-      "tarball": "linux-6.6.160.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.160.tar.xz",
-      "released": "2026-10-21",
+      "tarball": "linux-6.6.161.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.161.tar.xz",
+      "released": "2026-10-30",
       "files": 61,
       "bytes": 663419,
       "code": 8704,
@@ -2730,24 +2730,24 @@
           "code": 152
         }
       ],
-      "kernel_files": 72050,
-      "kernel_code": 26431890,
-      "kernel_comment": 4278272,
-      "kernel_blank": 4473980,
+      "kernel_files": 72051,
+      "kernel_code": 26432399,
+      "kernel_comment": 4278540,
+      "kernel_blank": 4474078,
       "languages": [
         {
           "language": "C",
           "files": 32942,
-          "code": 17425510,
-          "comment": 2643415,
-          "blank": 3379041
+          "code": 17425903,
+          "comment": 2643647,
+          "blank": 3379116
         },
         {
           "language": "C/C++ Header",
           "files": 23774,
-          "code": 7140108,
-          "comment": 1385880,
-          "blank": 717869
+          "code": 7140201,
+          "comment": 1385912,
+          "blank": 717889
         },
         {
           "language": "reStructuredText",
@@ -2786,15 +2786,15 @@
         },
         {
           "language": "Bourne Shell",
-          "files": 998,
-          "code": 122744,
-          "comment": 21377,
-          "blank": 31282
+          "files": 999,
+          "code": 122761,
+          "comment": 21381,
+          "blank": 31285
         },
         {
           "language": "make",
           "files": 2924,
-          "code": 51988,
+          "code": 51994,
           "comment": 12141,
           "blank": 11182
         },
@@ -5398,11 +5398,11 @@
       ]
     },
     {
-      "version": "6.12.114",
+      "version": "6.12.115",
       "series": "6.12",
-      "tarball": "linux-6.12.114.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.114.tar.xz",
-      "released": "2026-10-21",
+      "tarball": "linux-6.12.115.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.115.tar.xz",
+      "released": "2026-10-30",
       "files": 79,
       "bytes": 735211,
       "code": 9668,
@@ -5597,24 +5597,24 @@
           "code": 191
         }
       ],
-      "kernel_files": 76103,
-      "kernel_code": 28270273,
-      "kernel_comment": 4522221,
-      "kernel_blank": 4726260,
+      "kernel_files": 76104,
+      "kernel_code": 28271214,
+      "kernel_comment": 4522918,
+      "kernel_blank": 4726450,
       "languages": [
         {
           "language": "C",
           "files": 34660,
-          "code": 18377818,
-          "comment": 2772093,
-          "blank": 3567729
+          "code": 18378639,
+          "comment": 2772737,
+          "blank": 3567902
         },
         {
           "language": "C/C++ Header",
           "files": 25126,
-          "code": 7800998,
-          "comment": 1488849,
-          "blank": 751121
+          "code": 7801095,
+          "comment": 1488898,
+          "blank": 751135
         },
         {
           "language": "reStructuredText",
@@ -5646,10 +5646,10 @@
         },
         {
           "language": "Bourne Shell",
-          "files": 1080,
-          "code": 133538,
-          "comment": 23446,
-          "blank": 34183
+          "files": 1081,
+          "code": 133555,
+          "comment": 23450,
+          "blank": 34186
         },
         {
           "language": "Text",
@@ -5668,7 +5668,7 @@
         {
           "language": "make",
           "files": 3029,
-          "code": 55730,
+          "code": 55736,
           "comment": 12891,
           "blank": 12134
         },
@@ -8533,11 +8533,11 @@
       ]
     },
     {
-      "version": "6.18.59",
+      "version": "6.18.60",
       "series": "6.18",
-      "tarball": "linux-6.18.59.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.59.tar.xz",
-      "released": "2026-10-26",
+      "tarball": "linux-6.18.60.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.60.tar.xz",
+      "released": "2026-10-30",
       "files": 243,
       "bytes": 2406193,
       "code": 36381,
@@ -8768,24 +8768,24 @@
           "code": 454
         }
       ],
-      "kernel_files": 79550,
-      "kernel_code": 29364686,
-      "kernel_comment": 4663542,
-      "kernel_blank": 4913617,
+      "kernel_files": 79551,
+      "kernel_code": 29365294,
+      "kernel_comment": 4663953,
+      "kernel_blank": 4913746,
       "languages": [
         {
           "language": "C",
           "files": 35989,
-          "code": 19082156,
-          "comment": 2844628,
-          "blank": 3701180
+          "code": 19082684,
+          "comment": 2845009,
+          "blank": 3701296
         },
         {
           "language": "C/C++ Header",
           "files": 25998,
-          "code": 7985937,
-          "comment": 1526420,
-          "blank": 768958
+          "code": 7986000,
+          "comment": 1526446,
+          "blank": 768968
         },
         {
           "language": "JSON",
@@ -8817,10 +8817,10 @@
         },
         {
           "language": "Bourne Shell",
-          "files": 1175,
-          "code": 146436,
-          "comment": 25213,
-          "blank": 37419
+          "files": 1176,
+          "code": 146453,
+          "comment": 25217,
+          "blank": 37422
         },
         {
           "language": "Text",
@@ -10809,11 +10809,11 @@
       ]
     },
     {
-      "version": "7.2.13",
+      "version": "7.2.14",
       "series": "7.2",
-      "tarball": "linux-7.2.13.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.13.tar.xz",
-      "released": "2026-10-26",
+      "tarball": "linux-7.2.14.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.14.tar.xz",
+      "released": "2026-10-30",
       "files": 473,
       "bytes": 6341438,
       "code": 114646,
@@ -11071,24 +11071,24 @@
           "code": 1254
         }
       ],
-      "kernel_files": 82281,
-      "kernel_code": 30546846,
-      "kernel_comment": 4851146,
-      "kernel_blank": 5073511,
+      "kernel_files": 82282,
+      "kernel_code": 30547257,
+      "kernel_comment": 4851396,
+      "kernel_blank": 5073572,
       "languages": [
         {
           "language": "C",
           "files": 36919,
-          "code": 19648562,
-          "comment": 2920479,
-          "blank": 3808901
+          "code": 19648896,
+          "comment": 2920692,
+          "blank": 3808950
         },
         {
           "language": "C/C++ Header",
           "files": 26705,
-          "code": 8402626,
-          "comment": 1599752,
-          "blank": 790866
+          "code": 8402686,
+          "comment": 1599785,
+          "blank": 790875
         },
         {
           "language": "JSON",
@@ -11120,10 +11120,10 @@
         },
         {
           "language": "Bourne Shell",
-          "files": 1325,
-          "code": 159805,
-          "comment": 27323,
-          "blank": 41010
+          "files": 1326,
+          "code": 159822,
+          "comment": 27327,
+          "blank": 41013
         },
         {
           "language": "Rust",
@@ -11387,11 +11387,11 @@
       ]
     },
     {
-      "version": "7.3",
+      "version": "7.3.1",
       "series": "7.3",
-      "tarball": "linux-7.3.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.tar.xz",
-      "released": "2026-10-19",
+      "tarball": "linux-7.3.1.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.1.tar.xz",
+      "released": "2026-10-30",
       "files": 496,
       "bytes": 6639855,
       "code": 120019,
@@ -11649,24 +11649,24 @@
           "code": 1254
         }
       ],
-      "kernel_files": 83261,
-      "kernel_code": 30961328,
-      "kernel_comment": 4918259,
-      "kernel_blank": 5138553,
+      "kernel_files": 83262,
+      "kernel_code": 30961467,
+      "kernel_comment": 4918305,
+      "kernel_blank": 5138582,
       "languages": [
         {
           "language": "C",
           "files": 37368,
-          "code": 19912172,
-          "comment": 2961696,
-          "blank": 3858048
+          "code": 19912270,
+          "comment": 2961734,
+          "blank": 3858070
         },
         {
           "language": "C/C++ Header",
           "files": 27004,
-          "code": 8513410,
-          "comment": 1620010,
-          "blank": 798767
+          "code": 8513434,
+          "comment": 1620014,
+          "blank": 798771
         },
         {
           "language": "JSON",
@@ -11698,10 +11698,10 @@
         },
         {
           "language": "Bourne Shell",
-          "files": 1349,
-          "code": 163856,
-          "comment": 28336,
-          "blank": 41895
+          "files": 1350,
+          "code": 163873,
+          "comment": 28340,
+          "blank": 41898
         },
         {
           "language": "Rust",
