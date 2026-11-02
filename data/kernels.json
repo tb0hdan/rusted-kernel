@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-31",
+  "generated_utc": "2026-11-02",
   "cloc_version": "1.98",
   "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
@@ -10809,11 +10809,11 @@
       ]
     },
     {
-      "version": "7.2.14",
+      "version": "7.2.15",
       "series": "7.2",
-      "tarball": "linux-7.2.14.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.14.tar.xz",
-      "released": "2026-10-30",
+      "tarball": "linux-7.2.15.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.15.tar.xz",
+      "released": "2026-11-01",
       "files": 473,
       "bytes": 6341438,
       "code": 114646,
@@ -11072,23 +11072,23 @@
         }
       ],
       "kernel_files": 82282,
-      "kernel_code": 30547257,
-      "kernel_comment": 4851396,
-      "kernel_blank": 5073572,
+      "kernel_code": 30547345,
+      "kernel_comment": 4851679,
+      "kernel_blank": 5073590,
       "languages": [
         {
           "language": "C",
           "files": 36919,
-          "code": 19648896,
-          "comment": 2920692,
-          "blank": 3808950
+          "code": 19648969,
+          "comment": 2920931,
+          "blank": 3808965
         },
         {
           "language": "C/C++ Header",
           "files": 26705,
-          "code": 8402686,
-          "comment": 1599785,
-          "blank": 790875
+          "code": 8402693,
+          "comment": 1599820,
+          "blank": 790877
         },
         {
           "language": "JSON",
@@ -11121,9 +11121,9 @@
         {
           "language": "Bourne Shell",
           "files": 1326,
-          "code": 159822,
-          "comment": 27327,
-          "blank": 41013
+          "code": 159830,
+          "comment": 27336,
+          "blank": 41014
         },
         {
           "language": "Rust",
