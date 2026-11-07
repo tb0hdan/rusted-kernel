@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-02",
+  "generated_utc": "2026-11-07",
   "cloc_version": "1.98",
   "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
@@ -340,11 +340,11 @@
       ]
     },
     {
-      "version": "6.1.191",
+      "version": "6.1.192",
       "series": "6.1",
-      "tarball": "linux-6.1.191.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.191.tar.xz",
-      "released": "2026-10-30",
+      "tarball": "linux-6.1.192.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.192.tar.xz",
+      "released": "2026-11-06",
       "files": 29,
       "bytes": 353491,
       "code": 4877,
@@ -494,23 +494,23 @@
         }
       ],
       "kernel_files": 69554,
-      "kernel_code": 25420778,
+      "kernel_code": 25420791,
       "kernel_comment": 4149643,
-      "kernel_blank": 4314699,
+      "kernel_blank": 4314706,
       "languages": [
         {
           "language": "C",
           "files": 32008,
-          "code": 16776731,
+          "code": 16776743,
           "comment": 2581798,
-          "blank": 3266932
+          "blank": 3266938
         },
         {
           "language": "C/C++ Header",
           "files": 23263,
-          "code": 6912366,
+          "code": 6912367,
           "comment": 1339830,
-          "blank": 701453
+          "blank": 701454
         },
         {
           "language": "reStructuredText",
@@ -2549,11 +2549,11 @@
       ]
     },
     {
-      "version": "6.6.161",
+      "version": "6.6.162",
       "series": "6.6",
-      "tarball": "linux-6.6.161.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.161.tar.xz",
-      "released": "2026-10-30",
+      "tarball": "linux-6.6.162.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.162.tar.xz",
+      "released": "2026-11-06",
       "files": 61,
       "bytes": 663419,
       "code": 8704,
@@ -2731,23 +2731,23 @@
         }
       ],
       "kernel_files": 72051,
-      "kernel_code": 26432399,
+      "kernel_code": 26432412,
       "kernel_comment": 4278540,
-      "kernel_blank": 4474078,
+      "kernel_blank": 4474085,
       "languages": [
         {
           "language": "C",
           "files": 32942,
-          "code": 17425903,
+          "code": 17425915,
           "comment": 2643647,
-          "blank": 3379116
+          "blank": 3379122
         },
         {
           "language": "C/C++ Header",
           "files": 23774,
-          "code": 7140201,
+          "code": 7140202,
           "comment": 1385912,
-          "blank": 717889
+          "blank": 717890
         },
         {
           "language": "reStructuredText",
@@ -5398,11 +5398,11 @@
       ]
     },
     {
-      "version": "6.12.115",
+      "version": "6.12.116",
       "series": "6.12",
-      "tarball": "linux-6.12.115.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.115.tar.xz",
-      "released": "2026-10-30",
+      "tarball": "linux-6.12.116.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.116.tar.xz",
+      "released": "2026-11-06",
       "files": 79,
       "bytes": 735211,
       "code": 9668,
@@ -5598,23 +5598,23 @@
         }
       ],
       "kernel_files": 76104,
-      "kernel_code": 28271214,
+      "kernel_code": 28271227,
       "kernel_comment": 4522918,
-      "kernel_blank": 4726450,
+      "kernel_blank": 4726457,
       "languages": [
         {
           "language": "C",
           "files": 34660,
-          "code": 18378639,
+          "code": 18378651,
           "comment": 2772737,
-          "blank": 3567902
+          "blank": 3567908
         },
         {
           "language": "C/C++ Header",
           "files": 25126,
-          "code": 7801095,
+          "code": 7801096,
           "comment": 1488898,
-          "blank": 751135
+          "blank": 751136
         },
         {
           "language": "reStructuredText",
@@ -8533,32 +8533,32 @@
       ]
     },
     {
-      "version": "6.18.60",
+      "version": "6.18.62",
       "series": "6.18",
-      "tarball": "linux-6.18.60.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.60.tar.xz",
-      "released": "2026-10-30",
+      "tarball": "linux-6.18.62.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.62.tar.xz",
+      "released": "2026-11-06",
       "files": 243,
-      "bytes": 2406193,
-      "code": 36381,
-      "comment": 25276,
-      "blank": 7021,
+      "bytes": 2408664,
+      "code": 36416,
+      "comment": 25308,
+      "blank": 7022,
       "categories": [
         {
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 130,
-          "bytes": 1479868,
-          "code": 18435,
-          "comment": 18960,
-          "blank": 4033
+          "bytes": 1482303,
+          "code": 18469,
+          "comment": 18992,
+          "blank": 4034
         },
         {
           "category": "Drivers",
           "purpose": "Production device drivers written in Rust",
           "files": 64,
-          "bytes": 609975,
-          "code": 12692,
+          "bytes": 610011,
+          "code": 12693,
           "comment": 3019,
           "blank": 2208
         },
@@ -8673,21 +8673,21 @@
           "blank": 60
         },
         {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 6968,
+          "code": 157,
+          "comment": 29,
+          "blank": 37
+        },
+        {
           "category": "drivers/net (Networking)",
           "purpose": "",
           "files": 2,
           "bytes": 7835,
           "code": 157,
           "comment": 43,
-          "blank": 37
-        },
-        {
-          "category": "drivers/cpufreq (CPU frequency)",
-          "purpose": "",
-          "files": 1,
-          "bytes": 6932,
-          "code": 156,
-          "comment": 29,
           "blank": 37
         }
       ],
@@ -8724,8 +8724,8 @@
         },
         {
           "path": "rust/kernel/cpufreq.rs",
-          "bytes": 46417,
-          "code": 694
+          "bytes": 46588,
+          "code": 704
         },
         {
           "path": "rust/kernel/alloc/kvec.rs",
@@ -8744,8 +8744,8 @@
         },
         {
           "path": "rust/kernel/configfs.rs",
-          "bytes": 36971,
-          "code": 498
+          "bytes": 37735,
+          "code": 503
         },
         {
           "path": "rust/kernel/pci/id.rs",
@@ -8768,24 +8768,24 @@
           "code": 454
         }
       ],
-      "kernel_files": 79551,
-      "kernel_code": 29365294,
-      "kernel_comment": 4663953,
-      "kernel_blank": 4913746,
+      "kernel_files": 79557,
+      "kernel_code": 29435434,
+      "kernel_comment": 4673625,
+      "kernel_blank": 4915939,
       "languages": [
         {
           "language": "C",
-          "files": 35989,
-          "code": 19082684,
-          "comment": 2845009,
-          "blank": 3701296
+          "files": 35990,
+          "code": 19088172,
+          "comment": 2846019,
+          "blank": 3702302
         },
         {
           "language": "C/C++ Header",
-          "files": 25998,
-          "code": 7986000,
-          "comment": 1526446,
-          "blank": 768968
+          "files": 26003,
+          "code": 8050586,
+          "comment": 1535064,
+          "blank": 770147
         },
         {
           "language": "JSON",
@@ -8797,30 +8797,30 @@
         {
           "language": "reStructuredText",
           "files": 3843,
-          "code": 522788,
+          "code": 522804,
           "comment": 79860,
-          "blank": 191525
+          "blank": 191528
         },
         {
           "language": "YAML",
           "files": 5229,
-          "code": 469345,
+          "code": 469347,
           "comment": 23736,
-          "blank": 95929
+          "blank": 95930
         },
         {
           "language": "Assembly",
           "files": 1355,
           "code": 232469,
-          "comment": 99533,
+          "comment": 99534,
           "blank": 48161
         },
         {
           "language": "Bourne Shell",
           "files": 1176,
-          "code": 146453,
-          "comment": 25217,
-          "blank": 37422
+          "code": 146462,
+          "comment": 25227,
+          "blank": 37424
         },
         {
           "language": "Text",
@@ -8839,9 +8839,9 @@
         {
           "language": "make",
           "files": 3141,
-          "code": 57821,
-          "comment": 13080,
-          "blank": 12462
+          "code": 57825,
+          "comment": 13081,
+          "blank": 12463
         },
         {
           "language": "SVG",
@@ -8860,9 +8860,9 @@
         {
           "language": "Rust",
           "files": 243,
-          "code": 36381,
-          "comment": 25276,
-          "blank": 7021
+          "code": 36416,
+          "comment": 25308,
+          "blank": 7022
         },
         {
           "language": "XML",
@@ -11387,16 +11387,16 @@
       ]
     },
     {
-      "version": "7.3.1",
+      "version": "7.3.3",
       "series": "7.3",
-      "tarball": "linux-7.3.1.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.1.tar.xz",
-      "released": "2026-10-30",
+      "tarball": "linux-7.3.3.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.3.tar.xz",
+      "released": "2026-11-06",
       "files": 496,
-      "bytes": 6639855,
-      "code": 120019,
-      "comment": 55287,
-      "blank": 16363,
+      "bytes": 6643181,
+      "code": 120073,
+      "comment": 55314,
+      "blank": 16364,
       "categories": [
         {
           "category": "Vendored crates",
@@ -11411,17 +11411,17 @@
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 163,
-          "bytes": 2103831,
-          "code": 27986,
-          "comment": 26470,
-          "blank": 5932
+          "bytes": 2106483,
+          "code": 28023,
+          "comment": 26497,
+          "blank": 5933
         },
         {
           "category": "Drivers",
           "purpose": "Production device drivers written in Rust",
           "files": 102,
-          "bytes": 1053988,
-          "code": 22237,
+          "bytes": 1054662,
+          "code": 22254,
           "comment": 5161,
           "blank": 3856
         },
@@ -11530,8 +11530,8 @@
           "category": "drivers/android (Android (binder))",
           "purpose": "",
           "files": 20,
-          "bytes": 357554,
-          "code": 7479,
+          "bytes": 358192,
+          "code": 7495,
           "comment": 1491,
           "blank": 1146
         },
@@ -11554,6 +11554,15 @@
           "blank": 60
         },
         {
+          "category": "drivers/cpufreq (CPU frequency)",
+          "purpose": "",
+          "files": 1,
+          "bytes": 7006,
+          "code": 163,
+          "comment": 29,
+          "blank": 37
+        },
+        {
           "category": "drivers/net (Networking)",
           "purpose": "",
           "files": 2,
@@ -11561,15 +11570,6 @@
           "code": 163,
           "comment": 42,
           "blank": 38
-        },
-        {
-          "category": "drivers/cpufreq (CPU frequency)",
-          "purpose": "",
-          "files": 1,
-          "bytes": 6970,
-          "code": 162,
-          "comment": 29,
-          "blank": 37
         }
       ],
       "largest_files": [
@@ -11640,8 +11640,8 @@
         },
         {
           "path": "drivers/android/binder/thread.rs",
-          "bytes": 67116,
-          "code": 1361
+          "bytes": 67754,
+          "code": 1377
         },
         {
           "path": "rust/zerocopy/src/layout.rs",
@@ -11650,23 +11650,23 @@
         }
       ],
       "kernel_files": 83262,
-      "kernel_code": 30961467,
-      "kernel_comment": 4918305,
-      "kernel_blank": 5138582,
+      "kernel_code": 30965093,
+      "kernel_comment": 4919649,
+      "kernel_blank": 5139150,
       "languages": [
         {
           "language": "C",
           "files": 37368,
-          "code": 19912270,
-          "comment": 2961734,
-          "blank": 3858070
+          "code": 19915605,
+          "comment": 2962936,
+          "blank": 3858601
         },
         {
           "language": "C/C++ Header",
           "files": 27004,
-          "code": 8513434,
-          "comment": 1620014,
-          "blank": 798771
+          "code": 8513664,
+          "comment": 1620129,
+          "blank": 798804
         },
         {
           "language": "JSON",
@@ -11678,16 +11678,16 @@
         {
           "language": "reStructuredText",
           "files": 4064,
-          "code": 550758,
+          "code": 550763,
           "comment": 82750,
-          "blank": 200927
+          "blank": 200929
         },
         {
           "language": "YAML",
           "files": 5792,
-          "code": 530276,
+          "code": 530278,
           "comment": 26532,
-          "blank": 107361
+          "blank": 107362
         },
         {
           "language": "Assembly",
@@ -11706,9 +11706,9 @@
         {
           "language": "Rust",
           "files": 496,
-          "code": 120019,
-          "comment": 55287,
-          "blank": 16363
+          "code": 120073,
+          "comment": 55314,
+          "blank": 16364
         },
         {
           "language": "Python",
