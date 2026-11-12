@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-07",
+  "generated_utc": "2026-11-12",
   "cloc_version": "1.98",
   "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
@@ -5398,14 +5398,14 @@
       ]
     },
     {
-      "version": "6.12.116",
+      "version": "6.12.117",
       "series": "6.12",
-      "tarball": "linux-6.12.116.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.116.tar.xz",
-      "released": "2026-11-06",
+      "tarball": "linux-6.12.117.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.117.tar.xz",
+      "released": "2026-11-10",
       "files": 79,
-      "bytes": 735211,
-      "code": 9668,
+      "bytes": 735270,
+      "code": 9670,
       "comment": 9128,
       "blank": 1778,
       "categories": [
@@ -5467,8 +5467,8 @@
           "category": "Generated bindings",
           "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
           "files": 1,
-          "bytes": 1894,
-          "code": 41,
+          "bytes": 1926,
+          "code": 42,
           "comment": 16,
           "blank": 6
         },
@@ -5476,8 +5476,8 @@
           "category": "UAPI bindings",
           "purpose": "Raw bindings to the kernel's userspace API headers",
           "files": 1,
-          "bytes": 1136,
-          "code": 26,
+          "bytes": 1163,
+          "code": 27,
           "comment": 9,
           "blank": 4
         },
@@ -5597,31 +5597,31 @@
           "code": 191
         }
       ],
-      "kernel_files": 76104,
-      "kernel_code": 28271227,
-      "kernel_comment": 4522918,
-      "kernel_blank": 4726457,
+      "kernel_files": 76108,
+      "kernel_code": 28342118,
+      "kernel_comment": 4533314,
+      "kernel_blank": 4728768,
       "languages": [
         {
           "language": "C",
-          "files": 34660,
-          "code": 18378651,
-          "comment": 2772737,
-          "blank": 3567908
+          "files": 34659,
+          "code": 18384671,
+          "comment": 2774372,
+          "blank": 3568999
         },
         {
           "language": "C/C++ Header",
-          "files": 25126,
-          "code": 7801096,
-          "comment": 1488898,
-          "blank": 751136
+          "files": 25131,
+          "code": 7865930,
+          "comment": 1497633,
+          "blank": 752352
         },
         {
           "language": "reStructuredText",
           "files": 3604,
-          "code": 491246,
+          "code": 491257,
           "comment": 75192,
-          "blank": 180476
+          "blank": 180478
         },
         {
           "language": "JSON",
@@ -5633,23 +5633,23 @@
         {
           "language": "YAML",
           "files": 4389,
-          "code": 391470,
+          "code": 391481,
           "comment": 20180,
-          "blank": 80705
+          "blank": 80706
         },
         {
           "language": "Assembly",
           "files": 1334,
-          "code": 230995,
-          "comment": 98624,
-          "blank": 48040
+          "code": 230999,
+          "comment": 98639,
+          "blank": 48039
         },
         {
           "language": "Bourne Shell",
           "files": 1081,
-          "code": 133555,
-          "comment": 23450,
-          "blank": 34186
+          "code": 133564,
+          "comment": 23460,
+          "blank": 34188
         },
         {
           "language": "Text",
@@ -5669,7 +5669,7 @@
           "language": "make",
           "files": 3029,
           "code": 55736,
-          "comment": 12891,
+          "comment": 12892,
           "blank": 12134
         },
         {
@@ -5696,7 +5696,7 @@
         {
           "language": "Rust",
           "files": 79,
-          "code": 9668,
+          "code": 9670,
           "comment": 9128,
           "blank": 1778
         },
@@ -8533,24 +8533,24 @@
       ]
     },
     {
-      "version": "6.18.62",
+      "version": "6.18.63",
       "series": "6.18",
-      "tarball": "linux-6.18.62.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.62.tar.xz",
-      "released": "2026-11-06",
+      "tarball": "linux-6.18.63.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.63.tar.xz",
+      "released": "2026-11-10",
       "files": 243,
-      "bytes": 2408664,
-      "code": 36416,
-      "comment": 25308,
+      "bytes": 2408797,
+      "code": 36422,
+      "comment": 25304,
       "blank": 7022,
       "categories": [
         {
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 130,
-          "bytes": 1482303,
-          "code": 18469,
-          "comment": 18992,
+          "bytes": 1482410,
+          "code": 18474,
+          "comment": 18988,
           "blank": 4034
         },
         {
@@ -8620,8 +8620,8 @@
           "category": "Generated bindings",
           "purpose": "Auto-generated raw FFI bindings to C kernel symbols",
           "files": 1,
-          "bytes": 2360,
-          "code": 47,
+          "bytes": 2386,
+          "code": 48,
           "comment": 20,
           "blank": 8
         },
@@ -8768,24 +8768,24 @@
           "code": 454
         }
       ],
-      "kernel_files": 79557,
-      "kernel_code": 29435434,
-      "kernel_comment": 4673625,
-      "kernel_blank": 4915939,
+      "kernel_files": 79558,
+      "kernel_code": 29438544,
+      "kernel_comment": 4674688,
+      "kernel_blank": 4916510,
       "languages": [
         {
           "language": "C",
-          "files": 35990,
-          "code": 19088172,
-          "comment": 2846019,
-          "blank": 3702302
+          "files": 35991,
+          "code": 19090857,
+          "comment": 2846965,
+          "blank": 3702849
         },
         {
           "language": "C/C++ Header",
           "files": 26003,
-          "code": 8050586,
-          "comment": 1535064,
-          "blank": 770147
+          "code": 8050980,
+          "comment": 1535160,
+          "blank": 770169
         },
         {
           "language": "JSON",
@@ -8797,23 +8797,23 @@
         {
           "language": "reStructuredText",
           "files": 3843,
-          "code": 522804,
+          "code": 522810,
           "comment": 79860,
-          "blank": 191528
+          "blank": 191530
         },
         {
           "language": "YAML",
           "files": 5229,
-          "code": 469347,
+          "code": 469358,
           "comment": 23736,
-          "blank": 95930
+          "blank": 95931
         },
         {
           "language": "Assembly",
           "files": 1355,
-          "code": 232469,
-          "comment": 99534,
-          "blank": 48161
+          "code": 232474,
+          "comment": 99559,
+          "blank": 48160
         },
         {
           "language": "Bourne Shell",
@@ -8839,7 +8839,7 @@
         {
           "language": "make",
           "files": 3141,
-          "code": 57825,
+          "code": 57828,
           "comment": 13081,
           "blank": 12463
         },
@@ -8860,8 +8860,8 @@
         {
           "language": "Rust",
           "files": 243,
-          "code": 36416,
-          "comment": 25308,
+          "code": 36422,
+          "comment": 25304,
           "blank": 7022
         },
         {
@@ -11387,15 +11387,15 @@
       ]
     },
     {
-      "version": "7.3.3",
+      "version": "7.3.4",
       "series": "7.3",
-      "tarball": "linux-7.3.3.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.3.tar.xz",
-      "released": "2026-11-06",
+      "tarball": "linux-7.3.4.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.4.tar.xz",
+      "released": "2026-11-10",
       "files": 496,
-      "bytes": 6643181,
-      "code": 120073,
-      "comment": 55314,
+      "bytes": 6643283,
+      "code": 120084,
+      "comment": 55310,
       "blank": 16364,
       "categories": [
         {
@@ -11411,9 +11411,9 @@
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 163,
-          "bytes": 2106483,
-          "code": 28023,
-          "comment": 26497,
+          "bytes": 2106585,
+          "code": 28034,
+          "comment": 26493,
           "blank": 5933
         },
         {
@@ -11650,23 +11650,23 @@
         }
       ],
       "kernel_files": 83262,
-      "kernel_code": 30965093,
-      "kernel_comment": 4919649,
-      "kernel_blank": 5139150,
+      "kernel_code": 30969945,
+      "kernel_comment": 4921525,
+      "kernel_blank": 5139941,
       "languages": [
         {
           "language": "C",
           "files": 37368,
-          "code": 19915605,
-          "comment": 2962936,
-          "blank": 3858601
+          "code": 19919853,
+          "comment": 2964636,
+          "blank": 3859337
         },
         {
           "language": "C/C++ Header",
           "files": 27004,
-          "code": 8513664,
-          "comment": 1620129,
-          "blank": 798804
+          "code": 8514199,
+          "comment": 1620277,
+          "blank": 798851
         },
         {
           "language": "JSON",
@@ -11678,36 +11678,36 @@
         {
           "language": "reStructuredText",
           "files": 4064,
-          "code": 550763,
+          "code": 550781,
           "comment": 82750,
-          "blank": 200929
+          "blank": 200932
         },
         {
           "language": "YAML",
           "files": 5792,
-          "code": 530278,
+          "code": 530289,
           "comment": 26532,
-          "blank": 107362
+          "blank": 107363
         },
         {
           "language": "Assembly",
           "files": 1345,
-          "code": 230065,
-          "comment": 99310,
-          "blank": 47644
+          "code": 230078,
+          "comment": 99341,
+          "blank": 47645
         },
         {
           "language": "Bourne Shell",
           "files": 1350,
-          "code": 163873,
-          "comment": 28340,
-          "blank": 41898
+          "code": 163874,
+          "comment": 28341,
+          "blank": 41899
         },
         {
           "language": "Rust",
           "files": 496,
-          "code": 120073,
-          "comment": 55314,
+          "code": 120084,
+          "comment": 55310,
           "blank": 16364
         },
         {
@@ -11720,14 +11720,14 @@
         {
           "language": "Text",
           "files": 938,
-          "code": 87980,
+          "code": 87988,
           "comment": 0,
-          "blank": 19382
+          "blank": 19384
         },
         {
           "language": "make",
           "files": 3210,
-          "code": 61561,
+          "code": 61568,
           "comment": 13527,
           "blank": 13178
         },
