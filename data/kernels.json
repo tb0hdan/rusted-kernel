@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-12",
+  "generated_utc": "2026-11-18",
   "cloc_version": "1.98",
   "floor": "6.0",
   "source": "https://cdn.kernel.org/pub/linux/kernel",
@@ -5398,11 +5398,11 @@
       ]
     },
     {
-      "version": "6.12.117",
+      "version": "6.12.118",
       "series": "6.12",
-      "tarball": "linux-6.12.117.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.117.tar.xz",
-      "released": "2026-11-10",
+      "tarball": "linux-6.12.118.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.118.tar.xz",
+      "released": "2026-11-17",
       "files": 79,
       "bytes": 735270,
       "code": 9670,
@@ -5598,28 +5598,28 @@
         }
       ],
       "kernel_files": 76108,
-      "kernel_code": 28342118,
-      "kernel_comment": 4533314,
-      "kernel_blank": 4728768,
+      "kernel_code": 28345215,
+      "kernel_comment": 4534612,
+      "kernel_blank": 4729196,
       "languages": [
         {
           "language": "C",
           "files": 34659,
-          "code": 18384671,
-          "comment": 2774372,
-          "blank": 3568999
+          "code": 18387204,
+          "comment": 2775509,
+          "blank": 3569385
         },
         {
           "language": "C/C++ Header",
           "files": 25131,
-          "code": 7865930,
-          "comment": 1497633,
-          "blank": 752352
+          "code": 7866448,
+          "comment": 1497773,
+          "blank": 752388
         },
         {
           "language": "reStructuredText",
           "files": 3604,
-          "code": 491257,
+          "code": 491264,
           "comment": 75192,
           "blank": 180478
         },
@@ -5640,23 +5640,23 @@
         {
           "language": "Assembly",
           "files": 1334,
-          "code": 230999,
-          "comment": 98639,
-          "blank": 48039
+          "code": 231018,
+          "comment": 98660,
+          "blank": 48040
         },
         {
           "language": "Bourne Shell",
           "files": 1081,
-          "code": 133564,
+          "code": 133576,
           "comment": 23460,
-          "blank": 34188
+          "blank": 34192
         },
         {
           "language": "Text",
           "files": 1501,
-          "code": 110668,
+          "code": 110677,
           "comment": 0,
-          "blank": 24685
+          "blank": 24686
         },
         {
           "language": "Python",
@@ -5668,7 +5668,7 @@
         {
           "language": "make",
           "files": 3029,
-          "code": 55736,
+          "code": 55735,
           "comment": 12892,
           "blank": 12134
         },
@@ -8533,25 +8533,25 @@
       ]
     },
     {
-      "version": "6.18.63",
+      "version": "6.18.64",
       "series": "6.18",
-      "tarball": "linux-6.18.63.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.63.tar.xz",
-      "released": "2026-11-10",
+      "tarball": "linux-6.18.64.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.64.tar.xz",
+      "released": "2026-11-17",
       "files": 243,
-      "bytes": 2408797,
-      "code": 36422,
-      "comment": 25304,
-      "blank": 7022,
+      "bytes": 2408948,
+      "code": 36425,
+      "comment": 25306,
+      "blank": 7023,
       "categories": [
         {
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 130,
-          "bytes": 1482410,
-          "code": 18474,
-          "comment": 18988,
-          "blank": 4034
+          "bytes": 1482561,
+          "code": 18477,
+          "comment": 18990,
+          "blank": 4035
         },
         {
           "category": "Drivers",
@@ -8724,7 +8724,7 @@
         },
         {
           "path": "rust/kernel/cpufreq.rs",
-          "bytes": 46588,
+          "bytes": 46599,
           "code": 704
         },
         {
@@ -8768,24 +8768,24 @@
           "code": 454
         }
       ],
-      "kernel_files": 79558,
-      "kernel_code": 29438544,
-      "kernel_comment": 4674688,
-      "kernel_blank": 4916510,
+      "kernel_files": 79559,
+      "kernel_code": 29441245,
+      "kernel_comment": 4675995,
+      "kernel_blank": 4916911,
       "languages": [
         {
           "language": "C",
-          "files": 35991,
-          "code": 19090857,
-          "comment": 2846965,
-          "blank": 3702849
+          "files": 35990,
+          "code": 19093335,
+          "comment": 2848075,
+          "blank": 3703199
         },
         {
           "language": "C/C++ Header",
-          "files": 26003,
-          "code": 8050980,
-          "comment": 1535160,
-          "blank": 770169
+          "files": 26005,
+          "code": 8051138,
+          "comment": 1535343,
+          "blank": 770211
         },
         {
           "language": "JSON",
@@ -8797,9 +8797,9 @@
         {
           "language": "reStructuredText",
           "files": 3843,
-          "code": 522810,
+          "code": 522742,
           "comment": 79860,
-          "blank": 191530
+          "blank": 191525
         },
         {
           "language": "YAML",
@@ -8811,23 +8811,23 @@
         {
           "language": "Assembly",
           "files": 1355,
-          "code": 232474,
-          "comment": 99559,
-          "blank": 48160
+          "code": 232492,
+          "comment": 99571,
+          "blank": 48161
         },
         {
           "language": "Bourne Shell",
           "files": 1176,
-          "code": 146462,
+          "code": 146474,
           "comment": 25227,
-          "blank": 37424
+          "blank": 37428
         },
         {
           "language": "Text",
           "files": 1084,
-          "code": 97331,
+          "code": 97432,
           "comment": 0,
-          "blank": 21532
+          "blank": 21540
         },
         {
           "language": "Python",
@@ -8839,7 +8839,7 @@
         {
           "language": "make",
           "files": 3141,
-          "code": 57828,
+          "code": 57827,
           "comment": 13081,
           "blank": 12463
         },
@@ -8860,9 +8860,9 @@
         {
           "language": "Rust",
           "files": 243,
-          "code": 36422,
-          "comment": 25304,
-          "blank": 7022
+          "code": 36425,
+          "comment": 25306,
+          "blank": 7023
         },
         {
           "language": "XML",
@@ -11387,13 +11387,13 @@
       ]
     },
     {
-      "version": "7.3.4",
+      "version": "7.3.5",
       "series": "7.3",
-      "tarball": "linux-7.3.4.tar.xz",
-      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.4.tar.xz",
-      "released": "2026-11-10",
+      "tarball": "linux-7.3.5.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.5.tar.xz",
+      "released": "2026-11-17",
       "files": 496,
-      "bytes": 6643283,
+      "bytes": 6643294,
       "code": 120084,
       "comment": 55310,
       "blank": 16364,
@@ -11411,7 +11411,7 @@
           "category": "Kernel crate",
           "purpose": "Safe Rust abstractions layered over the C kernel APIs",
           "files": 163,
-          "bytes": 2106585,
+          "bytes": 2106596,
           "code": 28034,
           "comment": 26493,
           "blank": 5933
@@ -11650,23 +11650,23 @@
         }
       ],
       "kernel_files": 83262,
-      "kernel_code": 30969945,
-      "kernel_comment": 4921525,
-      "kernel_blank": 5139941,
+      "kernel_code": 30972823,
+      "kernel_comment": 4922532,
+      "kernel_blank": 5140413,
       "languages": [
         {
           "language": "C",
           "files": 37368,
-          "code": 19919853,
-          "comment": 2964636,
-          "blank": 3859337
+          "code": 19922447,
+          "comment": 2965569,
+          "blank": 3859783
         },
         {
           "language": "C/C++ Header",
           "files": 27004,
-          "code": 8514199,
-          "comment": 1620277,
-          "blank": 798851
+          "code": 8514420,
+          "comment": 1620343,
+          "blank": 798872
         },
         {
           "language": "JSON",
@@ -11678,9 +11678,9 @@
         {
           "language": "reStructuredText",
           "files": 4064,
-          "code": 550781,
+          "code": 550816,
           "comment": 82750,
-          "blank": 200932
+          "blank": 200933
         },
         {
           "language": "YAML",
@@ -11692,16 +11692,16 @@
         {
           "language": "Assembly",
           "files": 1345,
-          "code": 230078,
-          "comment": 99341,
+          "code": 230094,
+          "comment": 99349,
           "blank": 47645
         },
         {
           "language": "Bourne Shell",
           "files": 1350,
-          "code": 163874,
+          "code": 163886,
           "comment": 28341,
-          "blank": 41899
+          "blank": 41903
         },
         {
           "language": "Rust",
